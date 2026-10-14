@@ -1,0 +1,260 @@
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif; color:black;}
+#wrap{margin:0 auto; width:1920px; height:5400px;}
+#margin{width:1300px; margin:0 auto; height:5400px; position:absolute;}
+.clear{clear: both;}
+*{margin: 0; padding: 0;}
+
+/*main01*/
+#wrap #margin .main{width:1920px; height:206px; display:flex; justify-content: center; position:absolute} 
+#wrap #margin .main .main01{width:1300px; height:206px; display:flex; justify-content: space-between; position:absolute; z-index:3; margin:0 auto;} 
+#wrap #margin .main .main01 .mainlogo{width:97px; height:206px; background:url(../images/main/main_logo.png) no-repeat; 
+background-position:left center;}
+#wrap #margin .main .main01 .mainmenu{width:750px; height:206px; display:flex; justify-content: center;
+align-items: center; font-weight:400; font-size:16px;}
+#wrap #margin .main .main01 .mainplus{Width:97px; height:206px; display:flex; align-items: center; justify-content: flex-start;} 
+
+/*con01*/
+#wrap #margin .con01{width:1920px; height:787px; background:url(../images/profile/profile_img01.png) no-repeat;
+background-position:center; display:flex; align-items: center; flex-direction: column-reverse; align-items: center;}
+#wrap #margin .con01 .con01_text{width:1300px; height:132px; background:url(../images/profile/profile_title.png) no-repeat; margin-bottom:200px;}
+
+/*scroll*/
+#wrap #margin .con01 .scroll{width:1300px; height:90px; display:flex; flex-direction: column; align-items: flex-start; justify-content: space-between;
+margin-bottom:40px;}
+#wrap #margin .con01 .scroll02{width:52px; height:52px; border:#7a7c7e solid 1px; border-radius:100%; display:flex; justify-content: center;
+align-items: center; margin-left:7px;}
+#wrap #margin .con01 .scroll02 .arrow{width:7px; height: 7px; border-top: 2px solid #000; /* 선 두께 */
+border-right: 2px solid #000; /* 선 두께 */
+transform: rotate(135deg); /* 각도 */}
+
+/*scroll 애니*/
+#wrap #margin .con01 .scroll02{ animation: bounce 1s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .8);
+    animation-iteration-count: infinite;}
+    @keyframes bounce {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+        to {
+            transform: translate3d(0, 15px, 0);
+        }
+    }
+
+/*con02*/
+#wrap #margin .con02{width:1920px; height:1350px; display:flex; align-items: center; flex-direction: column;}
+#wrap #margin .con02 .profile_personal{width:1300px; height:830px; background:url(../images/profile/profile_img02.png) no-repeat;
+margin-top:164px;}
+#wrap #margin .con02 .profile_text01{width:1300px; height:90px; background:url(../images/profile/profile_who.png) no-repeat; margin-top:105px;}
+
+/*con03*/
+#wrap #margin .con03{width:1920px; height:916px; display:flex; background:#e0ffff; justify-content: center; align-items: center;}
+#wrap #margin .con03 .profile_concept{width:676px; height:579px; display:flex; 
+background:url(../images/profile/profile_graph02.png) no-repeat; background-position:left center;}
+#wrap #margin .con03 .profile_text02{width:650px; height:688px; display:flex; 
+background:url(../images/profile/profile_graph.png) no-repeat; background-position:center;  margin-top:50px;}
+#wrap #margin .con03 .profile_text02 .profile_shape{width:650px; height:688px; display:flex; 
+background:url(../images/profile/profile_graph01.png) no-repeat; background-position:center; margin-top:6px; margin-left:-3px;}
+    
+/*con04*/
+#wrap #margin .con04{width:1920px; height:1212px; display:flex; flex-direction: row; justify-content: center; align-items: center;}
+#wrap #margin .con04 .profile_img03{width:582px; height:875px; display:flex; background:url(../images/profile/profile_img03.png) no-repeat;}
+#wrap #margin .con04 .profile_skills{width:720px; height:875px; display:flex; background:url(../images/profile/profile_skills.png) no-repeat; 
+background-position:right center;}
+#wrap #margin .con04 .profile_skills .profile_skills01{width:593px; height:82px; background:url(../images/profile/profile_text01.png) no-repeat; 
+background-position:center; margin:110px 0 0 -33px;}
+    
+
+/*con05*/
+#wrap #margin .con05{width:1920px; height:674px; display:flex; flex-direction: column; align-items: center;
+background:#353637;}
+#wrap #margin .con05 .profile_vision{width:1300px; height:20px; display:flex; background:url(../images/profile/profile_vision.png) no-repeat;
+background-position:center; margin-top:166px;}
+#wrap #margin .con05 .profile_logo01{width:1300px; height:330px; display:flex; background:url(../images/profileing/profile_logo01.png) no-repeat; 
+background-position:center; margin-top:178px;}
+
+/*con05 슬라이드 효과*/
+#wrap #margin .con05 .slidebox {width:970px; height:204px; margin:0 auto; position:relative; top:60px}
+#wrap #margin .con05 .slidebox .slidelist {position:relative;white-space:nowrap;font-size:0;overflow:hidden;}
+#wrap #margin .con05 .slidebox .slidelist .slideitem {position:relative;display:inline-block;vertical-align:middle;width:100%;transition:all 1s;}
+#wrap #margin .con05 .slidebox .slidelist .slideitem > a {display:block;width:auto;position:relative;}
+#wrap #margin .con05 .slidebox .slidelist .slideitem > a img {max-width:100%;}
+
+#wrap #margin .con05 .slidebox .slide-control [class*="control"] label {position:absolute;z-index:10;top:70%;transform:translateY(-50%);padding:20px;border-radius:50%;cursor:pointer;}
+#wrap #margin .con05 .slidebox .slide-control [class*="control"] label.prev {left:-185px; width:52px; height:52px; background:url('../images/profile/profile_left.png') center center / 60% no-repeat;}
+#wrap #margin .con05 .slidebox .slide-control [class*="control"] label.next {right:-185px; width:52px; height:52px; background:url('../images/profile/profile_right.png') center center / 60% no-repeat;}
+
+#wrap #margin .con05 .slidebox .slide-control [class*="control"] label.prev:hover {opacity:50%;}
+#wrap #margin .con05 .slidebox .slide-control [class*="control"] label.next:hover {opacity:50%;}
+
+[name="slide"] {display:inline-block; position:relative; top:250px; left:46%;}
+#wrap #margin .con05 #slide01:checked ~ .slidelist .slideitem {left:0;}
+#wrap #margin .con05 #slide02:checked ~ .slidelist .slideitem {left:-100%;}
+#wrap #margin .con05 #slide03:checked ~ .slidelist .slideitem {left:-200%;}
+#wrap #margin .con05 #slide04:checked ~ .slidelist .slideitem {left:-300%;}
+
+#wrap #margin .con05 .slide-control [class*="control"] {display:none;}
+#wrap #margin .con05 #slide01:checked ~ .slide-control .control01 {display:block;}
+#wrap #margin .con05 #slide02:checked ~ .slide-control .control02 {display:block;}
+#wrap #margin .con05 #slide03:checked ~ .slide-control .control03 {display:block;}
+#wrap #margin .con05 #slide04:checked ~ .slide-control .control04 {display:block;}
+
+[type="radio"] {
+    vertical-align: middle;
+    appearance: none;
+    border: max(1px, 0.1em) solid white;
+    border-radius: 50%;
+    width: 1.25em;
+    height: 1.25em;
+    transition: border 0.5s ease-in-out;
+  }
+
+[type="radio"]:checked {
+    border: 0.4em solid white;
+    background-color: white;
+  }
+
+    
+/*con07*/
+#wrap #margin .con07{width:1920px; height:464px; display:flex; flex-direction: column; justify-content: center; align-items: center;
+background:url(../images/branding/brand_sky.png) no-repeat; background-position:bottom; background-size:cover; background-attachment:fixed;}
+#wrap #margin .con07 .profile_about{width:345px; height:100px; display:flex; justify-content: center; align-items: center;
+background:url(../images/profile/profile_more.png) no-repeat; background-position:center;}
+ 
+
+/*더보기*/
+#wrap #margin .main01 .mainplus .maincircle{Width:51px; height:51px; border-radius:100%;
+display:flex; justify-content: center; align-items: center; position:relative; z-index:3;} 
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] {display:none;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label {
+width:41px; height:41px; position:absolute; z-index:3; cursor:pointer; width:51px; height:51px; border: 1.5px solid #7a7c7e ; border-radius:100%;
+display:flex; justify-content: center; align-items: center;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span {display:block; position:absolute;
+border-radius:30px; background:#000; transition:all .35s;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(90deg);
+width:14px; height:2px;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(2) {bottom:50%; transform:translateY(100%);
+width:14px; height:2px;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1) {
+top:20px; transform:translateY(-50%) rotate(-0deg);}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2) {
+bottom:20px;}
+
+/* Shared three-line menu icon. */
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label{
+    position:relative;
+    width:60px;
+    height:40px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span{
+    left:0;
+    width:100% !important;
+    height:5px !important;
+    margin:0;
+    background:#555555;
+    transition:.3s;
+}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(1){top:0; transform:none !important;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(2){top:50%; bottom:auto; transform:translateY(-50%);}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(3){top:auto; bottom:0; transform:none !important;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label:hover span{background:#176B8C;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1){top:50%; transform:translateY(-50%) rotate(45deg);}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2){opacity:0;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(3){bottom:50%; transform:translateY(50%) rotate(-45deg);}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform:translateY(-50%) rotate(45deg) !important;
+}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg) !important;
+}
+
+.sidebar{width:41%; height:100%; background:url(../images/main/hambuger_bg.png)
+no-repeat; position:fixed; top:0; left:-960px; z-index:2; transition:all .35s;}
+input[id="menuicon"]:checked + label + .sidebar{left:0;}
+
+
+#wrap #margin .main01 .mainplus .maincircle .sidebar{display:flex; align-items: center;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu{width:404px; height:408px; 
+display:flex; flex-direction:column; justify-content: space-between; margin-left:116px;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Branding{width:170px; height:38px; 
+background:url(../images/main/hambuger_branding01.png) no-repeat; }
+#wrap #margin .main01 .mainplus .maincircle .sidebar .About{width:170px; height:38px; 
+background:url(../images/main/hambuger_about01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Portfolio{width:170px; height:38px;
+background:url(../images/main/hambuger_portfolio01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Process{width:170px; height:38px;
+background:url(../images/main/hambuger_process01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Experience{width:170px; height:38px; 
+background:url(../images/main/hambuger_experience01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Branding:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_branding02.png) no-repeat; }
+#wrap #margin .main01 .mainplus .maincircle .sidebar .About:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_about02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Portfolio:hover{width:170px; height:38px;
+background:url(../images/main/hambuger_portfolio02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Process:hover{width:170px; height:38px;
+background:url(../images/main/hambuger_process02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Experience:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_experience02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .dim{width:1920px; height:1000px; background: black; position:fixed;
+top: 0; left: 0; opacity:0%; display:none; transition: all .2s;}   
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked+label+.sidebar+.dim{opacity:80%; display: block;} 
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio ul{height:142px; display:none; list-style:none; margin:0px; padding:8px 4px 4px 4px;
+position:absolute; left:286px; background-color:white;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio:hover > ul{display:block;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio ul a{display:block; width:120px; height:20px; background-color:white;
+padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio ul a:hover{opacity:0.8;}
+
+/*탑버튼*/
+#wrap .topBtn{
+    width:51px;
+    height:51px;
+    position: fixed;
+    right: 50px; 
+    bottom: 50px;
+    z-index: 999;
+    cursor: pointer;
+    background-size:cover;}
+#wrap .topBtn:hover {opacity:50%;}
+
+
+/*푸터애니*/
+#wrap #margin .con07 .btn01{width:345px; height:65px;}
+#wrap #margin .con07 .btn01::before{
+    content: '';
+    position: relative;
+    bottom: -70px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background: #56c8cf;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+  }
+#wrap #margin .con07 .btn01:hover::before{
+    -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}

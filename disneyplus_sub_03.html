@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <title>시리즈모음</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        .sub01{width:1920px; height:4230px; margin:auto; background:url(./images/portfolio_disney/sub03.png);}
+        .sub01 .menu{width:1920px; height:315px; background:url(./images/portfolio_disney/top.png) no-repeat; display:flex; z-index:21; position:absolute;}
+        .sub01 .menu .menucenter{margin:0 auto; width:1300px; height:100px; display:flex; justify-content: space-between;}
+        .sub01 .menu .menucenter .menulogo{display:flex; align-items: center;} 
+        .sub01 .menu .menucenter .menulist{width:396px; height:100px; display:flex; justify-content: space-between; 
+        align-items: center;}
+        .sub01 .menu .menucenter .menulist .menu01 a{color:white; font-weight:400; font-size:15px; text-decoration:none;}
+        .sub01 .menu .menucenter .menulist a:hover{color:#1fafd2; font-weight:400; font-size:15px;}
+        .sub01 .menu .menucenter .menuicon{width:98px; height:100px; display:flex; justify-content: space-between; 
+        align-items: center;}
+
+        .sub01 .topBtn{
+        width:77px;
+        height:77px;
+        position: fixed;
+        right: 70px; 
+        bottom: 70px;
+        z-index: 999;
+        display:flex; justify-content: center; align-items: center;}
+        .sub01 .topBtn a{width:77px; height:77px; border-radius:50%; transition: 0.2s;}
+        .sub01 .topBtn a:hover{width:77px; height:77px;
+        box-shadow: 0 0 5px #1fafd2, 0 0 25px #1fafd2, 0 0 20px #1fafd2, 0 0 50px #1fafd2; background:#1fafd2;}
+    </style>
+
+</head>
+<body>
+    <div class="sub01">
+        <div class="menu">
+            <div class="menucenter">
+                <div class="menulogo"><a href="./disneyplus.html"><img src="./images/portfolio_disney/pluslogo.png" width="110px" height="60px"></a></div>
+                <div class="menulist">
+                    <div class="menu01"><a href="./disneyplus_sub_01.html">관심콘텐츠</a></div>
+                    <div class="menu01"><a href="./disneyplus_sub_02.html">오리지널</a></div>
+                    <div class="menu01"><a href="./disneyplus_sub_03.html">시리즈모음</a></div>
+                    <div class="menu01"><a href="./disneyplus_sub_04.html">함께보기</a></div>
+                    <div class="menu01"><a href="./disneyplus_sub_05.html">영화리뷰</a></div>
+                <!-- 링크다 걸었는데 서브페이지 누르면 크기가 너무 작게 나와요!-->
+                </div>
+                <div class="menuicon">
+                    <div class="icon01"><a href=#><img src="./images/portfolio_disney/search.png" width="18x" height="16px"></a></div>
+                    <div class="icon02"><a href=#><img src="./images/portfolio_disney/profile.png" width="15px" height="17px"></a></div>
+                    <div class="icon03"><a href=#><img src="./images/portfolio_disney/notice.png" width="17px" height="17px"></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="topBtn"><a href="#"><img src="./images/portfolio_disney/topbutton.png"></a></div>
+        <script>
+            $(function() {
+              $(window).scroll(function() { 
+                if ($(this).scrollTop() > 200) { 
+                  $('.topBtn').fadeIn(); } 
+                else { $('.topBtn').fadeOut(); }
+              }); 
+              $(".topBtn").click(function() { 
+                 $('html, body').animate({ scrollTop : 0  }, 300); 
+                return false; });
+            });
+        </script>
+    </div>
+</body>   
+
+</html>

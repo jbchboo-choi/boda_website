@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>최보경_디즈니플러스</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="css/disneyplus.css" rel="stylesheet" type="text/css"/>
+        <link href="js/top.js" rel="stylesheet" type="text/js"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+        </style>
+    </head> 
+    <body>
+        <div id="wrap">         
+            <div class="menu">
+                <div class="menucenter">
+                    <div class="menulogo"><a href="./disneyplus.html"><img src="./images/portfolio_disney/pluslogo.png" width="110px" height="60px"></a></div>
+                    <div class="menulist">
+                        <div class="menu01"><a href="./disneyplus_sub_01.html">관심콘텐츠</a></div>
+                        <div class="menu01"><a href="./disneyplus_sub_02.html">오리지널</a></div>
+                        <div class="menu01"><a href="./disneyplus_sub_03.html">시리즈모음</a></div>
+                        <div class="menu01"><a href="./disneyplus_sub_04.html">함께보기</a></div>
+                        <div class="menu01"><a href="./disneyplus_sub_05.html">영화리뷰</a></div>
+                    </div>
+                    <div class="menuicon">
+                        <div class="icon01"><a href=#><img src="./images/portfolio_disney//search.png" width="18x" height="16px"></a></div>
+                        <div class="icon02"><a href=#><img src="./images/portfolio_disney/profile.png" width="15px" height="17px"></a></div>
+                        <div class="icon03"><a href=#><img src="./images/portfolio_disney/notice.png" width="17px" height="17px"></a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="margin">
+                <section class="con01">
+                        <div class="con01cirle">
+                            <div class="con01button">
+                              <span><img src="./images/portfolio_disney/visualbutton.png"></span>
+                            </div>
+                         </div>   
+                </section>
+
+                <section class="con02">
+                    <div class="con02contents"><img src="./images/portfolio_disney/contents01.png"></div>
+                </section>
+                
+                <section class="con03">
+                    <div class="btn_left"><span><img src="./images/portfolio_disney/leftside.png"></span></div>
+                    <div class="con03wrap">
+                        <div class="con03cotentstitle"><img src="./images/portfolio_disney/contents03title.png"></div>
+                        <!-- 여기 페이지 좌우 롤링 걸려고 js파일 받아서 넣었는데 잘안되는 것 같아요!-->
+                        <div class="slide_wrapper">
+                            <div class="slides">
+                                <div class="banner01">
+                                    <div class="button03"><span><img src="./images/portfolio_disney/enterbutton.png"></span></div>
+                                </div>
+                                <div class="banner02">
+                                    <div class="button03"><span><img src="./images/portfolio_disney/enterbutton.png"></span></div>
+                                </div>
+                                <div class="banner03">
+                                    <div class="button03"><span><img src="./images/portfolio_disney/enterbutton.png"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="con03contents01">
+                            <div class="con03box01">
+                                <div class="con03button"></div>
+                            </div>
+                            <div class="con03box02"></div>
+                            <div class="con03box03"></div>
+                        </div>
+                    </div>
+                    <div class="btn_right"><span><img src="./images/portfolio_disney/rightside.png"></span></div>
+                </section>
+
+                <section class="con04">
+                    <div class="con04contents01"><img src="./images/portfolio_disney/contents04title.png"></div>
+                    <div class="con04contents02">
+                        <div class="con04movie01">이터널스</div>
+                        <div class="con04movie02">엑스맨</div>
+                        <div class="con04movie02">프리가이</div>
+                        <div class="con04movie02">알라딘</div>
+                        <div class="con04movie02">킹스맨</div>
+                        <div class="con04movie03">미녀와 야수</div>
+                    </div>
+                    <div class="con04contents03">
+                        <div class="con04contents03_1">
+                            <img src="./images/portfolio_disney/contents04text.png">
+                        </div>
+                        <div class="con04contents03_2">
+                            <div class="con04img">
+                                <div class="button04">
+                                <span><img src="./images/portfolio_disney/contents04right_play.png"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <se
+                ction class="con05">
+                    <div class="btn_left"><span><img src="./images/portfolio_disney/leftside.png"></span></div>
+                    <div class="con05wrap">
+                        <div class="con05contents01"><img src="./images/portfolio_disney/contents05title.png"></div>
+                        <div class="con05box">
+                            <div class="con05box01">
+                                <div class="button05"><span><img src="./images/portfolio_disney/playbutton.png"></span></div>
+                            </div>
+                            <div class="con05box02">
+                                <div class="button05"><span><img src="./images/portfolio_disney/playbutton.png"></span></div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <div class="btn_right"><span><img src="./images/portfolio_disney/rightside.png"></span></div>
+                </se>    
+            </div>
+
+            <div class="topBtn"><span><img src="./images/portfolio_disney/topbutton.png"></span></div>
+            <div class="lightBtn"><a href="./disneyplus_light.html"><img src="./images/portfolio_disney/darkbutton.png"></a></div>
+
+            <!--탑버튼 !-->
+             <script>
+                $(function() {
+                  $(window).scroll(function() { 
+                    if ($(this).scrollTop() > 200) { 
+                      $('.topBtn').fadeIn(); } 
+                    else { $('.topBtn').fadeOut(); }
+                  }); 
+                  $(".topBtn").click(function() { 
+                     $('html, body').animate({ scrollTop : 0  }, 300); 
+                    return false; });
+                });
+            </script>
+
+            <!-- 라이트모드 !-->
+            <script>
+                $(function() {
+                    $(window).scroll(function() { 
+                    if ($(this).scrollTop() > 200) { 
+                        $('.lightBtn').fadeIn(); } 
+                    else { $('.lightBtn').fadeOut(); }
+                    }); 
+                });
+            </script>
+
+     
+        </div>
+    </body>
+    <script type="text/javascript" src="js/rolling_1.js"></script>
+</html>
+
+ 

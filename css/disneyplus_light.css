@@ -1,0 +1,177 @@
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif; color:black;}
+#wrap{margin:0 auto; width:1920px; height:4500px; background:#eaeef2;}
+#margin{width:1300px; margin:0 auto; height:4000px; z-index:20; position:absolute;}
+.clear{clear: both;}
+
+/*menu*/
+#wrap .menu{width:1920px; height:315px; background:url(../images/portfolio_disney/top.png) no-repeat; display:flex; z-index:21; position:absolute;}
+#wrap .menu .menucenter{margin:0 auto; width:1300px; height:100px; display:flex; justify-content: space-between;}
+#wrap .menu .menucenter .menulogo{display:flex; align-items: center;} 
+#wrap .menu .menucenter .menulist{width:396px; height:100px; display:flex; justify-content: space-between; 
+align-items: center;}
+#wrap .menu .menucenter .menulist .menu01 a{color:white; font-weight:400; font-size:15px; text-decoration:none;}
+#wrap .menu .menucenter .menulist a:hover{color:#1fafd2; font-weight:400; font-size:15px;}
+#wrap .menu .menucenter .menuicon{width:98px; height:100px; display:flex; justify-content: space-between; 
+align-items: center;}
+
+
+/*con01*/
+#wrap #margin .con01{width:1920px; height:896px; background:url(../images/portfolio_disney/visual.jpg) no-repeat; background-position:center;
+display:flex; align-items: center; justify-content: center}
+
+/*con02*/
+#wrap #margin .con02{width:1920px; height:818px; display:flex; align-items: center; justify-content: center;
+background:white }
+
+/*con03*/
+#wrap #margin .con03{width:1920px; height:920px; display:flex; justify-content: center; background:#eaeef2}
+#wrap #margin .con03 .con03wrap{width:1300px; height:920px; display:flex; flex-direction: column;
+align-items: center;}
+#wrap #margin .con03 .con03wrap .banner_container{width:1300px; height:442px; overflow: hidden; margin-top:84px;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper{width:2800px; height:442px; display:flex;}
+#wrap #margin .con03 .con03wrap .con03cotentstitle{margin-top:167px;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .banner01{width:413px; height:443px; 
+background:url(../images/portfolio_disney/contents03_1.png) no-repeat; margin-right:30px; display:flex;  justify-content: flex-end; align-items: flex-end;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .banner02{width:413px; height:443px; 
+background:url(../images/portfolio_disney/contents03_2.png) no-repeat; margin-right:30px; display:flex;  justify-content: flex-end; align-items: flex-end;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .banner03{width:413px; height:443px; 
+background:url(../images/portfolio_disney/contents03_3.png) no-repeat; margin-right:30px; display:flex;  justify-content: flex-end; align-items: flex-end;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .banner04{width:413px; height:443px; 
+background:url(../images/portfolio_disney/contents03_1.png) no-repeat; margin-right:30px; display:flex;  justify-content: flex-end; align-items: flex-end;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .banner05{width:413px; height:443px; 
+background:url(../images/portfolio_disney/contents03_2.png) no-repeat; margin-right:30px; display:flex;  justify-content: flex-end; align-items: flex-end;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .banner06{width:413px; height:443px; 
+background:url(../images/portfolio_disney/contents03_3.png) no-repeat; display:flex;  justify-content: flex-end; align-items: flex-end;}
+
+/*con04*/
+#wrap #margin .con04{width:1920px; height:945px; display:flex; flex-direction: column; justify-content: center; background:url(../images/portfolio_disney/contents04bg_L.png) no-repeat; align-items: center;}
+#wrap #margin .con04contents02{height:72px; display:flex; margin-top:84px; background:url(../images/portfolio_disney/gradientbutton_bg.png) no-repeat;
+border-radius:50px;}
+#wrap #margin .con04contents02 .con04movie01{width:217px; height:70px; color:white; font-weight:200; font-size:16px;
+display:flex; align-items: center; justify-content: center; border:1px solid #1fafd2; border-top-left-radius:50px; border-bottom-left-radius:50px;
+background:white; color:#353535;}
+#wrap #margin .con04contents02 .con04movie02{width:217px; height:70px; color:white; font-weight:200; font-size:16px;
+display:flex; align-items: center; justify-content: center; border-right:1px solid white;}
+#wrap #margin .con04contents02 .con04movie03{width:217px; height:70px; color:white;  font-weight:200; font-size:16px;
+display:flex; align-items: center; justify-content: center; border:1px solid #1fafd2;
+border-top-right-radius:50px; border-bottom-right-radius:50px;}
+#wrap #margin .con04contents03{width:1300px; height:300px; display:flex; justify-content: space-between; margin-top:115px;}
+#wrap #margin .con04contents03 .con04contents03_2 .con04img{width:551px; height:300px; display:flex; justify-content: center;
+align-items: center; background:url(../images/portfolio_disney/contents04right.png) no-repeat;}
+
+/*con05*/
+#wrap #margin .con05{width:1920px; height:1149px; display:flex; background:url(../images/portfolio_disney/footer_L.jpg) no-repeat; justify-content: center;}
+#wrap #margin .con05 .con05wrap{width:1300px; height:1149px; display:flex; align-items: center; flex-direction: column;}
+#wrap #margin .con05 .con05contents01{margin-top:167px;}
+#wrap #margin .con05 .con05box{width:1300px; height:262px; display:flex; margin-top:84px; justify-content: space-between;}  
+#wrap #margin .con05 .con05box01{width:642px; height:262px; background:url(../images/portfolio_disney/contents05box01_L.png) no-repeat;
+display:flex; justify-content: flex-start; align-items: flex-end;}  
+#wrap #margin .con05 .con05box02{width:642px; height:262px; background:url(../images/portfolio_disney/contents05box02_L.png) no-repeat;
+display:flex; justify-content: flex-start; align-items: flex-end;} 
+
+
+/*버튼효과*/
+#wrap #margin .con01 .con01cirle .con01button{width:212px; height:52px; margin-bottom:176px; display:flex; justify-content: center;}
+#wrap #margin .con01 .con01cirle .con01button span{width:212px; height:52px; margin-bottom:176px; border-radius:30px;
+transition: 0.2s;}
+#wrap #margin .con01 .con01cirle .con01button span:hover{margin-bottom:176px; 
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2;}
+#wrap #margin .con03 .btn_left{width:67px; height:67px; display:flex; justify-content: center; margin-top:503px;  margin-right:41px; 
+align-items: center;}
+#wrap #margin .con03 .btn_left span{width:67px; height:67px; border-radius:50%; transition: 0.2s;} 
+#wrap #margin .con03 .btn_left span:hover{width:67px; height:67px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2; background:#1fafd2;}
+#wrap #margin .con03 .btn_right{width:67px; height:67px; display:flex; justify-content: center; margin-top:503px;  margin-left:41px;
+align-items: center;}
+#wrap #margin .con03 .btn_right span{width:67px; height:67px; border-radius:50%; transition: 0.2s;} 
+#wrap #margin .con03 .btn_right span:hover{width:67px; height:67px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2; background:#1fafd2;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .button03{width:108px; height:26px; margin-right:37px;
+margin-bottom:50px; display:flex; justify-content: center;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .button03 span{width:108px; height:26px; 
+margin-right:37px; margin-bottom:50px; border-radius:30px; transition: 0.2s;}
+#wrap #margin .con03 .con03wrap .banner_container .banner_wrapper .button03 spana:hover{width:108px; height:26px; margin-right:37px; margin-bottom:50px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2;}
+#wrap #margin .con04contents03 .con04contents03_2 .con04img .button04{width:73px; height:73px; display:flex; justify-content: center;}
+#wrap #margin .con04contents03 .con04contents03_2 .con04img .button04 span{width:73px; height:73px; border-radius:50%; transition: 0.2s;}
+#wrap #margin .con04contents03 .con04contents03_2 .con04img .button04 span:hover{width:73px; height:73px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2; background:#1fafd2;}
+#wrap #margin .con05 .btn_left{width:67px; height:67px; display:flex; justify-content: center; margin-top:423px; margin-right:41px; 
+align-items: center;}
+#wrap #margin .con05 .btn_left span{width:67px; height:67px; border-radius:50%; transition: 0.2s;} 
+#wrap #margin .con05 .btn_left span:hover{width:67px; height:67px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2; background:#1fafd2;}
+#wrap #margin .con05 .btn_right{width:67px; height:67px; display:flex; justify-content: center; margin-top:423px;  margin-left:41px;
+align-items: center;}
+#wrap #margin .con05 .btn_right span{width:67px; height:67px; border-radius:50%; transition: 0.2s;} 
+#wrap #margin .con05 .btn_right span:hover{width:67px; height:67px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2; background:#1fafd2;}
+#wrap #margin .con05 .button05{width:108px; height:26px; margin-left:30px; margin-bottom:44px; display:flex; justify-content: center;}
+#wrap #margin .con05 .button05 span{width:108px; height:26px; margin-left:60px; margin-bottom:44px; border-radius:30px; transition: 0.2s}
+#wrap #margin .con05 .button05 span:hover{width:108px; height:26px; margin-left:60px; margin-bottom:44px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2;}
+
+/*비주얼애니*/
+#wrap #margin .con01 .con01cirle{width:670px; height:667px; background:url(../images/portfolio_disney/circle.png) no-repeat;  display:flex; align-items: center;
+margin-top:90px;  justify-content: center; align-items: flex-end;}
+    
+#wrap #margin .con01 .con01cirle {
+    width:670px;
+    height:667px;
+    border-radius: 50%;
+    box-shadow:
+      0 0 20px #fff,
+      -20px 0 80px #2263af
+      20px 0 80px #1fafd2,
+      inset 0 0 50px #fff,
+      inset 50px 0 80px #2263af,
+      inset -50px 0 80px #1fafd2,
+      inset 50px 0 300px #2263af,
+      inset -50px 0 300px #1fafd2;
+    animation: pulsate 6s linear infinite;
+  }
+  
+  @keyframes pulsate {
+    50% {
+      box-shadow:
+        0 0 20px #fff,
+        20px 0 80px #2263af,
+        -20px 0 80px #1fafd2,
+        inset 0 0 50px #fff,
+        inset -50px 0 80px #2263af,
+        inset 50px 0 80px #1fafd2,
+        inset -50px 0 300px #2263af,
+        inset 50px 0 300px #1fafd2;
+    }
+  }
+
+/*탑버튼*/
+#wrap .topBtn{
+  width:77px;
+  height:77px;
+	position: fixed;
+	right: 70px; 
+	bottom: 70px;
+	z-index: 999;
+  display:flex; justify-content: center; align-items: center;}
+
+#wrap .topBtn span{width:77px; height:77px; border-radius:50%; transition: 0.2s; background:#1fafd2;}
+  
+
+#wrap .topBtn span:hover{width:77px; height:77px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2}
+
+#wrap .lightBtn{
+  width:70px;
+  height:70px;
+	position: fixed;
+	right: 75px; 
+	bottom: 180px;
+	z-index: 999;
+  display:flex; justify-content: center; align-items: center;}
+
+#wrap .lightBtn a{width:77px; height:77px; border-radius:50%; transition: 0.2s; background:#1fafd2;}
+  
+#wrap .lightBtn a:hover{width:77px; height:77px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2}

@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* reset CSS */
+
+html {
+	font-size:100.01%;
+}
+body {
+	font:normal 12px "애플고딕", AppleGothic, "돋움", dotum, Arial, Verdana, sans-serif;
+	line-height:1.3;
+	color:#666666;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+}
+br	{
+	letter-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:1em;
+}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+	margin:0;
+	padding:0;
+}
+ul, ol {
+	list-style:none;
+}
+img {
+	border:0;
+}
+table {
+	width:100%;
+	border-collapse: collapse;
+	font-size:1em;
+}
+table caption {
+	display:none;
+}
+a:link, a:visited {
+	color: #666666;
+	text-decoration:none;
+}
+a:hover {
+	color: #666666;
+	text-decoration:none;
+}
+
+/* Shared site top button component. */
+.site-top-button{
+	box-sizing:border-box;
+	width:56px !important;
+	height:56px !important;
+	padding:0;
+	border:1px solid rgba(86,198,208,.45);
+	border-radius:50%;
+	background:rgba(86,198,208,.16) !important;
+	color:rgba(86,198,208,.72);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font:inherit;
+	cursor:pointer;
+	transition:background-color .25s ease, border-color .25s ease, color .25s ease, transform .25s ease;
+}
+.site-top-button > span{
+	width:auto !important;
+	height:auto !important;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	line-height:1;
+	background:transparent !important;
+}
+.site-top-button img{
+	display:none !important;
+}
+.site-top-button > span::before{
+	content:'⌃';
+	display:block;
+	font-size:21px;
+	font-weight:600;
+	line-height:.72;
+}
+.site-top-button > span small{
+	display:block;
+	margin-top:4px;
+	font-size:10px;
+	font-weight:600;
+	letter-spacing:.04em;
+}
+.site-top-button:hover,
+#wrap .site-top-button:hover,
+.site-top-button:focus-visible,
+#wrap .site-top-button:focus-visible{
+	border-color:#56c6d0;
+	background:#56c6d0 !important;
+	color:#fff;
+	opacity:1 !important;
+	outline:none;
+	transform:translateY(-2px);
+}
+fieldset {
+	border:0;
+}
+legend {
+	display:none;
+}
+select, input, textarea {
+	font:normal 1em "애플고딕", AppleGothic, "굴림", gulim, Arial, Verdana, sans-serif;
+	color:#797b80;
+	vertical-align:middle;
+}
+em {
+	font-style: normal;
+}
+hr {
+	clear:both;	
+	height:0; 
+	visibility:hidden; 
+	overflow:hidden;
+	display: none;
+}

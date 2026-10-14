@@ -1,0 +1,220 @@
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif; color:black;}
+#wrap{margin:0 auto; width:1920px; height:10000px;}
+#margin{width:1300px; margin:0 auto;  height:10000px; position:absolute;}
+.clear{clear: both;}
+
+
+/*con01*/
+#wrap #margin .con01{width:1920px; height:950px; display:flex; background:#99e2f0;}
+#wrap #margin .con01  .main_img01{width:1920px; height:955px; background:url(../images/portfolio_event/main_img01.png) no-repeat;
+background-position:bottom; z-index:4; position:absolute;}
+#wrap #margin .con01 .main_img02{width:1920px; height:900px; background:url(../images/portfolio_event/main_img02.png) no-repeat;
+background-position:top;}
+#wrap #margin .con01 .main_text{width:1920px; height:900px; background:url(../images/portfolio_event/main_text.png) no-repeat;
+background-position:top; z-index:5; position:absolute; margin-top:95px;}
+#wrap #margin .con01 .windmill{width:407px; height:1000px; margin-left:285px; z-index:2; position:absolute}
+#wrap #margin .con01 .windmill .windmillcenter{width:40px; height:40px; background:url(../images/portfolio_event/windcircle.png) no-repeat; background-position:top;
+position:absolute; top:505px; left:180px; z-index:1;}
+#wrap #margin .con01 .windmill .windmill01{width:400px; height:400px; background:url(../images/portfolio_event/windmill01.png) no-repeat;
+background-position:center center; margin-top:320px;}
+#wrap #margin .con01 .windmill .windmill02{width:407px; height:384px; background:url(../images/portfolio_event/windmill02.png) no-repeat;
+background-position:center; margin-top:500px; z-index:-1; position:absolute;}
+#wrap #margin .con01 .main_cloud{width:1920px; height:900px; z-index:1; position:absolute;}
+#wrap #margin .con01 .main_cloud .cloud01{width:92px; height:45px; background:url(../images/portfolio_event/cloud01.png) no-repeat;}
+#wrap #margin .con01 .main_cloud .cloud02{width:165px; height:81px; background:url(../images/portfolio_event/cloud02.png) no-repeat;}
+#wrap #margin .con01 .main_cloud .cloud03{width:213px; height:105px; background:url(../images/portfolio_event/cloud03.png) no-repeat;}
+#wrap #margin .con01 .main_cloud .cloud04{width:372px; height:184px; background:url(../images/portfolio_event/cloud04.png) no-repeat;}
+#wrap #margin .con01 .main_cloud .cloud05{width:196px; height:97px; background:url(../images/portfolio_event/cloud05.png) no-repeat;}
+
+/*풍차애니메이션*/
+#wrap #margin .con01 .windmill .windmill01{animation:rolling01 5s linear infinite; border-radius:50%;
+  transform-origin:center; position:absolute;}
+  @keyframes rolling01 {
+    0% {transform:rotate(0);}
+    100% {transform:rotate(360deg);}
+  }
+
+/*풍차 구름*/
+#wrap #margin .con01 .main_cloud .cloud01{position:absolute; top:-10px; left:-100px; animation:move infinite ease-out 18s;}
+#wrap #margin .con01 .main_cloud .cloud02{position:absolute; top:248px; left:-180px;; animation:move infinite ease 19s;}
+#wrap #margin .con01 .main_cloud .cloud03{position:absolute; top:357px; left:-215px; animation:move infinite ease-out 18s;}
+#wrap #margin .con01 .main_cloud .cloud04{position:absolute; top:30px; left:-372px; animation:move infinite linear 20s;}
+#wrap #margin .con01 .main_cloud .cloud05{position:absolute; top:424px; left:-196px; animation:move infinite ease-in 19s;}
+@keyframes move {
+	100% {left:110%;}
+}
+
+/*con02*/
+#wrap #margin .con02{width:1920px; height:3420px; display:flex; background:url(../images/portfolio_event/con02bg.png) no-repeat; justify-content: center;
+flex-wrap: wrap; align-content: flex-start; background-position:top;}
+#wrap #margin .con02 .overview{width:1300px; height:620px; display:flex; flex-wrap: wrap; 
+align-content: space-between; justify-content: center; margin-top:118px;}
+#wrap #margin .con02 .typo{width:1300px; height:719px; display:flex; flex-wrap: wrap; 
+align-content: space-between; justify-content: center; margin-top:118px;}
+#wrap #margin .con02 .color{width:1300px; height:532px; display:flex; flex-wrap: wrap; 
+align-content: space-between; justify-content: center;margin-top:118px;}
+#wrap #margin .con02 .work{width:1300px; height:784px; display:flex; flex-wrap: wrap;
+align-content: space-between; justify-content: center; margin-top:118px; }
+#wrap #margin .con02 .work03{width:1920px; height:408px; display:flex; justify-content: space-between;}
+#wrap #margin .workbg{width:1920px; height:191px; margin-top:-320px; margin-top:-600px; }
+#wrap #margin .con02_1{width:1920px; height:400px; background:url(../images/portfolio_event/section02_2.png) no-repeat;
+position:absolute; margin-top:-320px;}
+
+/*con03*/
+#wrap #margin .con03{width:1920px; height:6520px; display:flex; background:#d6f3f9; justify-content: center;
+flex-wrap: wrap; align-content: flex-start; margin-top:-200px;}
+#wrap #margin .con03 .event{width:1920px; height:100px; margin-top:250px; display:flex;
+justify-content: center;}
+#wrap #margin .con03 .eventpage{width:1300px; height:4550px; margin-top:118px; overflow: hidden;}
+#wrap #margin .con03 .eventpage .eventmain{width:1300px; height:1000px; background:#99e2f0; overflow: hidden;}
+#wrap #margin .con03 .eventpage .eventmain .main_img01{width:1300px; height:1000px; background:url(../images/portfolio_event/eventmain_img01.png) no-repeat;
+background-position:bottom; z-index:4; position:absolute;}
+#wrap #margin .con03 .eventpage .eventmain .main_img02{width:1300px; height:880px; background:url(../images/portfolio_event/main_img02.png) no-repeat;
+background-position:bottom; z-index:3; position:absolute;}
+#wrap #margin .con03 .eventpage .eventmain .main_text{width:1300px; height:1000px; background:url(../images/portfolio_event/eventtitle.png) no-repeat;
+background-position:top; z-index:5; position:absolute; margin-top:85px;}
+#wrap #margin .con03 .eventpage .eventmain .windmill{width:407px; height:1000px; z-index:3; position:absolute}
+#wrap #margin .con03 .eventpage .eventmain .windmill .windmillcenter{width:40px; height:40px; background:url(../images/portfolio_event/windcircle.png) no-repeat; background-position:top;
+position:absolute; top:505px; left:180px; z-index:1;}
+#wrap #margin .con03 .eventpage .eventmain .windmill .windmill01{width:400px; height:400px; background:url(../images/portfolio_event/windmill01.png) no-repeat;
+background-position:center center; margin-top:320px;}
+#wrap #margin .con03 .eventpage .eventmain .windmill .windmill02{width:407px; height:384px; background:url(../images/portfolio_event/windmill02.png) no-repeat;
+background-position:center; margin-top:500px; margin-left:-3px; z-index:-1; position:absolute;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud{width:1300px; height:1000px; z-index:1; position:absolute; overflow: hidden;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud01{width:92px; height:45px; background:url(../images/portfolio_event/cloud01.png) no-repeat;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud02{width:165px; height:81px; background:url(../images/portfolio_event//cloud02.png) no-repeat;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud03{width:213px; height:105px; background:url(../images/portfolio_event/cloud03.png) no-repeat;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud04{width:372px; height:184px; background:url(../images/portfolio_event//cloud04.png) no-repeat;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud05{width:196px; height:97px; background:url(../images/portfolio_event/cloud05.png) ;}
+
+/*con03 이벤트내용*/
+#wrap #margin .con03 .eventpage .eventbg{width:1300px; height:3550px; background:url(../images/portfolio_event/eventbg_6.png) no-repeat; margin-top:-2px;} 
+#wrap #margin .con03 .eventpage .eventbg .event01{width:1300px; height:855px;} 
+#wrap #margin .con03 .eventpage .eventbg .event01 .gifts{padding-top:340px;}
+#wrap #margin .con03 .eventpage .eventbg .event01 .button01{width:1300px; display:flex; justify-content: center; margin-top:-50px;}
+#wrap #margin .con03 .eventpage .eventbg .event02{width:1300px; display:flex; flex-direction: column;
+align-items: center;} 
+#wrap #margin .con03 .eventpage .eventbg .event02 .coment{width:1030px; height:850px;
+display:flex; justify-content: space-between; align-items: flex-end;}
+#wrap #margin .con03 .eventpage .eventbg .event02 .coment .coment01{width:252px}
+#wrap #margin .con03 .eventpage .eventbg .event02 .coment .coment02{width:252px}
+#wrap #margin .con03 .eventpage .eventbg .event02 .icons{width:1030px; height:400px;
+display:flex; justify-content: space-between; align-items: flex-end;}
+#wrap #margin .con03 .eventpage .eventbg .event02 .icons .camera{width:207px; height:268px;
+display:flex; justify-content:center; align-items: center; margin-bottom:5px;}
+#wrap #margin .con03 .eventpage .eventbg .event02 .icons .mobile{width:207px; height:268px;
+display:flex; justify-content:center; align-items: center;}
+#wrap #margin .con03 .eventpage .eventbg .event02 .icons .computer{width:207px; height:268px;
+display:flex; justify-content:center; align-items: center; margin-bottom:11px; margin-right:2px;}
+#wrap #margin .con03 .eventpage .eventbg .event03{width:1300px; height:1130px; display:flex; justify-content: flex-end;
+flex-direction: column; align-items:center;} 
+#wrap #margin .con03 .eventpage .eventbg .event03 .projecter{width:1172px; height:390px; display:flex; justify-content: space-between;}
+#wrap #margin .con03 .eventpage .eventbg .event03 .projecter .projecter01{width:562px; height:390px;
+display:flex; justify-content:center; align-items: center; padding-top:60px;}
+#wrap #margin .con03 .eventpage .eventbg .event03 .projecter .projecter02{width:562px; height:390px;
+display:flex; justify-content:center; align-items: center; padding-top:60px;}
+#wrap #margin .con03 .eventpage .eventbg .event03 .button02{width:1300px; display:flex; justify-content: center; margin-top:163px;}
+#wrap #margin .con03 .eventpage .eventbg .event04{width:1300px; height:312px;} 
+#wrap #margin .con03 .eventpage .eventbg .event04 .lgiht{width:336px; height:312px;
+display:flex; justify-content:center; align-items: center; margin-left:8px;}
+
+/*con03 배너*/
+#wrap #margin .con03 .banner{width:1300px; height:203px; display:flex; flex-wrap: wrap; 
+align-content: space-between; justify-content: center; margin-top:118px;}
+#wrap #margin .con03 .banner .bannertitle{width:1300px; display:flex; justify-content: center;}
+#wrap #margin .con03 .banner .banner01{width:1300px; display:flex; justify-content:left;}
+#wrap #margin .con03 .banner02{width:1300px; margin-left:-120px; margin-top:67px;}
+#wrap #margin .con03 .banner03{width:1300px; display:flex; justify-content: center; margin-top:67px;}
+#wrap #margin .con03 .banner03 .banner03_1{margin-left:-150px;}
+#wrap #margin .con03 .banner03 .banner03_2{margin-left:-150px;}
+
+/*con04 배너*/
+#wrap #margin .con04{width:1920px; height:1240px; background:url(../images/portfolio_event/finalbg.png) no-repeat;
+display:flex; justify-content: center; align-items: center; margin-top:-200px;}
+#wrap #margin .con04 .epil{width:1300px; height:878px;
+display:flex; flex-direction: column; justify-content: space-between; align-items: center;}
+
+/*메안풍차애니메이션*/
+#wrap #margin .con03 .eventpage .eventmain .windmill .windmill01{animation:rolling01 5s linear infinite; border-radius:50%;
+transform-origin:center; position:absolute;}
+@keyframes rolling01 {
+	0% {transform:rotate(0);}
+	100% {transform:rotate(360deg);}
+}
+
+/*메인이동구름*/
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud01{position:absolute; top:-10px; left:-100px; animation:move infinite ease-out 18s;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud02{position:absolute; top:248px; left:-180px;; animation:move infinite ease 19s;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud03{position:absolute; top:357px; left:-215px; animation:move infinite ease-out 18s;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud04{position:absolute; top:30px; left:-372px; animation:move infinite linear 20s;}
+#wrap #margin .con03 .eventpage .eventmain .main_cloud .cloud05{position:absolute; top:424px; left:-196px; animation:move infinite ease-in 19s;}
+@keyframes move {
+	100% {left:110%;}
+}
+
+/*탑버튼*/
+#wrap .topBtn{
+    width:77px;
+    height:77px;
+      position: fixed;
+      right: 50px; 
+      bottom: 50px;
+      z-index: 999;
+      cursor: pointer;}
+#wrap .topBtn:hover {transform: translateX(1rem);}
+
+/*오른쪽스크롤바*/
+body {overflow-x: hidden;}
+body::-webkit-scrollbar {width:15px;}
+body::-webkit-scrollbar-thumb {height:15px; background: #00b995; border-radius:50px;}
+body::-webkit-scrollbar-track {background: #c2eef6;}
+      
+
+/*버튼애니메이션*/
+#wrap #margin .con03 .eventpage .eventbg .event01 .button01{animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;			
+}
+
+#wrap #margin .con03 .eventpage .eventbg .event03 .button02{animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;			
+}
+
+@keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    50%{
+      transform: translateY(-8%);
+    }
+    65%{
+      transform: translateY(4%);
+    }
+    80%{
+      transform: translateY(-4%);
+    }
+    95%{
+      transform: translateY(2%);
+    }			
+    100% {
+      transform: translateY(0%);
+    }	
+  }
+  
+

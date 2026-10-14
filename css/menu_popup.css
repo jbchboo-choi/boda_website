@@ -1,0 +1,362 @@
+/* Shared navigation popup for Spectrum and Work pages. */
+:root{
+    --menu-dim-color:#64C4E4;
+    --menu-dim-opacity:.25;
+}
+
+/* Shared responsive header height. Keep inner controls on their page-specific geometry. */
+#wrap #margin > .main,
+#wrap #margin > .main > .main01,
+#wrap #margin > .main .main01{
+    height:112px;
+    align-items:center;
+}
+
+/* Keep the full-screen dim layer above every page section when the menu is open. */
+#wrap #margin > .main{
+    z-index:9999;
+}
+
+/* The home page uses .main01 directly, so keep its popup above the viewport dim too. */
+#wrap #margin > .main01{
+    position:relative;
+    z-index:9999;
+}
+
+#wrap #margin > .main01 .maincircle .sidebar{
+    z-index:2000;
+}
+
+/* Cover the viewport outside the fixed page canvas as well. */
+body:has(input[id="menuicon"]:checked)::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:var(--menu-dim-color);
+    opacity:var(--menu-dim-opacity);
+    z-index:9998;
+    pointer-events:auto;
+}
+
+/* When the menu is open, let the page dim layer continue behind the header. */
+body:has(input[id="menuicon"]:checked) #wrap #margin > .main{
+    background:transparent;
+}
+
+@media (min-width:1317px){
+    #wrap #margin > .main,
+    #wrap #margin > .main > .main01,
+    #wrap #margin > .main .main01{
+        height:120px;
+    }
+}
+
+#wrap #margin .main01 .maincircle .dim,
+#wrap #margin .main .main01 .mainplus .maincircle .dim{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    background:var(--menu-dim-color);
+    opacity:0;
+    display:none;
+    z-index:1500;
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label + .sidebar + .dim,
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label + .sidebar + .dim{
+    display:none;
+    opacity:0;
+}
+
+#wrap #margin > .main,
+#wrap #margin > .main .main01,
+#wrap #margin > .main .main01 .mainplus,
+#wrap #margin > .main .main01 .mainplus .maincircle{
+    overflow:visible;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar{
+    position:absolute;
+    box-sizing:border-box;
+    width:min(340px, calc(100vw - 32px));
+    height:auto;
+    max-height:calc(100vh - 32px);
+    top:calc(100% + 16px);
+    left:calc(-1 * min(340px, calc(100vw - 32px)) - 32px);
+    padding:32px 36px 32px 24px;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 18px 50px rgba(0,0,0,.12);
+    z-index:1000;
+    display:none;
+    overflow-y:auto;
+    transition:left .35s ease;
+}
+
+/* Keep the original 51px hit area, but use the same compact hamburger/X mark as main. */
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label{
+    position:absolute;
+    background:transparent;
+    background-image:none;
+    border:0;
+    border-radius:0;
+    display:block;
+    width:24px;
+    height:18px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span{
+    display:block;
+    position:absolute;
+    left:50%;
+    width:24px;
+    min-width:24px;
+    max-width:24px;
+    height:3px;
+    min-height:3px;
+    max-height:3px;
+    margin:0;
+    border-radius:999px;
+    background:#555;
+    box-sizing:border-box;
+    transform:translateX(-50%);
+    transition:top .3s ease, bottom .3s ease, transform .3s ease, opacity .3s ease, background-color .3s ease;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(1){
+    top:0;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(2){
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(3){
+    top:auto;
+    bottom:0;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label:hover span{
+    background:#176B8C;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label:hover,
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label{
+    background-color:transparent;
+    background-image:none;
+    box-shadow:none;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label{
+    position:absolute;
+    z-index:2101;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:transparent;
+    background-image:none;
+    border:0;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span{
+    top:50%;
+    bottom:auto;
+    background:#555;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    transform:translate(-50%, -50%) rotate(45deg);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity:0;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    transform:translate(-50%, -50%) rotate(-45deg);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label + .sidebar{
+    display:block;
+    left:12px;
+}
+
+/* The page-specific styles contain legacy fixed-sidebar rules. This exact selector
+   keeps the shared popup above the dim layer on both pages. */
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label + li.sidebar{
+    position:absolute;
+    display:block;
+    top:calc(100% + 16px);
+    left:12px;
+    z-index:2000;
+    visibility:visible;
+    opacity:1;
+}
+
+/* Fallback for the legacy page selector kept in the existing page CSS. */
+#wrap #margin .main01 .mainplus .maincircle .sidebar{
+    position:absolute;
+    display:none;
+    top:calc(100% + 16px);
+    left:calc(-1 * min(340px, calc(100vw - 32px)) - 32px);
+}
+
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label + .sidebar{
+    display:block;
+    left:12px;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .popup-header,
+#wrap #margin .main .main01 .mainplus .maincircle .popup-brand,
+#wrap #margin .main .main01 .mainplus .maincircle .popup-close{
+    display:none;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .sidemenu{
+    width:100%;
+    height:auto;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .sidemenu > li{
+    width:100%;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item{
+    position:relative;
+    display:grid;
+    grid-template-columns:38px 1fr 24px;
+    align-items:start;
+    width:100%;
+    color:#111;
+    text-decoration:none;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item::before{
+    content:"";
+    position:absolute;
+    z-index:0;
+    inset:-8px -12px;
+    border-radius:8px;
+    background:transparent;
+    transition:background-color .2s ease;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item > *{
+    position:relative;
+    z-index:1;
+    transition:color .2s ease;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item:hover::before{
+    background:#EAF6FF;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-number{
+    padding-top:5px;
+    color:#777;
+    font-size:13px;
+    font-weight:400;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-copy{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-copy strong{
+    color:#111;
+    font-size:28px;
+    font-weight:400;
+    line-height:1.08;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-copy small{
+    color:#8b8b8b;
+    font-size:12px;
+    font-weight:400;
+    line-height:1.5;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    align-self:center;
+    width:24px;
+    height:24px;
+    margin-top:0;
+    padding:0;
+    color:#333;
+    font-size:0;
+    transition:color .2s ease, transform .25s ease;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-arrow::before{
+    content:"";
+    display:block;
+    width:9px;
+    height:9px;
+    border-top:1.8px solid currentColor;
+    border-right:1.8px solid currentColor;
+    transform:rotate(45deg);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item:hover .popup-copy strong,
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item:hover .popup-arrow{
+    color:#176B8C;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item:hover .popup-copy small{
+    color:#5D7C8A;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item:hover .popup-arrow{
+    transform:translateX(4px);
+}
+
+@media (max-width:767px){
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar{
+        width:calc(100vw - 32px);
+        padding:24px 28px 24px 16px;
+        border-radius:14px;
+    }
+
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-item{
+        grid-template-columns:34px 1fr 22px;
+    }
+
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-number{
+        padding-top:6px;
+        font-size:14px;
+    }
+
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-copy{
+        gap:8px;
+    }
+
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-copy strong{
+        font-size:27px;
+    }
+
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-copy small{
+        font-size:11px;
+    }
+
+    #wrap #margin .main .main01 .mainplus .maincircle .sidebar .popup-arrow{
+        width:22px;
+        height:22px;
+    }
+}

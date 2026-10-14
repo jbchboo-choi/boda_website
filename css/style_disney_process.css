@@ -1,0 +1,123 @@
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif;}
+#wrap{margin:0 auto; width:1920px; height:13000px; background-color:#081a30;}
+#margin{width:1300px; margin:0 auto; height:13000px; position:absolute;}
+.clear{clear: both;}
+*{margin: 0; padding: 0;}
+
+/*main01*/
+#wrap #margin .main{width:1920px; height:887px; background:url(../images/disney/disney_visual.png) no-repeat; display:flex; flex-direction: column;
+align-items: center;} 
+#wrap #margin .main .main01{width:1300px; height:920px; background:url(../images/disney/disney_planet.png) no-repeat;
+display:flex; align-items: center; background-position:top center; margin-top:10px;} 
+#wrap #margin .main .main02{width:1300px; height:206px; background:url(../images/disney/disney_info.png) no-repeat;
+display:flex; align-items: center; background-position:center;} 
+
+/*con01*/
+#wrap #margin .con01{width:1920px; height:1113px; background-color:#081a30; display:flex; flex-direction: column; align-items: center;}
+#wrap #margin .con01 .overview{width:1300px; height:270px; margin-top:175px;}
+#wrap #margin .con01 .overview .overview01{width:1300px; height:28px; background:url(../images/disney/disney_overview.png) no-repeat;
+background-position:left center;}
+#wrap #margin .con01 .overview .overview02{width:1300px; height:160px; background:url(../images/disney/disney_overview01.png) no-repeat;
+background-position:center; margin-top:80px;}
+#wrap #margin .con01 .concept{width:1300px; height:340px; background:url(../images/disney/disney_concept.png) no-repeat; margin-top:175px;}
+#wrap #margin .con01 .concept .concept01{width:1300px; height:222px; background:url(../images/disney/disney_concept01.png) no-repeat;
+background-position:center; margin-top:80px;}
+
+/*con02*/
+#wrap #margin .con02{width:1920px; height:670px; background:white; display:flex; flex-direction: column; align-items: center;}
+#wrap #margin .con02 .text{width:1300px; height:70px; background:url(../images/disney/disney_color.png) no-repeat; margin-top:175px;}
+#wrap #margin .con02 .color{width:1300px; height:185px; display:flex; justify-content: flex-end; margin-top:111px;}
+#wrap #margin .con02 .color .color01{width:455px; height:185px; background:url(../images/disney/disney_color01.png) no-repeat;}
+#wrap #margin .con02 .color .color02{width:455px; height:185px; background:url(../images/disney/disney_color02.png) no-repeat; margin-left:60px;}
+
+/*con03*/
+#wrap #margin .con03{width:1920px; height:1170px; background:#eaeef2; display:flex; flex-direction: column; align-items: center;}
+#wrap #margin .con03 .icon{width:1300px; height:357px; margin-top:175px; display:flex; flex-direction: column; align-items: flex-end;}
+#wrap #margin .con03 .icon .icon01{width:1300px; height:45px; background:url(../images/disney/disney_icon.png) no-repeat;}
+#wrap #margin .con03 .icon .icon02{width:750px; height:230px; background:url(../images/disney/disney_icon01.png) no-repeat; margin-top:90px;}
+#wrap #margin .con03 .typo{width:1300px; height:315px; margin-top:175px;}
+#wrap #margin .con03 .typo01{width:1300px; height:45px; background:url(../images/disney/disney_typo.png) no-repeat;}
+#wrap #margin .con03 .typo02{width:1300px; height:195px; background:url(../images/disney/disney_typo01.png) no-repeat; margin-top:80px;} 
+
+/*con04*/
+#wrap #margin .con04{width:1920px; height:736px; background:white;  display:flex; justify-content: center;}
+#wrap #margin .con04 .retouch{width:1300px; height:404px; margin-top:175px; display:flex; flex-direction: column;}
+#wrap #margin .con04 .retouch .retouch01{width:1300px; height:30px; background:url(../images/disney/disney_retouch.png) no-repeat;}
+#wrap #margin .con04 .retouch .retouch02{width:1300px; height:290px; display:flex; justify-content: space-between; margin-top:85px;}
+#wrap #margin .con04 .retouch .retouch02 .retouch03{width:620px; height:290px; background:url(../images/disney/disney_retouch01.jpg) no-repeat; background-size:cover;}  
+#wrap #margin .con04 .retouch .retouch02 .retouch04{width:620px; height:290px; background:url(../images/disney/disney_retouch02.gif) no-repeat; background-size:cover;}  
+
+/*con05*/
+#wrap #margin .con05{width:1920px; height:6770px; display:flex; flex-direction: column; align-items: center; background:#081a30;}
+#wrap #margin .con05 .pages{width:1300px; height:4500px; margin-top:175px;}
+/*con05_main*/
+#wrap #margin .con05 .pages .mainpage{width:830px; height:2160px;}
+#wrap #margin .con05 .pages .mainpage .mainpage_title{width:1300px; height:30px; background:url(../images/disney/disney_mainpage.png) no-repeat;} 
+#wrap #margin .con05 .pages .mainpage .mainpage_cont{width:1300px; height:2030px; display:flex; justify-content: space-between; margin-top:85px;}
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_img{width:822px; height:2045px; background:url(../images/disney/disney_main01.png) no-repeat;
+background-size:cover;}
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text{width:420px; height:2045px;}
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text .mainpage_text01{width:420px; height:90px; 
+background:url(../images/disney/disney_text01.png) no-repeat; margin-top:67px;} 
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text .mainpage_text02{width:420px; height:90px; 
+background:url(../images/disney/disney_text02.png) no-repeat; margin-top:306px;} 
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text .mainpage_text03{width:420px; height:90px; 
+background:url(../images/disney/disney_text03.png) no-repeat; margin-top:310px;} 
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text .mainpage_text04{width:420px; height:90px; 
+background:url(../images/disney/disney_text04.png) no-repeat; margin-top:336px;}
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text .mainpage_text05{width:420px; height:90px; 
+background:url(../images/disney/disney_text05.png) no-repeat; margin-top:265px;} 
+#wrap #margin .con05 .pages .mainpage .mainpage_cont .mainpage_text .mainpage_text06{width:420px; height:90px; 
+background:url(../images/disney/disney_text06.png) no-repeat; margin-top:185px;}
+/*con05_sub*/
+#wrap #margin .con05 .pages .subpage{width:1300px; height:4028px; margin-top:82px;}
+#wrap #margin .con05 .pages .subpage .subpage_title{width:1300px; height:30px; background:url(../images/disney/disney_subpage.png) no-repeat;} 
+#wrap #margin .con05 .pages .subpage .subpage_cont{width:1300px; height:3830px; display:flex; justify-content: space-between;
+margin-top:86px;}
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img01{width:605px; height:3830px;} 
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img01 .subpage01{width:605px; height:1172px; 
+background:url(../images/disney/disney_sub01.png) no-repeat; background-size:cover;}
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img01 .subpage02{width:605px; height:865px; 
+background:url(../images/disney/disney_sub02.png) no-repeat; margin-top:92px; background-size:cover;}
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img01 .subpage03{width:605px; height:1335px; 
+background:url(../images/disney/disney_sub03.png) no-repeat; margin-top:92px; background-size:cover;}
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img02{width:605px; height:3860px;} 
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img02 .subpage04{width:605px; height:1223px; 
+background:url(../images/disney/disney_sub04.png) no-repeat; background-size:cover;}
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img02 .subpage05{width:605px; height:1176px; 
+background:url(../images/disney/disney_sub05.png) no-repeat; margin-top:92px; background-size:cover;}
+#wrap #margin .con05 .pages .subpage .subpage_cont .subpage_img02 .subpage06{width:605px; height:1495px; 
+background:url(../images/disney/disney_sub06.png) no-repeat; margin-top:92px; background-size:cover;}
+
+    
+/*con06*/
+#wrap #margin .con06{width:1920px; height:1630px; display:flex; flex-direction: column; align-items: center; background:#eaeef2;}
+#wrap #margin .con06 .publish{width:1600px; height:600px; display:flex; margin-left:310px; margin-top:167px;}
+#wrap #margin .con06 .publish .publish01{width:292px; height:484px; background:url(../images/disney/disney_publish.png) no-repeat;}
+#wrap #margin .con06 .publish .publish02{width:678px; height:484px; background:url(../images/disney/disney_publish01.png) no-repeat; 
+margin-top:114px; margin-left:134px;}
+#wrap #margin .con06 .publish .publish03{width:480px; height:484px; background:url(../images/disney/disney_publish02.png) no-repeat; 
+margin-top:114px; margin-left:33px;} 
+#wrap #margin .con06 .process{width:1320px; height:535px; background:url(../images/disney/disney_process.png) no-repeat;
+margin-top:167px;}
+
+/*con07*/
+#wrap #margin .con07{width:1920px; height:525px; display:flex; background:#081a30; align-items: center; justify-content:center;}
+#wrap #margin .con07 .epilogue{width:1300px; height:175px; background:url(../images/disney/disney_epilo.png) no-repeat;}
+
+/*탑버튼*/
+#wrap .topBtn{
+    width:77px;
+    height:77px;
+      position: fixed;
+      right: 70px; 
+      bottom: 70px;
+      z-index: 80;
+    display:flex; justify-content: center; align-items: center;}
+  
+#wrap .topBtn span{width:77px; height:77px; border-radius:50%; transition: 0.2s; background:#1fafd2;}
+    
+  
+#wrap .topBtn span:hover{width:77px; height:77px;
+box-shadow: 0 0 5px #1fafd2, 0 0 5px #1fafd2, 0 0 10px #1fafd2, 0 0 10px #1fafd2}

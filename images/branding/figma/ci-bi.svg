@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="27" height="29.7275" viewBox="0 0 27 29.7275" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1">
+<path id="Rectangle 2" d="M13.5 14.4731L26 8.22311V21.5044L13.5 28.9262V14.4731Z" fill="#58C5CC"/>
+<path id="Rectangle 1" d="M1 9.78125C1 8.33616 1.77945 7.00342 3.03896 6.29495L11.539 1.5137C12.7566 0.828767 14.2434 0.828768 15.461 1.5137L23.961 6.29495C25.2206 7.00342 26 8.33616 26 9.78125V19.9462C26 21.3913 25.2206 22.724 23.961 23.4325L15.461 28.2138C14.2434 28.8987 12.7566 28.8987 11.539 28.2138L3.03895 23.4325C1.77944 22.724 1 21.3913 1 19.9462V9.78125Z" stroke="#4A4A4A" stroke-width="2"/>
+<line id="Line 2" x1="1.49026" y1="8.13279" x2="13.9903" y2="15.164" stroke="#4A4A4A" stroke-width="2"/>
+<line id="Line 3" y1="-1" x2="14.3418" y2="-1" transform="matrix(-0.871576 0.490261 0.490261 0.871576 26 9.00436)" stroke="#4A4A4A" stroke-width="2"/>
+<line id="Line 4" x1="13.7188" y1="15.2544" x2="13.7188" y2="29.3169" stroke="#4A4A4A" stroke-width="2"/>
+</g>
+</svg>

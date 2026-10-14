@@ -1,0 +1,2202 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif; color:black;}
+#wrap{margin:0 auto; width:1920px; height:5550px;}
+#margin{width:1300px; margin:0 auto; height:5550px; position:absolute;}
+.clear{clear: both;}
+*{margin: 0; padding: 0;}
+
+/*main01*/
+#wrap #margin .main{width:1920px; height:206px; display:flex; justify-content: center; position:absolute} 
+#wrap #margin .main .main01{width:1300px; height:206px; display:flex; justify-content: space-between; position:absolute; z-index:3; margin:0 auto;} 
+#wrap #margin .main .main01 .mainlogo{width:97px; height:206px; background:url(../images/main/main_logo.png) no-repeat; 
+background-position:left center;}
+#wrap #margin .main .main01 .mainmenu{width:750px; height:206px; display:flex; justify-content: center;
+align-items: center; font-weight:400; font-size:16px;}
+#wrap #margin .main .main01 .mainplus{Width:97px; height:206px; display:flex; align-items: center; justify-content: flex-start;} 
+
+/*con01*/
+#wrap #margin .con01{width:1920px; height:787px; background:url(../images/branding/brand_img01.png) no-repeat;
+background-position:center; display:flex; align-items: center; flex-direction: column-reverse; align-items: center;}
+#wrap #margin .con01 .con01_text{width:1300px; height:132px; background:url(../images/branding/brand_title.png) no-repeat; margin-bottom:200px;}
+#wrap #margin .con01 .con01_text{
+    box-sizing:border-box;
+    height:auto;
+    min-height:132px;
+    padding:0;
+    background:none;
+    color:#111;
+    font-size:42px;
+    font-weight:500;
+    line-height:1.35;
+}
+#wrap #margin .con01 .con01_text p{margin:0;}
+#wrap #margin .con01 .con01_text .intro-light{font-weight:400;}
+#wrap #margin .con01 .con01_text .intro-brand{font-weight:700;}
+#wrap #margin .con01 .con01_text .intro-credit{
+    font-size:.48em;
+    font-style:italic;
+    font-weight:400;
+    line-height:1.5;
+}
+
+@media (max-width:767px){
+    #wrap #margin .con01{
+        min-height:900px;
+        height:clamp(900px, 130vw, 1000px);
+    }
+
+    #wrap #margin .con01 .con01_text{
+        width:calc(100% - 32px);
+        min-height:0;
+        margin-bottom:120px;
+        font-size:clamp(24px, 7vw, 34px);
+        line-height:1.4;
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px){
+    #wrap #margin .main .main01{
+        width:calc(100% - 48px);
+    }
+
+    #wrap #margin .main .main01 .mainmenu{
+        width:auto;
+        flex:1;
+    }
+
+    #wrap #margin .main .main01 .mainplus{
+        width:72px;
+        flex:0 0 72px;
+    }
+
+    #wrap #margin .con01{
+        height:clamp(620px, 72vw, 787px);
+    }
+}
+
+/* Final desktop hero alignment */
+@media (min-width:1317px){
+    #wrap #margin > .main + .con01{margin-top:0;}
+    #wrap #margin .con01 .con01_text{
+        position:static;
+        left:auto;
+        top:auto;
+        align-self:center;
+        width:min(1300px, calc(100% - 80px));
+        max-width:1300px;
+        min-height:132px;
+        margin:0 auto 200px;
+        transform:none;
+        align-items:flex-start;
+        text-align:left;
+        white-space:normal;
+    }
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{width:100%; text-align:left;}
+    #wrap #margin .con01 .scroll{
+        position:static;
+        left:auto;
+        bottom:auto;
+        align-self:center;
+        width:min(1300px, calc(100% - 80px));
+        margin:0 auto 40px;
+        transform:none;
+    }
+}
+
+/* Final hero alignment — keep the hero directly below the header. */
+@media (min-width:1317px){
+    #wrap #margin > .main + .con01{margin-top:0;}
+    #wrap #margin .con01 .con01_text{
+        position:static;
+        left:auto;
+        top:auto;
+        align-self:center;
+        width:min(1300px, calc(100% - 80px));
+        max-width:1300px;
+        min-height:132px;
+        margin:0 auto 200px;
+        transform:none;
+        align-items:flex-start;
+        text-align:left;
+        white-space:normal;
+    }
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{width:100%; text-align:left;}
+    #wrap #margin .con01 .scroll{
+        position:static;
+        left:auto;
+        bottom:auto;
+        align-self:center;
+        width:min(1300px, calc(100% - 80px));
+        margin:0 auto 40px;
+        transform:none;
+    }
+}
+
+/* Final responsive layout overrides */
+html, body{width:100%; min-width:0; overflow-x:hidden;}
+#wrap{width:100vw; min-width:0; margin:0 auto;}
+#wrap #margin{width:100%; max-width:none; margin:0 auto; position:relative;}
+#wrap #margin > section{width:100vw; max-width:none; margin-left:50%; margin-right:0; transform:translateX(-50%);}
+#wrap #margin > .main{position:absolute; left:0; top:0; z-index:100; margin-left:0; margin-right:0; transform:none; pointer-events:auto;}
+#wrap #margin > .main .main01{position:relative; z-index:101;}
+#wrap #margin > section > .brand_personal,
+#wrap #margin > section > .brand_identity,
+#wrap #margin > section > .brand_text04,
+#wrap #margin > section > .brand_logo01,
+#wrap #margin > section > .concept_header,
+#wrap #margin > section > .concept_list,
+#wrap #margin > section > .con01_text,
+#wrap #margin > section > .scroll{margin-left:auto; margin-right:auto;}
+
+@media (min-width:1317px){
+    #wrap #margin .con01{height:787px; display:flex; flex-direction:column-reverse; align-items:center; background-position:center; background-size:cover;}
+    #wrap #margin > .main + .con01{margin-top:0;}
+    #wrap #margin .con01 .con01_text{position:static; align-self:center; width:min(1300px, calc(100% - 80px)); max-width:1300px; min-height:132px; margin:0 auto 200px; transform:none; display:flex; flex-direction:column; align-items:flex-start; font-size:42px; line-height:1.35; text-align:left; white-space:normal;}
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{width:100%; text-align:left;}
+    #wrap #margin .con01 .con01_text .hero-meta{margin-top:16px;}
+    #wrap #margin .con01 .con01_text p{white-space:nowrap;}
+    #wrap #margin .con01 .scroll{position:static; align-self:center; width:min(1300px, calc(100% - 80px)); height:90px; margin:0 0 40px; transform:none; align-items:center;}
+    #wrap #margin .con05 .brand_logo01{width:780px; max-width:calc(100% - 48px);}
+    #wrap #margin > section + section{margin-top:140px;}
+    #wrap #margin .con02{align-items:flex-start; height:684px; min-height:0; padding-top:0; padding-bottom:0;}
+    #wrap #margin .con03{padding-top:140px; padding-bottom:140px;}
+}
+
+@media (max-width:1300px){
+    #wrap #margin > section,
+    #wrap #margin .main .main01,
+    #wrap #margin .con01 .scroll,
+    #wrap #margin .con01 .con01_text,
+    #wrap #margin .con02 .brand_personal,
+    #wrap #margin .con03 .concept_header,
+    #wrap #margin .con03 .concept_list,
+    #wrap #margin .con04 .brand_identity,
+    #wrap #margin .con05 .brand_text04,
+    #wrap #margin .con05 .brand_logo01,
+    #wrap #margin .con07 .btn01{margin-left:auto; margin-right:auto;}
+    #wrap #margin .con03 .concept_header,
+    #wrap #margin .con04 .identity_intro,
+    #wrap #margin .con05 .brand_text04{text-align:center;}
+    #wrap #margin .con02 .brand_personal,
+    #wrap #margin .con04 .brand_identity,
+    #wrap #margin .con05 .brand_logo01{max-width:calc(100% - 48px);}
+}
+
+@media (max-width:1316px){
+    #wrap #margin .con05 .brand_logo01{display:block; width:calc(100% - 32px); height:auto; min-height:90px; aspect-ratio:1300 / 330; background-image:url(../images/branding/brand_logo01.png); background-size:contain; background-position:center; background-repeat:no-repeat; margin:48px auto 0;}
+}
+
+/* Menu hover: underline sweeps beneath the label. */
+#wrap #margin .main .main01 .mainmenu a{
+    position:relative;
+    display:block;
+}
+#wrap #margin .main .main01 .mainmenu a::before{
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:3px;
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform .35s ease;
+}
+#wrap #margin .main .main01 .mainmenu a:hover::before{
+    transform:scaleX(1);
+    transform-origin:left center;
+}
+
+/* final viewport-centered hero rules */
+#wrap #margin .con01 .con01_text{left:50%; top:50%; width:min(860px,calc(100% - 48px)); max-width:860px; min-height:0; margin:0; font-size:clamp(32px,3.2vw,56px); line-height:1.34; text-align:left; white-space:nowrap; transform:translate(-50%,-50%);}
+#wrap #margin .con01 .con01_text p{white-space:nowrap;}
+#wrap #margin .con01 .scroll{left:50%; bottom:40px; width:100vw; height:90px; margin:0; transform:translateX(-50%); align-items:center;}
+@media (max-width:1316px){
+    #wrap #margin .con01 .con01_text{left:50%; top:44%; width:calc(100vw - 64px); max-width:720px; font-size:clamp(28px,4.8vw,48px); line-height:1.38; text-align:center; white-space:normal; word-break:keep-all; overflow-wrap:break-word; transform:translate(-50%,-50%);}
+    #wrap #margin .con01 .con01_text p{white-space:normal;}
+    #wrap #margin .con01 .scroll{left:50%; bottom:24px; width:100vw; height:72px; transform:translateX(-50%);}
+}
+
+/* final hero alignment override */
+#wrap #margin .con01 .con01_text{
+    left:50%; top:50%; width:min(860px, calc(100% - 48px)); max-width:860px;
+    min-height:0; margin:0; font-size:clamp(32px, 3.2vw, 56px); line-height:1.34;
+    text-align:left; white-space:nowrap; transform:translate(-50%, -50%);
+}
+#wrap #margin .con01 .con01_text p{white-space:nowrap;}
+#wrap #margin .con01 .scroll{
+    left:50%; bottom:40px; width:100vw; height:90px; margin:0;
+    transform:translateX(-50%); align-items:center;
+}
+@media (max-width:1316px){
+    #wrap #margin .con01 .con01_text{
+        left:50%; top:44%; width:calc(100vw - 64px); max-width:720px;
+        font-size:clamp(28px, 4.8vw, 48px); line-height:1.38; text-align:center;
+        white-space:normal; word-break:keep-all; overflow-wrap:break-word;
+        transform:translate(-50%, -50%);
+    }
+    #wrap #margin .con01 .con01_text p{white-space:normal;}
+    #wrap #margin .con01 .scroll{
+        left:50%; bottom:24px; width:100vw; height:72px; transform:translateX(-50%);
+    }
+}
+
+/* final hero alignment override */
+#wrap #margin .con01 .con01_text{
+    left:50%;
+    top:50%;
+    width:min(860px, calc(100% - 48px));
+    max-width:860px;
+    min-height:0;
+    margin:0;
+    font-size:clamp(32px, 3.2vw, 56px);
+    line-height:1.34;
+    text-align:left;
+    white-space:nowrap;
+    transform:translate(-50%, -50%);
+}
+#wrap #margin .con01 .con01_text p{white-space:nowrap;}
+#wrap #margin .con01 .scroll{
+    left:50%;
+    bottom:40px;
+    width:100vw;
+    height:90px;
+    margin:0;
+    transform:translateX(-50%);
+    align-items:center;
+}
+
+@media (max-width:1316px){
+    #wrap #margin .con01 .con01_text{
+        left:50%;
+        top:44%;
+        width:calc(100vw - 64px);
+        max-width:720px;
+        font-size:clamp(28px, 4.8vw, 48px);
+        line-height:1.38;
+        text-align:center;
+        white-space:normal;
+        word-break:keep-all;
+        overflow-wrap:break-word;
+        transform:translate(-50%, -50%);
+    }
+    #wrap #margin .con01 .con01_text p{white-space:normal;}
+    #wrap #margin .con01 .scroll{
+        left:50%;
+        bottom:24px;
+        width:100vw;
+        height:72px;
+        transform:translateX(-50%);
+    }
+}
+
+@media (max-width:1316px){
+    #wrap #margin .main .main01{width:calc(100% - 32px);}
+    #wrap #margin .main .main01 .mainplus{width:52px; flex:0 0 52px;}
+    #wrap #margin .con01{height:clamp(620px, 92vw, 780px);}
+}
+
+/* fixed, responsive hero alignment */
+#wrap #margin .con01 .con01_text{
+    left:50%;
+    top:50%;
+    width:min(860px, calc(100% - 48px));
+    max-width:860px;
+    min-height:0;
+    margin:0;
+    font-size:clamp(32px, 3.2vw, 56px);
+    line-height:1.34;
+    text-align:left;
+    white-space:nowrap;
+    transform:translate(-50%, -50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#wrap #margin .con01 .con01_text .hero-message,
+#wrap #margin .con01 .con01_text .hero-meta{
+    width:100%;
+    text-align:center;
+}
+
+#wrap #margin .con01 .con01_text .hero-meta{
+    margin-top:clamp(18px, 2vw, 30px);
+}
+
+#wrap #margin .con01 .con01_text p{
+    white-space:nowrap;
+}
+
+#wrap #margin .con01 .scroll{
+    left:50%;
+    bottom:40px;
+    width:100vw;
+    height:90px;
+    margin:0;
+    transform:translateX(-50%);
+    align-items:center;
+}
+
+@media (max-width:1316px){
+    #wrap #margin .con01 .con01_text{
+        left:50%;
+        top:44%;
+        width:calc(100vw - 64px);
+        max-width:720px;
+        font-size:clamp(28px, 4.8vw, 48px);
+        line-height:1.38;
+        text-align:center;
+        white-space:normal;
+        word-break:keep-all;
+        overflow-wrap:break-word;
+        transform:translate(-50%, -50%);
+    }
+
+    #wrap #margin .con01 .con01_text p{
+        white-space:normal;
+    }
+
+    #wrap #margin .con01 .scroll{
+        left:50%;
+        bottom:24px;
+        width:100vw;
+        height:72px;
+        transform:translateX(-50%);
+    }
+}
+
+/* tablet and mobile layout starts at 1316px */
+@media (max-width:1316px){
+    #wrap #margin .main{
+        height:112px;
+    }
+
+    #wrap #margin .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+        align-items:center;
+    }
+
+    #wrap #margin .main .main01 .mainplus{
+        width:52px;
+        height:100%;
+        flex:0 0 52px;
+    }
+
+    #wrap #margin .main .main01 .maincircle,
+    #wrap #margin .main .main01 .maincircle input[id="menuicon"] + label{
+        width:42px;
+        height:42px;
+    }
+
+    #wrap #margin .main .main01 .mainmenu{
+        width:auto;
+        height:auto;
+        flex:1;
+        font-size:14px;
+        text-align:center;
+    }
+
+    #wrap #margin .main .main01 .mainlogo{
+        width:64px;
+        height:24px;
+        flex:0 0 64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    #wrap #margin .con01{
+        height:clamp(620px, 92vw, 780px);
+        background-position:right center;
+        background-size:auto 100%;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        left:50%;
+        top:44%;
+        width:calc(100vw - 64px);
+        max-width:720px;
+        min-height:0;
+        font-size:clamp(28px, 4.8vw, 48px);
+        line-height:1.38;
+        text-align:center;
+        white-space:normal;
+        overflow-wrap:break-word;
+        word-break:keep-all;
+        transform:translate(-50%, -50%);
+    }
+
+    #wrap #margin .con01 .scroll{
+        left:50%;
+        bottom:24px;
+        width:100%;
+        height:72px;
+        margin:0;
+        align-items:center;
+        transform:translateX(-50%);
+    }
+
+    #wrap #margin .con01 .scroll01{
+        font-size:clamp(13px, 1.8vw, 18px);
+        white-space:nowrap;
+    }
+
+    #wrap #margin .con01 .scroll02{
+        width:44px;
+        height:44px;
+    }
+}
+
+/*scroll*/
+#wrap #margin .con01 .scroll{width:1300px; height:90px; display:flex; flex-direction: column; align-items: center; justify-content: space-between;
+margin-bottom:40px;}
+#wrap #margin .con01 .scroll02{width:52px; height:52px; border:#7a7c7e solid 1px; border-radius:100%; display:flex; justify-content: center;
+align-items: center;}
+#wrap #margin .con01 .scroll02 .arrow{width:7px; height: 7px; border-top:0;
+border-right:2px solid #000;
+border-bottom:2px solid #000;
+transform:rotate(45deg); /* 아래 방향 */}
+
+/*scroll 애니*/
+#wrap #margin .con01 .scroll02{ animation: bounce 1s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .8);
+    animation-iteration-count: infinite;}
+    @keyframes bounce {
+        from {
+            transform: translate3d(0, 0, 0);
+        }
+        to {
+            transform: translate3d(0, 15px, 0);
+        }
+    }
+
+/*con02*/
+#wrap #margin .con02{width:1920px; height:1000px; display:flex; align-items:center; justify-content:center;}
+#wrap #margin .con02 .brand_personal{width:1300px; height:684px; display:flex; align-items:flex-start; justify-content:space-between; position:relative;}
+#wrap #margin .con02 .brand_personal:before{display:none;}
+#wrap #margin .con02 .brand_personal:after{content:''; position:absolute; left:0; top:0; width:566px; height:112px; background:#fff; z-index:1;}
+#wrap #margin .con02 .brand_personal .brand_text_heading{position:absolute; left:0; top:0; width:566px; z-index:2;}
+#wrap #margin .con02 .brand_personal .brand_text_heading h2{margin:0; color:#111; font-family:'Noto Sans KR',sans-serif; font-size:22px; font-weight:600; line-height:1.4; letter-spacing:0;}
+#wrap #margin .con02 .brand_personal .brand_personal_bar{position:absolute; left:0; top:92px; width:72px; height:6px; display:block; background:#56c6d0; z-index:2;}
+#wrap #margin .con02 .brand_personal .brand_text01{width:560px; min-height:198px; flex:0 0 560px; background:none; margin-top:210px; position:relative; z-index:2; color:#353637; font-family:'Noto Sans KR',sans-serif; font-size:18px; font-weight:300; line-height:1.6; letter-spacing:-.04em; word-break:keep-all; line-break:strict;}
+#wrap #margin .con02 .brand_personal .brand_text01 p{margin:0 0 28px;}
+#wrap #margin .con02 .brand_personal .brand_personal_logo{position:absolute; left:0; top:470px; width:420px; height:auto; display:block; z-index:2;}
+#wrap #margin .con02 .brand_personal .brand_expressions{width:650px; height:640px; position:relative; display:flex; flex-direction:column; align-items:center; justify-content:flex-start; overflow:visible; margin-top:0;}
+#wrap #margin .con02 .expressions_intro{width:650px; margin:16px 0 0; color:#7b8990; font-size:15px; font-weight:400; letter-spacing:-.04em; line-height:19.5px; text-align:center; white-space:nowrap;}
+#wrap #margin .con02 .expression_graphic{width:560px; height:560px; position:relative; margin-top:18px; border-radius:280px; background:transparent; flex:0 0 560px;}
+#wrap #margin .con02 .expression_graphic:before{content:''; position:absolute; left:64px; top:60px; width:432px; height:432px; border:1px solid rgba(75,203,235,.55); border-radius:216px; background:#f5fcfe; box-sizing:border-box;}
+#wrap #margin .con02 .expression_graphic:after{content:''; position:absolute; left:149px; top:149px; width:262px; height:262px; border:1px solid #d7d7d7; border-radius:131px; background:#d7d7d7; box-sizing:border-box;}
+#wrap #margin .con02 .expression_orbit{position:absolute; left:50%; top:50%; border-radius:50%; transform:translate(-50%,-50%); display:none;}
+#wrap #margin .con02 .expression_line{position:absolute; left:280px; width:1px; height:261px; background:rgba(75,203,235,.45); z-index:1;}
+#wrap #margin .con02 .line_top{top:20px;}
+#wrap #margin .con02 .line_bottom{top:281px; height:228px;}
+#wrap #margin .con02 .expression_node{position:absolute; width:114px; height:114px; border:1px solid rgba(75,203,235,.4); border-radius:57px; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:#000; font-size:14px; box-shadow:0 5px 10px rgba(77,190,218,.08); box-sizing:border-box; z-index:3;}
+#wrap #margin .con02 .expression_node b{font-family:'Noto Sans KR',sans-serif; font-weight:700; line-height:18.2px; margin:0; white-space:nowrap;}
+#wrap #margin .con02 .expression_node .node_icon{height:46px; width:50px; flex:0 0 46px; position:relative; display:block; color:#3e4648; line-height:0;}
+#wrap #margin .con02 .expression_node .node_icon img{display:block; width:auto; height:auto; max-width:none;}
+#wrap #margin .con02 .node_editorial .node_icon{height:42.3px; flex-basis:42.3px;}
+#wrap #margin .con02 .node_web .node_icon{height:37.5px; flex-basis:37.5px;}
+#wrap #margin .con02 .node_ci .node_icon{height:45.7px; flex-basis:45.7px;}
+#wrap #margin .con02 .node_video .node_icon{height:39.4px; flex-basis:39.4px;}
+#wrap #margin .con02 .node_package .node_icon{height:55px; flex-basis:55px;}
+#wrap #margin .con02 .node_3d .node_icon{height:51px; flex-basis:51px; width:50px;}
+#wrap #margin .con02 .node_3d .node_icon img{position:absolute;}
+#wrap #margin .con02 .node_3d .node_icon img:nth-child(1){left:12.5px; top:0;}
+#wrap #margin .con02 .node_3d .node_icon img:nth-child(2){left:0; top:21.88px;}
+#wrap #margin .con02 .node_3d .node_icon img:nth-child(3){left:25px; top:21.88px;}
+#wrap #margin .con02 .expression_node .node_icon:before,
+#wrap #margin .con02 .expression_node .node_icon:after,
+#wrap #margin .con02 .expression_node .node_icon i:before,
+#wrap #margin .con02 .expression_node .node_icon i:after{content:''; position:absolute; display:block; box-sizing:border-box;}
+
+/* Editorial: open book */
+#wrap #margin .con02 .icon_editorial:before{width:37px; height:34px; left:7px; top:5px; border:3px solid #3e4648; border-right:0; border-radius:4px 0 0 3px; transform:skewY(2deg);}
+#wrap #margin .con02 .icon_editorial:after{width:37px; height:34px; right:7px; top:5px; border:3px solid #3e4648; border-left:0; border-radius:0 4px 3px 0; transform:skewY(-2deg);}
+#wrap #margin .con02 .icon_editorial i:before{width:21px; height:3px; right:12px; top:15px; background:#3e4648; box-shadow:0 9px #3e4648;}
+#wrap #margin .con02 .icon_editorial i:after{width:23px; height:22px; left:14px; top:11px; background:linear-gradient(135deg,#57cad5 0 72%,transparent 73%); border-radius:2px;}
+
+/* Web: browser window */
+#wrap #margin .con02 .icon_web:before{width:74px; height:48px; left:6px; top:0; border:3px solid #3e4648; border-radius:7px;}
+#wrap #margin .con02 .icon_web:after{width:68px; height:3px; left:9px; top:13px; background:#3e4648;}
+#wrap #margin .con02 .icon_web i:before{width:7px; height:7px; left:14px; top:4px; border:2px solid #3e4648; border-radius:50%; box-shadow:14px 0 #57cad5, 28px 0 #3e4648;}
+#wrap #margin .con02 .icon_web i:after{width:24px; height:23px; left:16px; top:21px; background:#57cad5; border-radius:2px; box-shadow:35px 2px 0 -10px #3e4648, 35px 11px 0 -10px #3e4648;}
+
+/* CI / BI: stacked identity cards */
+#wrap #margin .con02 .icon_ci:before{width:54px; height:43px; left:20px; top:3px; border:3px solid #3e4648; border-radius:7px; background:#fff; box-shadow:10px -9px 0 -1px #57cad5, 10px -9px 0 2px #3e4648;}
+#wrap #margin .con02 .icon_ci:after{width:22px; height:28px; left:36px; top:10px; border:3px solid #3e4648; border-radius:50% 50% 45% 45%; transform:rotate(36deg);}
+#wrap #margin .con02 .icon_ci i:before{width:6px; height:6px; left:46px; top:21px; border:2px solid #3e4648; border-radius:50%; background:#fff; z-index:1;}
+#wrap #margin .con02 .icon_ci i:after{width:18px; height:5px; left:38px; top:39px; border:2px solid #3e4648; border-radius:3px; background:#57cad5; z-index:1;}
+
+/* Video: player frame and progress bar */
+#wrap #margin .con02 .icon_video:before{width:74px; height:43px; left:6px; top:0; border:3px solid #3e4648; border-radius:7px;}
+#wrap #margin .con02 .icon_video:after{left:36px; top:12px; width:0; height:0; border-top:9px solid transparent; border-bottom:9px solid transparent; border-left:14px solid #57cad5;}
+#wrap #margin .con02 .icon_video i:before{width:72px; height:3px; left:8px; top:51px; background:#3e4648;}
+#wrap #margin .con02 .icon_video i:after{width:14px; height:14px; left:28px; top:45px; border:3px solid #3e4648; border-radius:50%; background:#57cad5;}
+
+/* Package: open box */
+#wrap #margin .con02 .icon_package:before{width:46px; height:31px; left:20px; top:19px; border:3px solid #3e4648; border-top:0; background:linear-gradient(90deg,transparent 47%,#3e4648 48% 52%,transparent 53%);}
+#wrap #margin .con02 .icon_package:after{width:46px; height:20px; left:20px; top:11px; border:3px solid #3e4648; border-bottom:0; transform:skewY(-23deg); background:linear-gradient(135deg,transparent 47%,#57cad5 48% 68%,transparent 69%);}
+#wrap #margin .con02 .icon_package i:before{width:22px; height:14px; left:10px; top:6px; border-top:3px solid #3e4648; transform:rotate(25deg);}
+#wrap #margin .con02 .icon_package i:after{width:22px; height:14px; right:10px; top:6px; border-top:3px solid #3e4648; transform:rotate(-25deg);}
+
+/* 3D: three simple cubes */
+#wrap #margin .con02 .icon_3d i{position:absolute; width:23px; height:23px; border:3px solid #3e4648; background:linear-gradient(135deg,#fff 0 50%,#57cad5 51%); transform:rotate(30deg) skewY(-30deg) scaleY(.86);}
+#wrap #margin .con02 .icon_3d i:nth-child(1){left:31px; top:1px;}
+#wrap #margin .con02 .icon_3d i:nth-child(2){left:14px; top:19px;}
+#wrap #margin .con02 .icon_3d i:nth-child(3){left:48px; top:19px;}
+#wrap #margin .con02 .node_editorial{left:224px; top:0;}
+#wrap #margin .con02 .node_web{left:424px; top:123px;}
+#wrap #margin .con02 .node_ci{left:424px; top:324px;}
+#wrap #margin .con02 .node_video{left:224px; top:446px;}
+#wrap #margin .con02 .node_package{left:22px; top:323px;}
+#wrap #margin .con02 .node_3d{left:22px; top:123px;}
+#wrap #margin .con02 .expression_core{position:absolute; left:175.5px; top:175.5px; width:209px; height:209px; border:0; border-radius:104.5px; background:#58c5cc; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#000; line-height:1.4; letter-spacing:0; z-index:2;}
+#wrap #margin .con02 .expression_core strong{font-size:24px; font-weight:700; line-height:1.4;}
+
+/*con03*/
+#wrap #margin .con03{width:1920px; min-height:0; box-sizing:border-box; padding:64px 40px 60px; display:flex; flex-direction:column; gap:40px; background:#e0ffff; justify-content:flex-start; align-items:center;}
+#wrap #margin .con03 .concept_header{text-align:center;}
+#wrap #margin .con03 .concept_header p{margin:0 0 20px; color:#55aeb9; font-size:14px; font-weight:500; letter-spacing:.32em;}
+#wrap #margin .con03 .concept_header h2{margin:0; color:#111; font-size:42px; font-weight:500; line-height:1.35; letter-spacing:-.06em;}
+#wrap #margin .con03 .concept_header h2 em{color:#2f9ba8; font-style:normal;}
+#wrap #margin .con03 .concept_list{width:100%; max-width:1180px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:38px;}
+#wrap #margin .con03 .concept_card{min-width:0; aspect-ratio:1; border:1px solid rgba(91,190,204,.5); border-radius:50%; background:rgba(255,255,255,.18); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; color:#111;}
+#wrap #margin .con03 .concept_icon{display:flex; width:78px; height:78px; margin-bottom:22px; border-radius:50%; background:#fff; align-items:center; justify-content:center;}
+#wrap #margin .con03 .concept_icon img{display:block; width:auto; height:auto; max-width:none; transform:scale(1.35);}
+#wrap #margin .con03 .concept_card_text small{display:block; margin-bottom:8px; color:#2d98a5; font-size:14px; letter-spacing:.2em;}
+#wrap #margin .con03 .concept_card_text h3{margin:0; font-size:25px; font-weight:600; line-height:1.2;}
+#wrap #margin .con03 .concept_card_text i{display:block; width:1px; height:16px; margin:13px auto 12px; background:#5cb5bf;}
+#wrap #margin .con03 .concept_card_text p{margin:0; font-size:18px; line-height:1.55; letter-spacing:-.05em;}
+
+@media (max-width:1200px){
+    #wrap{width:100%;}
+    #wrap #margin{width:100%; position:relative;}
+    #wrap #margin .con03{width:100%; min-height:0; padding:56px 32px 54px; gap:36px;}
+    #wrap #margin .con03 .concept_header h2{font-size:clamp(30px,4vw,42px);}
+    #wrap #margin .con03 .concept_list{max-width:820px; gap:20px;}
+    #wrap #margin .con03 .concept_card_text h3{font-size:22px;}
+    #wrap #margin .con03 .concept_card_text p{font-size:16px;}
+}
+
+@media (max-width:767px){
+    #wrap #margin .con03{width:100%; padding:40px 20px 42px; gap:28px; align-items:stretch;}
+    #wrap #margin .con03 .concept_header p{margin-bottom:12px; font-size:10px; letter-spacing:.28em;}
+    #wrap #margin .con03 .concept_header h2{font-size:27px; line-height:1.4;}
+    #wrap #margin .con03 .concept_list{display:flex; flex-direction:column; gap:0; max-width:none;}
+    #wrap #margin .con03 .concept_card{aspect-ratio:auto; min-height:118px; padding:18px 8px; border:0; border-bottom:1px solid rgba(91,190,204,.25); border-radius:0; background:transparent; flex-direction:row; justify-content:flex-start; text-align:left;}
+    #wrap #margin .con03 .concept_card:last-child{border-bottom:0;}
+    #wrap #margin .con03 .concept_icon{flex:0 0 64px; width:64px; height:64px; margin:0 20px 0 0; border-radius:50%; background:#fff;}
+    #wrap #margin .con03 .concept_icon img{transform:scale(1.25);}
+    #wrap #margin .con03 .concept_card_text small{margin-bottom:4px; font-size:11px;}
+    #wrap #margin .con03 .concept_card_text h3{font-size:20px;}
+    #wrap #margin .con03 .concept_card_text i{height:10px; margin:7px 0 6px;}
+    #wrap #margin .con03 .concept_card_text p{font-size:14px; line-height:1.45;}
+    #wrap #margin .con03 .desktop_break{display:none;}
+}
+
+/*con04*/
+#wrap #margin .con04{width:1920px; box-sizing:border-box; padding:58px 40px 70px; display:flex; justify-content:center; align-items:center; background:#fff;}
+#wrap #margin .con04 .brand_identity{width:100%; max-width:1500px;}
+#wrap #margin .con04 .identity_intro{display:flex; align-items:flex-start; gap:42px; margin-bottom:68px;}
+#wrap #margin .con04 .identity_intro>span{flex:0 0 auto; padding-right:0; border-right:0; color:#111; font-size:22px; font-weight:600; line-height:1.4; white-space:nowrap;}
+#wrap #margin .con04 .identity_intro p{max-width:970px; margin:0; color:#353637; font-size:18px; font-weight:300; line-height:1.55; letter-spacing:-.04em;}
+#wrap #margin .con04 .identity_formula{display:grid; grid-template-columns:1fr 80px 1fr 80px 1fr; align-items:center; gap:0;}
+#wrap #margin .con04 .identity_item{display:flex; flex-direction:column; align-items:center; justify-content:flex-start; text-align:center;}
+#wrap #margin .con04 .identity_word{display:block; position:relative; height:155px; overflow:hidden;}
+#wrap #margin .con04 .identity_word_bo{width:255px;}
+#wrap #margin .con04 .identity_word_boda{width:425px;}
+#wrap #margin .con04 .identity_word img,
+#wrap #margin .con04 .identity_glasses_icon img{position:absolute; top:0; width:1300px; height:210px; max-width:none;}
+#wrap #margin .con04 .identity_word_bo img{left:0;}
+#wrap #margin .con04 .identity_word_boda img{left:-875px;}
+#wrap #margin .con04 .identity_item p{margin:25px 0 0; color:#353637; font-size:18px; font-weight:300; line-height:1.45; letter-spacing:-.04em;}
+#wrap #margin .con04 .identity_item p{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px; text-align:center;}
+#wrap #margin .con04 .identity_item p strong{font-weight:600;}
+#wrap #margin .con04 .identity_item p span{display:block;}
+#wrap #margin .con04 .identity_formula{justify-items:center;}
+#wrap #margin .con04 .identity_item{width:100%; align-items:center; text-align:center;}
+#wrap #margin .con04 .identity_word,
+#wrap #margin .con04 .identity_glasses_icon{margin-left:auto; margin-right:auto;}
+#wrap #margin .con04 .identity_item p{width:100%;}
+#wrap #margin .con04 .identity_plus{color:#55c8cf; font-size:66px; font-weight:600; line-height:1; text-align:center;}
+#wrap #margin .con04 .identity_glasses_icon{display:block; position:relative; width:250px; height:155px; overflow:hidden;}
+#wrap #margin .con04 .identity_glasses_icon img{left:-440px;}
+
+@media (max-width:1200px){
+    #wrap #margin .con04{width:100%; padding:48px 32px 58px;}
+    #wrap #margin .con04 .identity_intro{gap:28px; margin-bottom:52px;}
+    #wrap #margin .con04 .identity_intro>span{padding-right:28px; font-size:18px;}
+    #wrap #margin .con04 .identity_intro p{font-size:16px;}
+    #wrap #margin .con04 .identity_formula{grid-template-columns:1fr 54px 1fr 54px 1fr;}
+    #wrap #margin .con04 .identity_word{transform:scale(.82); transform-origin:center bottom; margin-bottom:-22px;}
+    #wrap #margin .con04 .identity_plus{font-size:52px;}
+    #wrap #margin .con04 .identity_glasses_icon{transform:scale(.82);}
+    #wrap #margin .con04 .identity_item p{font-size:16px;}
+}
+
+@media (max-width:767px){
+    #wrap #margin .con04{width:100%; padding:42px 22px 48px;}
+    #wrap #margin .con04 .identity_intro{display:block; margin-bottom:36px; text-align:center;}
+    #wrap #margin .con04 .identity_intro>span{display:inline-block; padding:0; border:0; font-size:16px;}
+    #wrap #margin .con04 .identity_intro p{margin-top:16px; font-size:14px; line-height:1.6;}
+    #wrap #margin .con04 .identity_formula{display:flex; flex-direction:column; gap:0;}
+    #wrap #margin .con04 .identity_item{width:100%; min-height:132px;}
+    #wrap #margin .con04 .identity_word{transform:scale(.68); transform-origin:center top; margin-bottom:-40px;}
+    #wrap #margin .con04 .identity_glasses_icon{height:92px; transform:scale(.68); transform-origin:center top; margin-bottom:-24px;}
+    #wrap #margin .con04 .identity_item p{margin-top:13px; font-size:14px;}
+    #wrap #margin .con04 .identity_plus{width:28px; height:28px; margin:4px 0; border-radius:50%; background:#8dd9dc; color:#fff; font-size:24px; line-height:27px;}
+}
+
+/*con05*/
+#wrap #margin .con05{width:1920px; height:892px; display:flex; flex-direction: column; justify-content: center; align-items: center;
+background:url(../images/branding/brand_img02.png) no-repeat;}
+#wrap #margin .con05 .brand_text04{width:1300px; height:auto; display:flex; align-items:center; justify-content:center; background:none; text-align:center;}
+#wrap #margin .con05 .brand_text04 h2{margin:0; color:#111; font-family:'Noto Sans KR',sans-serif; font-size:22px; font-weight:600; line-height:1.4; letter-spacing:0;}
+#wrap #margin .con05 .brand_logo01{width:910px; max-width:calc(100% - 48px); aspect-ratio:1300 / 330; height:auto; display:block; background:url(../images/branding/brand_logo01.png) center center / contain no-repeat; margin:72px auto 0;}
+    
+/*con06*/
+#wrap #margin .con06{display:none;}
+
+/*con07*/
+#wrap #margin .con07{width:1920px; height:464px; display:flex; flex-direction: column; justify-content: center; align-items: center;
+background:url(../images/branding/brand_sky.png) no-repeat; background-position:bottom; background-size:cover; background-attachment:fixed;}
+#wrap #margin .con07 .brand_about{width:210px; height:100px; display:flex; justify-content: center; align-items: center;
+background:url(../images/branding/brand_about.png) no-repeat; background-position:center;}
+ 
+
+/*더보기*/
+#wrap #margin .main01 .mainplus .maincircle{Width:51px; height:51px; border-radius:100%;
+display:flex; justify-content: center; align-items: center; position:relative; z-index:3;} 
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] {display:none;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label {
+width:41px; height:41px; position:absolute; z-index:3; cursor:pointer; width:51px; height:51px; border: 1.5px solid #7a7c7e ; border-radius:100%;
+display:flex; justify-content: center; align-items: center;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span {display:block; position:absolute;
+border-radius:30px; background:#000; transition:all .35s;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(90deg);
+width:14px; height:2px;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(2) {bottom:50%; transform:translateY(100%);
+width:14px; height:2px;}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1) {
+top:20px; transform:translateY(-50%) rotate(-0deg);}
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2) {
+bottom:20px;}
+
+.sidebar{width:400px; height:100%; background:url(../images/main/hambuger_bg.png)
+no-repeat; position:fixed; top:0; left:-960px; z-index:2; transition:all .35s;}
+input[id="menuicon"]:checked + label + .sidebar{left:0;}
+
+/*사이드바*/
+#wrap #margin .main01 .mainplus .maincircle .sidebar{display:flex; align-items: center;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu{width:404px; height:408px; 
+display:flex; flex-direction:column; justify-content: space-between; margin-left:116px;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Branding{width:170px; height:38px; 
+background:url(../images/main/hambuger_branding01.png) no-repeat; }
+#wrap #margin .main01 .mainplus .maincircle .sidebar .About{width:170px; height:38px; 
+background:url(../images/main/hambuger_about01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Portfolio{width:170px; height:38px;
+background:url(../images/main/hambuger_portfolio01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Process{width:170px; height:38px;
+background:url(../images/main/hambuger_process01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Experience{width:170px; height:38px; 
+background:url(../images/main/hambuger_experience01.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Branding:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_branding02.png) no-repeat; }
+#wrap #margin .main01 .mainplus .maincircle .sidebar .About:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_about02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Portfolio:hover{width:170px; height:38px;
+background:url(../images/main/hambuger_portfolio02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Process:hover{width:170px; height:38px;
+background:url(../images/main/hambuger_process02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .Experience:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_experience02.png) no-repeat;}
+#wrap #margin .main01 .mainplus .maincircle .dim{width:1920px; height:1000px; background: black; position:fixed;
+top: 0; left: 0; opacity:0%; display:none; transition: all .2s;}   
+#wrap #margin .main01 .mainplus .maincircle input[id="menuicon"]:checked+label+.sidebar+.dim{opacity:80%; display: block;} 
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio ul{height:142px; display:none; list-style:none; margin:0px; padding:8px 4px 4px 4px;
+position:absolute; left:286px; background-color:white;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio:hover > ul{display:block;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio ul a{display:block; width:120px; height:20px; background-color:white;
+padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
+#wrap #margin .main01 .mainplus .maincircle .sidebar .sidemenu .Portfolio ul a:hover{opacity:0.8;}
+
+/*탑버튼*/
+#wrap .topBtn{
+    width:51px;
+    height:51px;
+    position: fixed;
+    right: 50px; 
+    bottom: 50px;
+    z-index: 999;
+    cursor: pointer;
+    background-size:cover;}
+#wrap .topBtn:hover {opacity:50%;}
+
+/*푸터애니*/
+#wrap #margin .con07 .btn01{width:210px; height:116px;}
+#wrap #margin .con07 .btn01::before{
+    content: '';
+    position: relative;
+    bottom: -70px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background: #56c8cf;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+  }
+#wrap #margin .con07 .btn01:hover::before{
+    -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+
+#wrap #margin .con07 .btn01::before{
+    display:none;
+}
+
+#wrap #margin .con07 .btn01{
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+#wrap #margin .con07 .brand_about_copy{
+    margin:44px 0 0;
+    color:#333;
+    font-size:20px;
+    font-weight:500;
+    line-height:1.6;
+    letter-spacing:-.04em;
+    white-space:nowrap;
+    text-shadow:0 1px 4px rgba(255,255,255,.55);
+}
+
+/* Replace the ABOUT image with accessible, editable text. */
+#wrap #margin .con07 .btn01{
+    width:min(100%, 640px);
+}
+
+#wrap #margin .con07 .brand_about{
+    width:auto;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:none;
+    color:#111;
+    font-family:'Alegreya Sans', sans-serif;
+    line-height:1;
+}
+
+#wrap #margin .con07 .brand_about_kicker{
+    display:block;
+    font-size:20px;
+    font-weight:500;
+    letter-spacing:.3em;
+}
+
+#wrap #margin .con07 .brand_about_title{
+    position:relative;
+    display:block;
+    margin-top:10px;
+    font-size:88px;
+    font-weight:400;
+    letter-spacing:-.04em;
+}
+
+#wrap #margin .con07 .brand_about_title::after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-10px;
+    height:4px;
+    background:#56c8cf;
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform .35s ease;
+}
+
+#wrap #margin .con07 .btn01:hover .brand_about_title::after{
+    transform:scaleX(1);
+}
+
+@media (max-width:767px){
+    #wrap #margin .con07 .brand_about_kicker{font-size:15px; letter-spacing:.22em;}
+    #wrap #margin .con07 .brand_about_title{font-size:60px;}
+    #wrap #margin .con07 .brand_about_copy{
+        margin-top:32px;
+        font-size:11px;
+        white-space:normal;
+    }
+}
+
+/* branding header/menu matches the main page */
+#wrap #margin .main{
+    height:206px;
+}
+
+#wrap #margin .main + .con01{
+    margin-top:0;
+}
+
+#wrap #margin .main .main01 .maincircle .sidebar{
+    box-sizing:border-box;
+    width:min(720px, calc(100vw - 32px));
+    height:calc(100vh - 32px);
+    top:16px;
+    left:calc(-1 * min(720px, calc(100vw - 32px)) - 32px);
+    padding:42px 42px 48px;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 18px 50px rgba(0,0,0,.12);
+    z-index:1000;
+    display:block;
+    transition:left .35s ease;
+}
+
+#wrap #margin .main .main01 .maincircle input[id="menuicon"]:checked + label + .sidebar{
+    left:16px;
+}
+
+#wrap #margin .main .main01 .maincircle .popup-header{
+    display:flex;
+    align-items:center;
+    height:42px;
+}
+
+#wrap #margin .main .main01 .maincircle .popup-brand{
+    display:block;
+    width:87px;
+    height:33px;
+    background:url(../images/main/main_logo.png) center / 87px 33px no-repeat;
+}
+#wrap #margin .main .main01 .maincircle .popup-close{
+    margin-left:auto;
+    display:flex;
+    width:42px;
+    height:42px;
+    align-items:center;
+    justify-content:center;
+    color:#111;
+    font-size:34px;
+    font-weight:300;
+    line-height:1;
+    cursor:pointer;
+}
+
+#wrap #margin .main .main01 .maincircle .sidebar .sidemenu{
+    width:100%;
+    height:auto;
+    margin:74px 0 0;
+    display:flex;
+    flex-direction:column;
+    gap:42px;
+}
+
+#wrap #margin .main .main01 .maincircle .sidebar .sidemenu li{width:100%;}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-item{
+    display:grid;
+    grid-template-columns:74px 1fr 46px;
+    align-items:start;
+    color:#111;
+    text-decoration:none;
+}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-number{font-size:16px; color:#7b8990; padding-top:6px;}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-copy{display:flex; flex-direction:column; gap:11px;}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-copy strong{font-size:40px; font-weight:400; line-height:1; letter-spacing:-.04em;}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-copy small{font-size:14px; color:#7b8990; line-height:1.45;}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-arrow{font-size:32px; line-height:1; text-align:right; transition:transform .25s ease;}
+#wrap #margin .main .main01 .maincircle .sidebar .popup-item:hover .popup-arrow{transform:translateX(6px);}
+
+#wrap #margin .main .main01 .maincircle input[id="menuicon"]:checked + label{
+    border-color:#111;
+    background:#111;
+}
+#wrap #margin .main .main01 .maincircle input[id="menuicon"]:checked + label span{background:#fff;}
+#wrap #margin .main .main01 .maincircle input[id="menuicon"]:checked + label{opacity:0; visibility:hidden; pointer-events:none;}
+#wrap #margin .main .main01 .maincircle .sidebar{height:auto; max-height:calc(100vh - 32px); overflow-y:auto;}
+#wrap #margin .main .main01 .maincircle .dim{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    background:#000;
+    opacity:0;
+    display:none;
+    z-index:999;
+}
+#wrap #margin .main .main01 .maincircle input[id="menuicon"]:checked + label + .sidebar + .dim{display:block; opacity:.35;}
+
+@media (max-width:767px){
+    #wrap #margin .main .main01 .maincircle .sidebar{
+        width:calc(100vw - 32px);
+        left:calc(-100vw + 0px);
+        padding:32px 24px;
+    }
+    #wrap #margin .main .main01 .maincircle input[id="menuicon"]:checked + label + .sidebar{left:16px;}
+    #wrap #margin .main .main01 .maincircle .sidebar .sidemenu{margin-top:54px; gap:30px;}
+    #wrap #margin .main .main01 .maincircle .sidebar .popup-item{grid-template-columns:48px 1fr 32px;}
+    #wrap #margin .main .main01 .maincircle .sidebar .popup-copy{gap:8px;}
+    #wrap #margin .main .main01 .maincircle .sidebar .popup-copy strong{font-size:30px;}
+}
+
+/* shared section container and spacing */
+#wrap{
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    overflow-x:hidden;
+}
+
+#wrap #margin{
+    width:100%;
+    max-width:none;
+    height:auto;
+    min-height:100vh;
+    position:relative;
+}
+
+#wrap #margin > section{
+    width:100%;
+    max-width:none;
+    box-sizing:border-box;
+}
+
+#wrap #margin > section + section{
+    margin-top:120px;
+}
+
+#wrap #margin .main{
+    width:100%;
+}
+
+#wrap #margin .main .main01,
+#wrap #margin .con01 .scroll,
+#wrap #margin .con01 .con01_text,
+#wrap #margin .con02 .brand_personal,
+#wrap #margin .con04 .brand_identity,
+#wrap #margin .con05 .brand_text04,
+#wrap #margin .con05 .brand_logo01{
+    width:min(1300px, calc(100% - 48px));
+    max-width:1300px;
+    margin-left:auto;
+    margin-right:auto;
+    box-sizing:border-box;
+}
+
+#wrap #margin .con01{
+    width:100%;
+    max-width:none;
+    position:relative;
+    display:block;
+    background-position:right center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    background-color:#e3e5e5;
+    overflow:hidden;
+}
+
+#wrap #margin .con01 .con01_text{
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:0;
+    transform:translate(-50%, -50%);
+    text-align:left;
+}
+
+#wrap #margin .con01 .scroll{
+    position:absolute;
+    left:50%;
+    bottom:40px;
+    margin:0;
+    transform:translateX(-50%);
+}
+
+#wrap #margin .con02{
+    height:auto;
+    min-height:760px;
+    padding:120px 0;
+    box-sizing:border-box;
+}
+
+#wrap #margin .con02 .brand_personal{
+    height:auto;
+    min-height:684px;
+}
+
+#wrap #margin .con04{
+    padding-top:120px;
+    padding-bottom:120px;
+}
+
+#wrap #margin .con04 .brand_identity{
+    max-width:1300px;
+}
+
+#wrap #margin .con05{
+    padding:120px 0;
+    height:auto;
+    min-height:892px;
+    background-size:cover;
+}
+
+#wrap #margin .con05 .brand_logo01{
+    background-size:contain;
+}
+
+#wrap #margin .con06{
+    min-height:714px;
+    height:auto;
+    background-size:cover;
+}
+
+#wrap #margin .con07{
+    min-height:464px;
+    height:auto;
+    background-size:cover;
+}
+
+@media (max-width:1300px){
+    #wrap #margin .con02 .brand_text01{
+        width:42%;
+        flex-basis:42%;
+    }
+
+    #wrap #margin .con02 .brand_expressions{
+        width:52%;
+        transform:scale(.9);
+        transform-origin:top center;
+    }
+
+    #wrap #margin .con02 .brand_personal:before,
+    #wrap #margin .con02 .brand_personal:after{
+        display:none;
+    }
+
+    #wrap #margin .con02 .brand_text_heading{
+        width:42%;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        width:min(420px,32vw);
+        top:470px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1300px){
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        left:50%;
+        transform:translateX(-50%);
+    }
+
+    #wrap #margin .con02 .expression_graphic{
+        transform:scale(1.2);
+        transform-origin:top center;
+    }
+}
+
+/* Match Brand Concept kicker typography to Personal Branding. */
+@media (min-width:981px){
+    #wrap #margin .con03 .concept_header p{
+        font-size:22px;
+        font-weight:600;
+        letter-spacing:0;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .main{
+        height:112px;
+    }
+
+    #wrap #margin .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+        align-items:center;
+    }
+
+    #wrap #margin .main .main01 .mainplus{
+        width:52px;
+        height:100%;
+        flex:0 0 52px;
+    }
+
+    #wrap #margin .main .main01 .maincircle,
+    #wrap #margin .main .main01 .maincircle input[id="menuicon"] + label{
+        width:42px;
+        height:42px;
+    }
+
+    #wrap #margin .main .main01 .mainmenu{
+        width:auto;
+        flex:1;
+        height:auto;
+        font-size:14px;
+        text-align:center;
+    }
+
+    #wrap #margin .main .main01 .mainlogo{
+        width:64px;
+        height:24px;
+        flex:0 0 64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    #wrap #margin .con01{
+        height:clamp(560px, 145vw, 760px);
+        background-position:right center;
+        background-size:auto 100%;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        left:50%;
+        top:46%;
+        max-width:100%;
+        overflow-wrap:anywhere;
+        text-align:center;
+        transform:translate(-50%, -50%);
+    }
+
+    #wrap #margin .con01 .scroll{
+        bottom:24px;
+        height:72px;
+    }
+
+    #wrap #margin > section + section{
+        margin-top:80px;
+    }
+
+    #wrap #margin .main .main01,
+    #wrap #margin .con01 .scroll,
+    #wrap #margin .con01 .con01_text,
+    #wrap #margin .con02 .brand_personal,
+    #wrap #margin .con04 .brand_identity,
+    #wrap #margin .con05 .brand_text04,
+    #wrap #margin .con05 .brand_logo01{
+        width:calc(100% - 32px);
+    }
+
+    #wrap #margin .con01 .con01_text{
+        margin-bottom:120px;
+    }
+
+    #wrap #margin .con02{
+        padding:80px 0;
+    }
+
+    #wrap #margin .con02 .brand_personal{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        min-height:0;
+    }
+
+    #wrap #margin .con02 .brand_text_heading,
+    #wrap #margin .con02 .brand_text01,
+    #wrap #margin .con02 .brand_expressions{
+        width:100%;
+        flex-basis:auto;
+    }
+
+    #wrap #margin .con02 .brand_text_heading{
+        position:relative;
+    }
+
+    #wrap #margin .con02 .brand_text01{
+        margin-top:40px;
+    }
+
+    #wrap #margin .con02 .brand_expressions{
+        transform:none;
+        margin-top:56px;
+        min-height:390px;
+        overflow:hidden;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        position:relative;
+        left:auto;
+        top:auto;
+        width:min(420px,80%);
+        margin:24px auto 0;
+    }
+
+    #wrap #margin .con02 .expression_graphic{
+        transform:scale(.62);
+        transform-origin:top center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #wrap #margin .con03,
+    #wrap #margin .con04,
+    #wrap #margin .con05{
+        padding-top:80px;
+        padding-bottom:80px;
+    }
+
+    #wrap #margin .con04 .identity_intro{
+        width:100%;
+    }
+
+    #wrap #margin .con05 .brand_logo01{
+        height:auto;
+        grid-template-columns:1fr;
+        margin-top:48px;
+    }
+
+    #wrap #margin .con06{
+        min-height:460px;
+    }
+
+    #wrap #margin .con07{
+        min-height:320px;
+    }
+}
+
+/* final 1316px breakpoint overrides */
+@media (max-width:1316px){
+    #wrap #margin .main{height:112px;}
+    #wrap #margin .main .main01{width:calc(100% - 32px); height:112px; align-items:center;}
+    #wrap #margin .main .main01 .mainplus{width:52px; height:100%; flex:0 0 52px;}
+    #wrap #margin .main .main01 .mainmenu{width:auto; height:auto; flex:1; font-size:14px; text-align:center;}
+    #wrap #margin .main .main01 .mainlogo{width:64px; height:24px; flex:0 0 64px; background-size:64px 24px; background-position:center;}
+
+    #wrap #margin .con01{height:clamp(620px, 92vw, 780px); background-position:right center; background-size:auto 100%;}
+    #wrap #margin .con01 .con01_text{
+        left:50%; top:44%; width:calc(100vw - 64px); max-width:720px; min-height:0;
+        font-size:clamp(28px, 4.8vw, 48px); line-height:1.38; text-align:center;
+        white-space:normal; overflow-wrap:break-word; word-break:keep-all;
+        transform:translate(-50%, -50%);
+    }
+    #wrap #margin .con01 .scroll{
+        left:50%; bottom:24px; width:100%; height:72px; margin:0;
+        align-items:center; transform:translateX(-50%);
+    }
+    #wrap #margin .con01 .scroll01{font-size:clamp(13px, 1.8vw, 18px); white-space:nowrap;}
+    #wrap #margin .con01 .scroll02{width:44px; height:44px;}
+}
+
+@media (min-width:768px) and (max-width:1200px){
+    #wrap #margin .main .main01{
+        width:calc(100% - 48px);
+    }
+
+    #wrap #margin .main .main01 .mainmenu{
+        width:auto;
+        flex:1;
+    }
+
+    #wrap #margin .main .main01 .mainplus{
+        width:72px;
+        flex:0 0 72px;
+    }
+
+    #wrap #margin .con01{
+        height:clamp(620px, 72vw, 787px);
+    }
+}
+
+/* Final desktop hero alignment */
+@media (min-width:1317px){
+    #wrap #margin > .main + .con01{margin-top:0;}
+    #wrap #margin .con01 .con01_text{position:static; left:auto; top:auto; align-self:center; width:min(1300px, calc(100% - 80px)); max-width:1300px; min-height:132px; margin:0 auto 200px; transform:none; align-items:flex-start; text-align:left; white-space:normal;}
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{width:100%; text-align:left;}
+    #wrap #margin .con01 .scroll{position:static; left:auto; bottom:auto; align-self:center; width:min(1300px, calc(100% - 80px)); margin:0 auto 40px; transform:none;}
+}
+
+/* Responsive system: fluid containers, preserved typography, and safe stacking. */
+@media (max-width:1316px){
+    #wrap,
+    #wrap #margin{
+        width:100%;
+        min-width:0;
+        height:auto;
+    }
+
+    #wrap #margin > section{
+        width:100%;
+        max-width:100%;
+        margin-left:0;
+        transform:none;
+        overflow:hidden;
+    }
+
+    #wrap #margin .con01{
+        min-height:620px;
+        height:clamp(620px, 92vw, 780px);
+        background-position:center;
+        background-size:cover;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        box-sizing:border-box;
+        width:min(720px, calc(100% - 48px));
+        max-width:720px;
+        margin:0 auto;
+        padding:0;
+        text-align:center;
+        white-space:normal;
+        overflow-wrap:break-word;
+        word-break:keep-all;
+        transform:translate(-50%, -50%);
+    }
+
+    #wrap #margin .con01 .con01_text p{
+        white-space:normal;
+    }
+
+    #wrap #margin .con01 .scroll{
+        width:100%;
+        max-width:none;
+        left:50%;
+        bottom:24px;
+        margin:0;
+        transform:translateX(-50%);
+    }
+
+    #wrap #margin .con02{
+        height:auto;
+        min-height:0;
+        padding:100px 0;
+        box-sizing:border-box;
+    }
+
+    #wrap #margin .con02 .brand_personal{
+        width:min(1300px, calc(100% - 48px));
+        max-width:1300px;
+        height:auto;
+        min-height:0;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        justify-content:flex-start;
+        gap:0;
+    }
+
+    #wrap #margin .con02 .brand_personal:after{
+        display:none;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text_heading{
+        position:static;
+        width:100%;
+        text-align:left;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_personal_bar{
+        position:static;
+        width:72px;
+        height:6px;
+        margin-top:24px;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text01{
+        width:100%;
+        flex:0 1 auto;
+        min-height:0;
+        margin-top:48px;
+        text-align:left;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        position:static;
+        align-self:center;
+        width:min(420px, 70%);
+        height:auto;
+        margin:48px auto 0;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_expressions{
+        width:100%;
+        height:480px;
+        margin-top:72px;
+        overflow:visible;
+    }
+
+    #wrap #margin .con02 .expression_graphic{
+        transform:scale(.82);
+        transform-origin:top center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    #wrap #margin .con03,
+    #wrap #margin .con04,
+    #wrap #margin .con05{
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+
+    #wrap #margin .con03 .concept_list{
+        width:min(100%, 900px);
+    }
+
+    #wrap #margin .con04 .brand_identity,
+    #wrap #margin .con05 .brand_text04,
+    #wrap #margin .con05 .brand_logo01{
+        width:min(1300px, calc(100% - 48px));
+        max-width:1300px;
+    }
+
+    #wrap #margin .con05{
+        height:auto;
+        min-height:620px;
+        background-size:cover;
+        background-position:center;
+    }
+
+    #wrap #margin .con05 .brand_logo01{
+        height:auto;
+        min-height:90px;
+        aspect-ratio:1300 / 330;
+        margin:48px auto 0;
+        background-size:contain;
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .con01{
+        min-height:560px;
+        height:clamp(560px, 145vw, 760px);
+        background-position:center;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        width:calc(100% - 32px);
+        top:44%;
+        font-size:clamp(24px, 7vw, 34px);
+        line-height:1.4;
+    }
+
+    #wrap #margin .con01 .con01_text .hero-meta{
+        margin-top:18px;
+    }
+
+    #wrap #margin .con01 .scroll{
+        bottom:24px;
+        height:72px;
+    }
+
+    #wrap #margin .con02{
+        padding:60px 0;
+    }
+
+    #wrap #margin .con02 .brand_personal{
+        width:calc(100% - 32px);
+        align-items:center;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text_heading,
+    #wrap #margin .con02 .brand_personal .brand_text01{
+        width:100%;
+        text-align:center;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_personal_bar{
+        width:60px;
+        margin-top:20px;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text01{
+        margin-top:36px;
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text01 p{
+        margin-bottom:22px;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        width:min(300px, 82%);
+        margin-top:28px;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_expressions{
+        width:100%;
+        height:360px;
+        margin-top:52px;
+        overflow:hidden;
+    }
+
+    #wrap #margin .con02 .expression_graphic{
+        transform:scale(.62);
+    }
+
+    #wrap #margin .con03,
+    #wrap #margin .con04,
+    #wrap #margin .con05{
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+
+    #wrap #margin .con04 .brand_identity,
+    #wrap #margin .con05 .brand_text04,
+    #wrap #margin .con05 .brand_logo01{
+        width:calc(100% - 32px);
+    }
+
+    #wrap #margin .con05{
+        min-height:0;
+    }
+
+    #wrap #margin .con05 .brand_logo01{
+        min-height:72px;
+        margin-top:36px;
+    }
+}
+
+/* Keep the scroll control centered with the label above the arrow. */
+#wrap #margin .con01 .scroll{
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    gap:0;
+    text-align:center;
+}
+
+#wrap #margin .con01 .scroll01{
+    width:auto;
+    margin:0;
+    white-space:nowrap;
+    text-align:center;
+}
+
+/* Anchor the scroll control to the bottom of the hero instead of the flex flow. */
+#wrap #margin .con01{
+    position:relative;
+    display:block;
+    flex-direction:initial;
+}
+
+#wrap #margin .con01 .scroll{
+    position:absolute;
+    left:50%;
+    bottom:40px;
+    width:100%;
+    height:90px;
+    margin:0;
+    transform:translateX(-50%);
+}
+
+@media (min-width:1317px){
+    #wrap #margin .con01 .con01_text{
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:min(1300px, calc(100% - 80px));
+        max-width:1300px;
+        margin:0;
+        transform:translate(-50%, -50%);
+        text-align:left;
+    }
+}
+
+@media (max-width:1316px){
+    #wrap #margin .con01 .con01_text{
+        position:absolute;
+        left:50%;
+        top:44%;
+        transform:translate(-50%, -50%);
+    }
+
+    #wrap #margin .con01 .scroll{
+        bottom:24px;
+        height:72px;
+    }
+}
+
+/* Keep the branding logo centered and enlarge the infographic on tablet widths. */
+@media (min-width:981px) and (max-width:1316px){
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        position:static;
+        left:auto;
+        align-self:center;
+        margin:48px auto 0;
+        transform:none;
+    }
+
+    #wrap #margin .con02 .expression_graphic{
+        transform:scale(1);
+        transform-origin:top center;
+    }
+}
+
+/* Hero text treatment: responsive composition without scaling the whole section. */
+#wrap #margin .con01 .con01_text::before{
+    content:'';
+    display:block;
+    width:34px;
+    height:2px;
+    margin-bottom:26px;
+    background:#56c6d0;
+}
+
+@media (min-width:1317px){
+    #wrap #margin .con01 .con01_text{
+        top:58%;
+        left:calc(50% - 650px);
+        max-width:1300px;
+        font-size:clamp(30px, 2.45vw, 44px);
+        line-height:1.35;
+        align-items:flex-start;
+        transform:translateY(-50%);
+    }
+
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{
+        width:min(520px, 100%);
+        text-align:left;
+    }
+
+    #wrap #margin .con01 .con01_text .hero-meta{
+        margin-top:20px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1300px){
+    #wrap #margin .con01 .con01_text{
+        top:56%;
+        width:min(520px, calc(100% - 64px));
+        max-width:520px;
+        font-size:clamp(28px, 4vw, 38px);
+        line-height:1.4;
+        text-align:left;
+    }
+
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{
+        width:100%;
+        text-align:left;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .con01{
+        height:clamp(640px, 170vw, 760px);
+        background-color:#fff;
+        background-position:center top;
+        background-size:auto 43%;
+        background-repeat:no-repeat;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        left:0;
+        top:auto;
+        bottom:0;
+        width:100%;
+        max-width:none;
+        min-height:0;
+        box-sizing:border-box;
+        padding:34px 24px 42px;
+        background:#fff;
+        font-size:clamp(22px, 6.4vw, 30px);
+        line-height:1.42;
+        text-align:left;
+        transform:none;
+    }
+
+    #wrap #margin .con01 .con01_text::before{
+        margin-bottom:20px;
+    }
+
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{
+        width:100%;
+        text-align:left;
+    }
+
+    #wrap #margin .con01 .con01_text .hero-meta{
+        margin-top:16px;
+    }
+}
+
+/* Final hero text position: no accent bar, slightly higher and vertically centered. */
+#wrap #margin .con01 .con01_text::before{
+    display:none;
+}
+
+@media (min-width:768px){
+    #wrap #margin .con01 .con01_text{
+        top:52%;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .con01{
+        min-height:0;
+        height:auto;
+        padding-top:43vw;
+        background-size:auto 43vw;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        position:relative;
+        left:auto;
+        top:auto;
+        bottom:auto;
+        transform:none;
+        width:100%;
+        max-width:none;
+        padding:56px 40px 32px;
+    }
+
+    #wrap #margin .con01 .scroll{
+        display:none;
+    }
+}
+
+/* Tablet hero reference: keep only the left-aligned text composition. */
+@media (min-width:768px) and (max-width:1300px){
+    #wrap #margin .con01 .con01_text{
+        position:absolute;
+        left:24px;
+        right:auto;
+        max-width:none;
+        margin:0;
+        text-align:left;
+        transform:translateY(-50%);
+    }
+
+    #wrap #margin .con01 .con01_text::before{
+        display:none;
+    }
+
+    #wrap #margin .con01 .con01_text .hero-message,
+    #wrap #margin .con01 .con01_text .hero-meta{
+        width:min(520px, 100%);
+        text-align:left;
+    }
+}
+
+/* Personal Branding section spacing */
+@media (min-width:1317px){
+    #wrap #margin .con02{
+        height:auto;
+        min-height:0;
+        padding-top:140px;
+        padding-bottom:140px;
+        box-sizing:border-box;
+        margin-top:0;
+    }
+}
+
+/* Remove the inter-section margin above Personal Branding at every viewport. */
+#wrap #margin > .con01 + .con02{
+    margin-top:0;
+}
+
+#wrap #margin > .con02 + .con03{
+    margin-top:0;
+}
+
+/* Brand Concept section spacing */
+@media (min-width:1317px){
+    #wrap #margin .con03{
+        padding-top:140px;
+        padding-bottom:140px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    #wrap #margin .con03{
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .con03{
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+}
+
+/* Align the Brand Concept circles to the shared 1300px content grid. */
+@media (min-width:1317px){
+    #wrap #margin .con03 .concept_list{
+        width:min(1300px, 100%);
+        max-width:1300px;
+    }
+}
+
+/* Match the large concept cards to the original-color node style. */
+@media (min-width:768px){
+    #wrap #margin .con03 .concept_card{
+        border-color:rgba(75,203,235,.4);
+        background:#fff;
+        box-shadow:0 5px 10px rgba(77,190,218,.08);
+    }
+}
+
+/* Remove the extra vertical space around Brand Identity on desktop. */
+@media (min-width:1317px){
+    #wrap #margin > .con03 + .con04,
+    #wrap #margin > .con04 + .con05{
+        margin-top:0;
+    }
+
+    #wrap #margin .con04{
+        padding-top:140px;
+        padding-bottom:140px;
+    }
+
+    #wrap #margin .con04 .identity_intro > p{
+        flex:0 0 700px;
+        max-width:700px;
+    }
+
+    #wrap #margin .con04 .identity_intro{
+        gap:80px;
+        margin-bottom:68px;
+    }
+}
+
+/* Use the dedicated identity artwork instead of cropping one sprite. */
+#wrap #margin .con04 .identity_word,
+#wrap #margin .con04 .identity_glasses_icon{
+    width:auto;
+    height:auto;
+    overflow:visible;
+}
+
+#wrap #margin .con04 .identity_word img,
+#wrap #margin .con04 .identity_glasses_icon img{
+    position:static;
+    display:block;
+    width:auto;
+    height:auto;
+    max-width:100%;
+}
+
+/* Align the Logo Variation title with the logo content below. */
+#wrap #margin .con05 .brand_text04{
+    width:min(1300px, calc(100% - 48px));
+    justify-content:flex-start;
+    text-align:left;
+}
+
+/* Remove the white gap before the final sky section. */
+#wrap #margin > .con05 + .con07{
+    margin-top:0;
+}
+
+/* Keep the unused section from creating a white block before the footer. */
+#wrap #margin .con06{
+    display:none;
+    min-height:0;
+    height:0;
+}
+
+#wrap #margin > .con05 + .con06 + .con07{
+    margin-top:0;
+}
+
+/* Center the formula plus signs against the logo artwork. */
+@media (min-width:1317px){
+    #wrap #margin .con04 .identity_plus{
+        align-self:center;
+        transform:translateY(-42px);
+    }
+
+    #wrap #margin .con04 .identity_formula > .identity_plus:first-of-type{
+        transform:translate(-16px, -42px);
+    }
+
+    #wrap #margin .con04 .identity_formula > .identity_plus:last-of-type{
+        transform:translate(-56px, -42px);
+    }
+}
+
+/* Keep visual background sections full-width when the viewport is reduced. */
+#wrap #margin .con03,
+#wrap #margin .con05,
+#wrap #margin .con07{
+    width:100%;
+    max-width:none;
+}
+
+/* Keep Brand Concept card content inside the circles at the 1300px breakpoint. */
+@media (min-width:768px) and (max-width:1300px){
+    #wrap #margin .con03 .concept_icon{
+        width:68px;
+        height:68px;
+        margin-bottom:16px;
+    }
+
+    #wrap #margin .con03 .concept_card_text small{
+        margin-bottom:6px;
+        font-size:12px;
+    }
+
+    #wrap #margin .con03 .concept_card_text h3{
+        font-size:18px;
+    }
+
+    #wrap #margin .con03 .concept_card_text i{
+        height:12px;
+        margin:9px auto 9px;
+    }
+
+    #wrap #margin .con03 .concept_card_text p{
+        font-size:15px;
+        line-height:1.4;
+    }
+}
+
+/* Switch Brand Concept to the mobile card layout at 980px and below. */
+@media (max-width:980px){
+    #wrap #margin .con03{
+        padding:60px 20px;
+        gap:28px;
+        align-items:stretch;
+    }
+
+    #wrap #margin .con03 .concept_header p{
+        margin-bottom:12px;
+        font-size:10px;
+        letter-spacing:.28em;
+    }
+
+    #wrap #margin .con03 .concept_header h2{
+        font-size:27px;
+        line-height:1.4;
+    }
+
+    #wrap #margin .con03 .concept_list{
+        display:flex;
+        flex-direction:column;
+        gap:0;
+        max-width:none;
+    }
+
+    #wrap #margin .con03 .concept_card{
+        aspect-ratio:auto;
+        min-height:118px;
+        padding:18px 8px;
+        border:0;
+        border-top:1px solid rgba(91,190,204,.25);
+        border-radius:0;
+        background:transparent;
+        box-shadow:none;
+        flex-direction:row;
+        justify-content:flex-start;
+        text-align:left;
+    }
+
+    #wrap #margin .con03 .concept_card:last-child{
+        border-bottom:1px solid rgba(91,190,204,.25);
+    }
+
+    #wrap #margin .con03 .concept_icon{
+        flex:0 0 64px;
+        width:64px;
+        height:64px;
+        margin:0 20px 0 0;
+    }
+
+    #wrap #margin .con03 .concept_card_text small{
+        margin-bottom:4px;
+        font-size:11px;
+    }
+
+    #wrap #margin .con03 .concept_card_text h3{
+        font-size:20px;
+    }
+
+    #wrap #margin .con03 .concept_card_text i{
+        height:10px;
+        margin:7px 0 6px;
+    }
+
+    #wrap #margin .con03 .concept_card_text p{
+        font-size:14px;
+        line-height:1.45;
+    }
+
+    #wrap #margin .con03 .desktop_break{
+        display:none;
+    }
+}
+
+/* Keep the Brand Identity description left-aligned beside its heading. */
+@media (min-width:768px){
+    #wrap #margin .con04 .identity_intro > p{
+        text-align:left;
+    }
+}
+
+/* Lower the Personal Branding accent bar below its heading. */
+@media (min-width:1317px){
+    #wrap #margin .con02 .brand_personal .brand_personal_bar{
+        top:112px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    #wrap #margin .con02 .brand_personal .brand_personal_bar{
+        margin-top:32px;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .con02 .brand_personal .brand_personal_bar{
+        margin-top:28px;
+    }
+}
+
+/* Keep the Personal Branding logo centered at every width up to 1316px. */
+@media (max-width:1316px){
+    #wrap #margin .con02 .brand_personal .brand_personal_logo{
+        position:static;
+        left:auto;
+        right:auto;
+        align-self:center;
+        margin-left:auto;
+        margin-right:auto;
+        transform:none;
+    }
+}
+
+/* Keep non-infographic body text consistent on mobile. */
+@media (max-width:767px){
+    #wrap #margin .con02 .brand_personal .brand_text01,
+    #wrap #margin .con03 .concept_card_text p,
+    #wrap #margin .con04 .identity_intro p,
+    #wrap #margin .con04 .identity_item p,
+    #wrap #margin .con07 .brand_about_copy{
+        font-size:16px;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text_heading h2,
+    #wrap #margin .con03 .concept_header p,
+    #wrap #margin .con04 .identity_intro > span,
+    #wrap #margin .con05 .brand_text04 h2{
+        font-size:22px;
+        font-weight:600;
+        line-height:1.4;
+        letter-spacing:0;
+    }
+}
+
+/* Keep section headings and body copy consistent up to 1000px. */
+@media (max-width:1000px){
+    #wrap #margin .con02 .brand_personal .brand_text_heading h2,
+    #wrap #margin .con03 .concept_header p,
+    #wrap #margin .con04 .identity_intro > span,
+    #wrap #margin .con05 .brand_text04 h2{
+        font-size:22px;
+        font-weight:600;
+        line-height:1.4;
+        letter-spacing:0;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_text01,
+    #wrap #margin .con03 .concept_card_text p,
+    #wrap #margin .con04 .identity_intro p,
+    #wrap #margin .con04 .identity_item p,
+    #wrap #margin .con07 .brand_about_copy{
+        font-size:16px;
+    }
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label{
+    --menu-mark:#999999;
+    background:transparent;
+    border:0;
+    border-radius:8px;
+    background-image:linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark));
+    background-position:left top,left top,right top,right top,left bottom,left bottom,right bottom,right bottom;
+    background-size:18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px;
+    background-repeat:no-repeat;
+    transition:background-color .2s ease, background-image .2s ease;
+}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span{
+    background:#555555;
+    width:20px;
+    height:2px;
+    transition:background-color .2s ease, transform .2s ease, top .2s ease, bottom .2s ease;
+}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label:hover{
+    --menu-mark:#64C4E4;
+    background:transparent;
+    background-image:linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark));
+}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label:hover span{background:#176B8C;}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label{
+    --menu-mark:#64C4E4;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    background:transparent;
+    border:0;
+    border-radius:8px;
+    background-image:linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark));
+    background-position:left top,left top,right top,right top,left bottom,left bottom,right bottom,right bottom;
+    background-size:18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px;
+    background-repeat:no-repeat;
+}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span{background:#555555;}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    bottom:auto;
+    top:50%;
+    transform:translateY(-50%) rotate(-45deg);
+}
+
+/* Shared desktop header height. */
+@media (min-width:1317px){
+    #wrap #margin .main,
+    #wrap #margin .main .main01,
+    #wrap #margin .main .main01 .mainlogo,
+    #wrap #margin .main .main01 .mainplus,
+    #wrap #margin .main .main01 .mainmenu{
+        height:120px;
+    }
+}
+
+/* Compact the Spectrum first view so the header, hero image and bottom guide fit together. */
+@media (min-width:1317px){
+    #wrap #margin .con01{
+        height:700px;
+    }
+    #wrap #margin .con01 .con01_text{
+        margin-bottom:120px;
+    }
+    #wrap #margin .con01 .scroll{
+        height:64px;
+        margin-bottom:20px;
+    }
+}
+

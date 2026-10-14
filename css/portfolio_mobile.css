@@ -1,0 +1,164 @@
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif; color:black;}
+#wrap{margin:0 auto; width:1920px; height:12000px;}
+#margin{width:1300px; margin:0 auto;  height:12000px; position:absolute;}
+.clear{clear: both;}
+
+
+/*con01*/
+#wrap #margin .con01{width:1920px; height:1064px; display:flex; background:#f4f2ef;}
+#wrap #margin .con01 .con01_1{width:822px; height:1095px; display:flex; flex-direction: column;}
+#wrap #margin .con01 .con01_1 .main_foods{width:822px; height:250px; display:flex; margin-left: 120px;}
+#wrap #margin .con01 .con01_1 .main_foods .main_food01{width:250px; height:250px; display:flex; justify-content: center; align-items: center;}
+#wrap #margin .con01 .con01_1 .main_foods .main_food02{width:250px; height:250px; display:flex; justify-content: center; align-items: center;}
+#wrap #margin .con01 .con01_1 .main_foods .main_food03{width:250px; height:250px; display:flex; justify-content: center; align-items: center;}
+#wrap #margin .con01 .main_text{width:450px; height:580px; background:url(../images/portfolio_mobile/main_text.png) no-repeat; margin-top:136px;
+margin-left:163px;}
+#wrap #margin .con01 .con01_2{width:1098px; height:1095px; background:url(../images/portfolio_mobile/main_circle.png) no-repeat; background-position:right top;
+display:flex;}
+#wrap #margin .con01 .con01_2 .con01_left{width:320px; height:950px; margin-top:80px; display:flex;
+flex-direction: column; justify-content: space-between; align-items: flex-start; margin-left:200px;}
+#wrap #margin .con01 .con01_2 .con01_left .egg{width:300px; height:200px; margin-left:20px;}
+#wrap #margin .con01 .con01_2 .con01_left .kimchi{width:300px; height:200px; margin-left:-170px;
+margin-top:-10px;}
+#wrap #margin .con01 .con01_2 .con01_left .meat{width:300px; height:200px; margin-bottom:-20px;
+margin-left:-20px;}
+#wrap #margin .con01 .con01_2 .con01_right{width:830px; height:830px; margin:70px 0px 0px -100px;}
+
+
+/*con02*/
+#wrap #margin .con02{width:1920px; height:1000px; display:flex; justify-content: center; flex-direction: column;
+align-items: center;}
+#wrap #margin .con02 .con02title{width:1300px; height:48px; display:flex; align-items: center; 
+justify-content: center;}
+#wrap #margin .con02 .con02text{width:1300px; height:380px; display:flex; align-items: center; justify-content: center; 
+justify-content: space-between; margin-top:156px;}
+
+
+/*con03*/
+#wrap #margin .con03{width:1920px; height:1520px; justify-content: center; background:#231815;
+display:flex; align-items: center; flex-direction: column; justify-content: center;}
+#wrap #margin .con03 .con03title{width:1300px; height:42px; background:url(../images/portfolio_mobile/con03_title.png) no-repeat; display:flex; 
+align-items: center; justify-content: center; background-position:center;}
+#wrap #margin .con03 .con03text{width:1320px; height:980px; background:url(../images/portfolio_mobile/con03_flowchart.png) no-repeat;
+margin-top:95px;}
+
+/*con04*/
+#wrap #margin .con04{width:1920px; height:2270px; display:flex; justify-content: flex-start; align-items: center;
+flex-direction: column; justify-content: center;}
+#wrap #margin .con04 .con04_1{width:1300px; height:400px; display:flex; align-items: center;
+flex-direction: column; justify-content: space-between; margin-top:256px;}
+#wrap #margin .con04 .con04title{width:1300px; height:115px; background:url(../images/portfolio_mobile/con04_title.png) no-repeat;}
+#wrap #margin .con04 .con04img{width:862px; height:200px; display:flex;
+justify-content: space-between; align-items: flex-end;}
+#wrap #margin .con04 .con04img .plus{margin-bottom:60px;}
+#wrap #margin .con04 .con04img .equal{margin-bottom:70px;}
+#wrap #margin .con04 .con04_2{width:1300px; height:296px; display:flex; justify-content: space-between; margin-top:256px;}
+#wrap #margin .con04 .con04_2 .color{width:590px; height:294px; display:flex;
+flex-direction: column; justify-content: space-between;}
+#wrap #margin .con04 .con04_2 .icon{width:590px; height:294px; display:flex; 
+flex-direction: column; justify-content: space-between;}
+#wrap #margin .con04 .con04_3{display:flex; justify-content: space-between;}
+#wrap #margin .con04 .con04_3 .logos{width:1300px; height:416px; display:flex; flex-wrap: wrap; margin-top:256px; 
+justify-content: center;}
+#wrap #margin .con04 .con04_3 .logo{margin-left:-30px;}
+#wrap #margin .con04 .con04_4{width:1300px; height:160px; display:flex; justify-content: space-between; margin-top:256px;
+flex-direction: column;}
+#wrap #margin .con04 .con04_4 .title{width:1300px; height:42px; display:flex; justify-content: center;}
+#wrap #margin .con04 .con04_4 .appicon{width:1300px; display:flex; justify-content: space-between;}
+
+/*con06*/
+#wrap #margin .con06{width:1920px; height:2920px; justify-content: center;
+display:flex; align-items: center; flex-direction: column; justify-content: center;}
+#wrap #margin .con06 .con06title{width:1300px; height:50px; background:url(../images/portfolio_mobile/con06_title.png) no-repeat; 
+background-position:center; margin-bottom:165px;}
+#wrap #margin .con06 .con06_sub01{width:1300px; height:486px; background:#eeeeee; border-radius:30px; display:flex;
+justify-content: space-between; align-items: center;}
+#wrap #margin .con06 .con06_sub01 .point01{width:594px; height:486px; display:flex; align-items: center; margin-left:115px;}
+#wrap #margin .con06 .con06_sub01 .point01_2{width:206px; height:486px; display:flex; flex-direction: column-reverse;
+justify-content: flex-start; align-items: center; margin-left:20px;}
+#wrap #margin .con06 .con06_sub01 .point01_2 .icon01{margin-top:-25px;}
+#wrap #margin .con06 .con06_sub01 .point01_3{width:390px; height:700px;}
+#wrap #margin .con06 .con06_sub01 .point01_3 .icon01_2{margin-left:10px; margin-top:-30px;}
+
+#wrap #margin .con06 .con06_sub02{width:1300px; height:486px; background:#eeeeee; border-radius:30px; display:flex;
+justify-content: space-between; align-items: center; margin-top:162px;}
+#wrap #margin .con06 .con06_sub02 .point02{margin-left:-70px; margin-top:15px;}
+#wrap #margin .con06 .con06_sub02 .point02_2{width:340px; height:486px; display:flex; flex-direction: column;
+justify-content:center; align-items: center; margin-left:-100px;}
+#wrap #margin .con06 .con06_sub02 .point02_2 .icon02{margin-top:30px;}
+#wrap #margin .con06 .con06_sub02 .point02_3{margin-right:115px;}
+
+#wrap #margin .con06 .con06_sub03{width:1300px; height:486px; background:#eeeeee; border-radius:30px; display:flex;
+justify-content: space-between; align-items: center; margin-top:162px;}
+#wrap #margin .con06 .con06_sub03 .point03{width:594px; height:486px; display:flex; align-items: center; margin-left:115px;}
+#wrap #margin .con06 .con06_sub03 .point03_2{width:206px; height:486px; display:flex; flex-direction: column-reverse;
+justify-content: center; align-items: flex-start; margin-right:80px;}
+#wrap #margin .con06 .con06_sub03 .point03_2 .icon03{margin-top:-25px;}
+#wrap #margin .con06 .con06_sub03 .point03_3{width:390px; height:700px;}
+#wrap #margin .con06 .con06_sub03 .point03_3 .icon03{margin-top:150px;}
+#wrap #margin .con06 .con06_sub03 .point03_3 .icon03_2{margin-left:10px; margin-top:-30px;}
+
+#wrap #margin .con06 .con07title{width:1300px; height:50px; background:url(../images/portfolio_mobile/con07_title.png) no-repeat; 
+background-position:center; margin-top:306px; margin-bottom:150px;}
+
+/*con07*/
+#wrap #margin .con07{width:1920px; height:1700px; justify-content: center; background:#ffbc01;
+display:flex; align-items: center; flex-direction: column; justify-content: center;}
+#wrap #margin .con07_1{width:1450px; height:688px; justify-content: center; display:flex; 
+align-items: center; justify-content: space-between; margin-top:50px; padding-right:5px;}
+#wrap #margin .con07_2{width:1450px; height:688px; justify-content: center; display:flex; 
+align-items: center; justify-content: space-between; margin-top:35px; padding-right:5px;}
+#wrap #margin .con07_3{width:1450px; height:688px; justify-content: center; display:flex; 
+align-items: center; justify-content: space-between; margin-top:35px; padding-right:5px;}
+
+/*con08*/
+#wrap #margin .con08{width:1920px; height:1924px; justify-content: center;
+display:flex; align-items: center; flex-direction: column; justify-content: center;}
+#wrap #margin .con08 .con08_title{width:1300px; height:550px; display:flex; flex-direction: column;
+justify-content: space-between; align-items: center; margin-top:430px;} 
+#wrap #margin .con08 .con08_epil{width:1920px; height:696px; display:flex; flex-direction: column;
+justify-content: center; align-items: center; margin-top:256px; background:url(../images/portfolio_mobile/mockup01.png) no-repeat;}
+#wrap #margin .con08 .con08_epil .con08_epil01{width:1300px; height:236px; display:flex;
+justify-content: flex-end; align-items: center;}
+#wrap #margin .con08 .con08_mockup{width:1920px; height:692px; display:flex; flex-direction: row;
+justify-content: space-between; align-items:center; margin-top:256px;}
+
+/*탑버튼*/
+#wrap .topBtn{
+    width:77px;
+    height:77px;
+      position: fixed;
+      right: 70px; 
+      bottom: 70px;
+      z-index: 80;
+    display:flex; justify-content: center; align-items: center;}
+  
+/*메인 애니메이션*/
+#wrap #margin .con01 .con01_2 .con01_right{width:830px; height:830px; margin:70px 0px 0px -100px;
+position:absolute; top:10px; right:-660px; animation:rolling01 2s ease-out 1s 1 backwards;
+transform-origin:right top; animation-direction : normal;
+}
+
+/*오른쪽스크롤바*/
+body {overflow-x: hidden;}
+body::-webkit-scrollbar {width:15px;}
+body::-webkit-scrollbar-thumb {height:15px; background: #efc059; border-radius:50px;}
+body::-webkit-scrollbar-track {background: #ebe6e0;}
+
+#wrap #margin .con01 .con01_1 .main_foods .main_food01:hover{animation-play-state:running;}
+
+@keyframes rolling01 {
+	0% {transform:rotate(-90deg);}
+	100% {transform:rotate(0deg);}
+}
+
+#wrap #margin .con01 .yellowcircle{width:235px; height:235px; background:#ffbc01;
+border-radius:50%; position:absolute; top:825px; left:40px; z-index:-1; 
+animation:ycircle 1s ease-out 0.5s both;}
+
+@keyframes ycircle {
+	0% {transform:rotate(-90deg);}
+	100% {transform:rotate(0deg);}
+}
+

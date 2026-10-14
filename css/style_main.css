@@ -1,0 +1,1263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*공통CSS*/
+*{margin: 0px; padding: 0px; font-family:'Noto Sans KR', sans-serif; color:black;}
+#wrap{margin:0 auto; width:1920px; height:1000px; background:#e1e4e3;}
+#margin{width:1300px; margin:0 auto; height:1000px;}
+.clear{clear: both;}
+*{margin: 0; padding: 0; text-decoration:none; list-style: none;}
+
+/*main01*/
+#wrap #margin .main01{width:1300px; height:206px; display:flex; justify-content: space-between; align-items: center}
+#wrap #margin .main01 .mainlogo{width:97px; height:206px; background:url(../images/main/main_logo.png) no-repeat; 
+background-position:left center;}
+#wrap #margin .main01 a:has(.mainlogo){display:block;flex:0 0 97px;width:97px;height:206px;overflow:visible}
+#wrap #margin .main01 a:has(.mainlogo) .mainlogo{width:100%;height:100%;background-position:left center;background-repeat:no-repeat}
+#wrap #margin .main01 .mainmenu{width:420px; height:206px; display:flex; justify-content: space-between;
+align-items: center; font-weight:400; font-size:16px; text-decoration:none;}
+#wrap #margin .main01 .mainmenu a{color:black; text-decoration:none; height:40px;}
+#wrap #margin .main01 .mainmenu > li:hover .dropdown{display:block;}
+#wrap #margin .main01 .mainmenu .dropdown{display:none; position:absolute; text-align:left; z-index:1; line-height:26px; 
+margin-top:10px; padding:20px; background-color: #f0f6f4;}
+#wrap #margin .main01 .mainplus{Width:97px; height:206px; display:flex; align-items: center; justify-content: flex-start;}
+
+/*main02*/
+#wrap #margin .main02{width:1300px; height:570px; display:flex; justify-content:center; position:absolute;}
+#wrap #margin .main02 .main_cloud{width:920px; height:567px; background:url(../images/main/main_cloud.png) center/920px 567px no-repeat;
+position:relative; left:56%; margin-left:40px; z-index:1;}
+#wrap #margin .main02 .main_me{width:920px; height:567px; background:url(../images/main/main_me.png) center/auto no-repeat;
+position:absolute; left:calc(50% - 130px); top:60px; margin:0; z-index:3;}
+#wrap #margin .main02 .main_title{width:1300px; height:567px; background:url(../images/main/main_title.png) center 220px/910px auto no-repeat;
+position:absolute; left:calc(50% - 170px); top:0; transform:translateX(-50%); margin:0; z-index:4;}
+#wrap #margin .main02 .main_me{
+    width:876px;
+    height:570px;
+    background:url(../images/main/main_me.png) no-repeat center;
+    background-size:auto;
+    position:absolute;
+
+    margin-left:-130px;
+    --me-top:60px;
+    --float-y:15px;
+
+    margin-top:var(--me-top);
+    animation:floatMe 3.8s ease-in-out infinite;
+}
+
+@keyframes floatMe{
+    0%, 100%{
+        margin-top:var(--me-top);
+    }
+
+    50%{
+        margin-top:calc(var(--me-top) - var(--float-y));
+    }
+}
+
+/* 태블릿 */
+@media (max-width:1024px){
+    #wrap #margin .main02 .main_me{
+        width:700px;
+        height:456px;
+        margin-left:-100px;
+
+        --me-top:50px;
+        --float-y:12px;
+    }
+}
+
+/* 모바일 */
+@media (max-width:767px){
+    #wrap #margin .main02 .main_me{
+        width:360px;
+        height:235px;
+        margin-left:-40px;
+
+        --me-top:30px;
+        --float-y:8px;
+    }
+}
+
+/* main visual layers: the cloud is the coordinate system */
+#wrap #margin .main02 .main_cloud{
+    position:relative;
+    left:56%;
+    top:50%;
+    width:min(920px, 100%);
+    height:auto;
+    aspect-ratio:920 / 567;
+    margin:0;
+    transform:translate(-50%, -50%);
+    background-size:100% 100%;
+}
+
+#wrap #margin .main02 .main_cloud .main_me{
+    position:absolute;
+    left:38%;
+    top:112px;
+    width:min(329px, 36%);
+    height:auto;
+    aspect-ratio:329 / 412;
+    margin:0;
+    transform:translateX(-50%);
+    background-size:100% 100%;
+    animation:floatMe 3.8s ease-in-out infinite;
+    z-index:3;
+}
+
+#wrap #margin .main02 .main_cloud .main_title{
+    position:absolute;
+    left:50%;
+    top:3%;
+    width:100%;
+    height:100%;
+    margin:0;
+    transform:translateX(-50%);
+    background-position:center 220px;
+    background-size:min(910px, 99%) auto;
+    z-index:4;
+}
+
+@keyframes floatMe{
+    0%, 100%{ transform:translateX(-50%) translateY(0); }
+    50%{ transform:translateX(-50%) translateY(-15px); }
+}
+
+@media (max-width:767px){
+    #wrap #margin .main02 .main_cloud .main_me{
+        top:30px;
+        width:36%;
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        background-position:center 58%;
+        background-size:80% auto;
+    }
+}
+
+/* 최종 적용: 1030px 전후 중간 화면 */
+@media (min-width:768px) and (max-width:1100px){
+    #wrap #margin{
+        width:calc(100% - 40px);
+    }
+
+    #wrap #margin .main01{
+        height:150px;
+    }
+
+    #wrap #margin .main01 .mainmenu{
+        width:min(360px, 38vw);
+        font-size:15px;
+    }
+
+    #wrap #margin .main02{
+        height:clamp(420px, 55vw, 520px);
+    }
+
+    #wrap #margin .main02 .main_cloud{
+        left:50%;
+        width:min(820px, 100%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_me{
+        left:38%;
+        top:112px;
+        width:min(329px, 36%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        left:37%;
+        top:3%;
+        width:90%;
+        background-size:min(780px, 85vw) auto;
+        background-position:center clamp(70px, 22vw, 190px);
+    }
+
+    #wrap #margin .main03{
+        min-height:140px;
+    }
+}
+
+/* LOOK WIDER 타이틀 반응형 보정 */
+#wrap #margin .main02 .main_cloud .main_title{
+    background-size:min(910px, 85vw) auto;
+    background-position:center clamp(70px, 22vw, 220px);
+}
+
+@media (max-width:767px){
+    #wrap #margin .main02 .main_cloud .main_title{
+        background-size:min(862px, 85vw) auto;
+        background-position:center clamp(70px, 22vw, 150px);
+    }
+}
+
+/* 1030px 전후 중간 화면 보정 */
+@media (min-width:768px) and (max-width:1100px){
+    #wrap #margin{
+        width:calc(100% - 40px);
+    }
+
+    #wrap #margin .main01{
+        height:150px;
+    }
+
+    #wrap #margin .main01 .mainmenu{
+        width:min(360px, 38vw);
+        font-size:15px;
+    }
+
+    #wrap #margin .main02{
+        height:clamp(420px, 55vw, 520px);
+    }
+
+    #wrap #margin .main02 .main_cloud{
+        left:50%;
+        width:min(820px, 100%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_me{
+        left:38%;
+        top:112px;
+        width:min(329px, 36%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        left:37%;
+        top:3%;
+        width:90%;
+        background-size:min(780px, 85vw) auto;
+        background-position:center clamp(70px, 22vw, 190px);
+    }
+
+    #wrap #margin .main03{
+        min-height:140px;
+    }
+}
+
+/*main03*/
+#wrap #margin .main03{width:1300px; height:200px; display:flex;  
+justify-content: space-between; align-items:center; font-weight:300; font-size:14px; margin-top:574px;}
+#wrap #margin .main03 .main03_left{width:360px;}
+#wrap #margin .main03 .main03_center{width:98px; height:110px; display:flex;
+align-items: center; flex-direction: column; justify-content: space-around; font-weight:400; font-size:14px;}
+#wrap #margin .main03 .main03_center_link{display:block; width:100%; color:inherit; text-align:center; text-decoration:none; white-space:nowrap;}
+#wrap #margin .main03 .main03_center .main03_center02{width:85px; height:85px; background:url(../images/main/main_button.png)
+no-repeat; background-position:center;}
+#wrap #margin .main03 .main03_center .main03_center02:hover{transform:translateY(5px);}
+    
+
+/*더보기*/
+#wrap #margin .main01 .maincircle{Width:51px; height:51px; border-radius:100%;
+display:flex; justify-content: center; align-items: center; position:relative; z-index:3;} 
+#wrap #margin .main01 .maincircle input[id="menuicon"] {display:none;}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label {
+position:absolute; z-index:3; cursor:pointer; width:51px; height:51px; border: 1.5px solid #7a7c7e ; border-radius:100%;
+display:flex; justify-content: center; align-items: center;}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span {display:block; position:absolute;
+border-radius:30px; background:#000; transition:all .35s;}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(1) {top:50%; transform:translateY(-50%) rotate(90deg);
+width:14px; height:2px;}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(2) {bottom:50%; transform:translateY(100%);
+width:14px; height:2px;}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(1) {
+top:20px; transform:translateY(-50%) rotate(-0deg);}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(2) {
+bottom:20px;}
+.sidebar{width:400px; height:100%; background:url(../images/main/hambuger_bg.png)
+no-repeat; position:fixed; top:0; left:-960px; z-index:2; transition:all .35s;}
+input[id="menuicon"]:checked + label + .sidebar{left:0;}
+
+/*사이드바*/
+#wrap #margin .main01 .maincircle .sidebar{display:flex; align-items: center;}
+#wrap #margin .main01 .maincircle .sidebar .sidemenu{width:404px; height:408px; 
+display:flex; flex-direction:column; justify-content: space-between; margin-left:116px;}
+#wrap #margin .main01 .maincircle .sidebar .Branding{width:170px; height:38px; 
+background:url(../images/main/hambuger_branding01.png) no-repeat; }
+#wrap #margin .main01 .maincircle .sidebar .About{width:170px; height:38px; 
+background:url(../images/main/hambuger_about01.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Portfolio{width:170px; height:38px;
+background:url(../images/main/hambuger_portfolio01.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Process{width:170px; height:38px;
+background:url(../images/main/hambuger_process01.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Experience{width:170px; height:38px; 
+background:url(../images/main/hambuger_experience01.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Branding:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_branding02.png) no-repeat; }
+#wrap #margin .main01 .maincircle .sidebar .About:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_about02.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Portfolio:hover{width:170px; height:38px;
+background:url(../images/main/hambuger_portfolio02.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Process:hover{width:170px; height:38px;
+background:url(../images/main/hambuger_process02.png) no-repeat;}
+#wrap #margin .main01 .maincircle .sidebar .Experience:hover{width:170px; height:38px; 
+background:url(../images/main/hambuger_experience02.png) no-repeat;}
+#wrap #margin .main01 .maincircle .dim{width:1920px; height:1000px; background:#64C4E4; position:fixed;
+top:0; left:0; opacity:0; display:none; transition:opacity .2s ease;}   
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked+label+.sidebar+.dim{opacity:.14; display:block;} 
+
+/* Popup: keep the close control independent from the menu toggle. */
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+#wrap #margin .main01 .maincircle .sidebar .sidemenu .Portfolio ul{height:142px; display:none; list-style:none; margin:0px; padding:8px 4px 4px 4px;
+position:absolute; left:286px; background-color:white;}
+#wrap #margin .main01 .maincircle .sidebar .sidemenu .Portfolio:hover > ul{display:block;}
+#wrap #margin .main01 .maincircle .sidebar .sidemenu .Portfolio ul a{display:block; width:120px; height:20px; background-color:white;
+padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
+#wrap #margin .main01 .maincircle .sidebar .sidemenu .Portfolio ul a:hover{opacity:0.8;}
+
+/*메뉴*/
+#wrap #margin .main01 .mainmenu a::before{
+    content: '';
+    position: relative;
+    bottom: -15px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background: #56c8cf;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+  }
+#wrap #margin .main01 .mainmenu a:hover::before{
+    -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+
+/* Menu hover: underline sweeps beneath the label. */
+#wrap #margin .main01 .mainmenu a{
+    position:relative;
+    display:block;
+}
+#wrap #margin .main01 .mainmenu a::before{
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:2px;
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform .35s ease;
+}
+#wrap #margin .main01 .mainmenu a:hover::before{
+    transform:scaleX(1);
+    transform-origin:left center;
+}
+
+/* 메뉴 팝업 */
+#wrap #margin .main01 .maincircle .sidebar{
+    box-sizing:border-box;
+    width:min(340px, calc(100vw - 32px));
+    height:auto;
+    max-height:calc(100vh - 32px);
+    top:170px;
+    left:calc(-1 * min(340px, calc(100vw - 32px)) - 32px);
+    padding:32px 36px 32px 24px;
+    border-radius:18px;
+    background:#fff;
+    box-shadow:0 18px 50px rgba(0,0,0,.12);
+    z-index:1000;
+    display:block;
+    transition:left .35s ease;
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label + .sidebar{
+    left:16px;
+}
+
+#wrap #margin .main01 .maincircle .popup-header{
+    display:none;
+}
+
+#wrap #margin .main01 .maincircle .popup-brand{
+    display:none;
+    width:87px;
+    height:33px;
+    background:url(../images/main/main_logo.png) center / 87px 33px no-repeat;
+}
+#wrap #margin .main01 .maincircle .popup-close{
+    margin-left:auto;
+    display:flex;
+    width:42px;
+    height:42px;
+    align-items:center;
+    justify-content:center;
+    color:#111;
+    font-size:34px;
+    font-weight:300;
+    line-height:1;
+    cursor:pointer;
+}
+#wrap #margin .main01 .maincircle .popup-header .popup-close{
+    display:none;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .sidemenu{
+    width:100%;
+    height:auto;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .sidemenu li{
+    width:100%;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item{
+    position:relative;
+    display:grid;
+    grid-template-columns:38px 1fr 24px;
+    align-items:start;
+    width:100%;
+    color:#111;
+    text-decoration:none;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item::before{
+    content:"";
+    position:absolute;
+    z-index:0;
+    inset:-8px -12px;
+    border-radius:8px;
+    background:transparent;
+    transition:background-color .2s ease;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item > *{
+    position:relative;
+    z-index:1;
+    transition:color .2s ease;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item:hover::before{
+    background:#EAF6FF;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item:hover .popup-copy strong,
+#wrap #margin .main01 .maincircle .sidebar .popup-item:hover .popup-arrow{
+    color:#176B8C;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item:hover .popup-copy small{
+    color:#5D7C8A;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-number{
+    padding-top:5px;
+    color:#777;
+    font-size:13px;
+    font-weight:400;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-copy{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-copy strong{
+    color:#111;
+    font-size:28px;
+    font-weight:400;
+    line-height:1.08;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-copy small{
+    color:#8b8b8b;
+    font-size:12px;
+    font-weight:400;
+    line-height:1.5;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:24px;
+    height:24px;
+    padding:0;
+    align-self:center;
+    margin-top:0;
+    color:#333;
+    font-size:0;
+    transition:transform .25s ease;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-arrow::before{
+    content:"";
+    display:block;
+    width:10px;
+    height:10px;
+    border-top:2px solid currentColor;
+    border-right:2px solid currentColor;
+    transform:rotate(45deg);
+    transform-origin:center;
+}
+
+#wrap #margin .main01 .maincircle .sidebar .popup-item:hover .popup-arrow{
+    transform:translateX(4px);
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1002;
+    border:0;
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span{
+    background:#111;
+}
+
+#wrap #margin .main01 .maincircle .dim{
+    z-index:999;
+    width:100vw;
+    height:100vh;
+}
+
+@media (max-width:767px){
+    #wrap #margin .main01 .maincircle .sidebar{
+        height:auto;
+        max-height:calc(100vh - 20px);
+        top:90px;
+        padding:24px 28px 24px 16px;
+        border-radius:14px;
+    }
+
+    #wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label{
+        top:27px;
+        left:calc(100vw - 72px);
+    }
+
+    #wrap #margin .main01 .maincircle .sidebar .sidemenu{
+        margin-top:0;
+        gap:20px;
+    }
+
+    #wrap #margin .main01 .maincircle .sidebar .popup-item{
+        grid-template-columns:34px 1fr 22px;
+    }
+
+    #wrap #margin .main01 .maincircle .sidebar .popup-number{
+        padding-top:6px;
+        font-size:14px;
+    }
+
+    #wrap #margin .main01 .maincircle .sidebar .popup-copy{gap:8px;}
+    #wrap #margin .main01 .maincircle .sidebar .popup-copy strong{font-size:27px;}
+
+    #wrap #margin .main01 .maincircle .sidebar .popup-copy small{
+        font-size:11px;
+    }
+
+    #wrap #margin .main01 .maincircle .sidebar .popup-arrow{
+        width:22px;
+        height:22px;
+        margin-top:0;
+    }
+}
+
+/* 반응형 메인 레이아웃 */
+html,
+body{
+    width:100%;
+    min-height:100%;
+    overflow-x:hidden;
+}
+
+#wrap{
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    overflow:hidden;
+}
+
+#margin{
+    width:min(1300px, calc(100% - 48px));
+    min-height:100vh;
+    height:auto;
+}
+
+#wrap #margin .main01{
+    width:100%;
+    height:clamp(120px, 15vw, 206px);
+}
+
+#wrap #margin .main01 .mainlogo{
+    display:block;
+    width:87px;
+    height:33px;
+    flex:0 0 87px;
+    background-position:center;
+    background-size:87px 33px;
+}
+
+#wrap #margin .main01 .mainplus{
+    width:97px;
+    min-width:97px;
+    flex:0 0 97px;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+#wrap #margin .main01 .mainmenu{
+    width:min(420px, 42vw);
+    height:100%;
+}
+
+#wrap #margin .main02{
+    position:relative;
+    width:100%;
+    height:clamp(420px, 48vw, 570px);
+    display:block;
+}
+
+#wrap #margin .main02 .main_cloud,
+#wrap #margin .main02 .main_me,
+#wrap #margin .main02 .main_title{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:min(876px, 100%);
+    height:100%;
+    margin:0;
+    background-position:center;
+    background-size:contain;
+    transform:translate(-50%, -50%);
+}
+
+#wrap #margin .main02 .main_me{
+    height:80%;
+    width:auto;
+    aspect-ratio:329 / 412;
+    left:calc(50% - clamp(20px, 4vw, 56px));
+    top:100%;
+    transform:translate(-50%, -100%);
+    background-size:100% 100%;
+    --float-y:15px;
+    animation:floatMe 3.8s ease-in-out infinite;
+}
+
+@keyframes floatMe{
+    0%, 100%{
+        transform:translate(-50%, -100%);
+    }
+
+    50%{
+        transform:translate(-50%, calc(-100% - var(--float-y)));
+    }
+}
+
+#wrap #margin .main03{
+    width:100%;
+    height:auto;
+    min-height:160px;
+    margin-top:0;
+    gap:24px;
+}
+
+@media (max-width:767px){
+    #margin{
+        width:calc(100% - 32px);
+    }
+
+    #wrap #margin .main01{
+        height:112px;
+    }
+
+    #wrap #margin .main01 .mainmenu{
+        width:min(250px, 62vw);
+        font-size:14px;
+    }
+
+    #wrap #margin .main01 .mainlogo{
+        width:64px;
+        height:24px;
+        flex-basis:64px;
+        background-size:64px 24px;
+    }
+
+    #wrap #margin .main01 .mainplus{
+        width:64px;
+        min-width:64px;
+        flex-basis:64px;
+    }
+
+    #wrap #margin .main01 .maincircle{
+        flex:0 0 42px;
+        width:42px;
+        height:42px;
+    }
+
+    #wrap #margin .main01 .maincircle input[id="menuicon"] + label{
+        width:42px;
+        height:42px;
+    }
+
+    #wrap #margin .main02{
+        height:clamp(330px, 105vw, 470px);
+    }
+
+    #wrap #margin .main02 .main_me{
+        --float-y:8px;
+    }
+
+    #wrap #margin .main02 .main_title{
+        background-size:80% auto;
+    }
+
+    #wrap #margin .main03{
+        min-height:140px;
+        flex-direction:column;
+        justify-content:center;
+        gap:14px;
+        padding:24px 0;
+        box-sizing:border-box;
+        text-align:center;
+    }
+
+    #wrap #margin .main03_left,
+    #wrap #margin .main03_right{
+        width:100%;
+        font-size:11px;
+    }
+}
+
+@media (max-width:1316px){
+    #wrap #margin .main01 a:has(.mainlogo){width:64px;height:24px;flex:0 0 64px;display:block}
+    #wrap #margin .main01 a:has(.mainlogo) .mainlogo{width:64px;height:24px;flex:0 0 64px;background-size:64px 24px;background-position:center}
+}
+
+/* final nesting override: children are positioned inside .main_cloud */
+#wrap #margin .main02 .main_cloud{
+    position:relative;
+    left:56%;
+    top:50%;
+    width:min(920px, 100%);
+    height:auto;
+    aspect-ratio:920 / 567;
+    margin:0;
+    transform:translate(-50%, -50%);
+    background-size:100% 100%;
+}
+
+#wrap #margin .main02 .main_cloud .main_me{
+    position:absolute;
+    left:38%;
+    top:112px;
+    width:min(329px, 36%);
+    height:auto;
+    aspect-ratio:329 / 412;
+    margin:0;
+    transform:translateX(-50%);
+    background-size:100% 100%;
+    animation:floatMeNested 3.8s ease-in-out infinite;
+    z-index:3;
+}
+
+#wrap #margin .main02 .main_cloud .main_title{
+    position:absolute;
+    left:50%;
+    top:3%;
+    width:100%;
+    height:100%;
+    margin:0;
+    transform:translateX(-50%);
+    background-position:center 220px;
+    background-size:min(910px, 99%) auto;
+    z-index:4;
+}
+
+@keyframes floatMeNested{
+    0%, 100%{ transform:translateX(-50%) translateY(0); }
+    50%{ transform:translateX(-50%) translateY(-15px); }
+}
+
+@media (max-width:767px){
+    #wrap #margin .main02 .main_cloud .main_me{
+        top:30px;
+        width:36%;
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        background-position:center 58%;
+        background-size:80% auto;
+    }
+}
+
+@media (min-width:768px) and (max-width:1100px){
+    #wrap #margin .main02 .main_cloud{
+        left:50%;
+        width:min(820px, 100%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_me{
+        left:38%;
+        top:112px;
+        width:min(329px, 36%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        left:37%;
+        top:3%;
+        width:90%;
+        background-size:min(780px, 85vw) auto;
+        background-position:center clamp(70px, 22vw, 190px);
+    }
+}
+
+/* 최종 메인 비주얼 기준: 구름 안에서 레이어가 함께 축소 */
+#wrap #margin .main02{
+    width:100%;
+    height:clamp(360px, 48vw, 570px);
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:visible;
+}
+
+#wrap #margin .main02 .main_cloud{
+    position:relative;
+    left:0;
+    top:0;
+    width:min(920px, 100%);
+    height:auto;
+    aspect-ratio:920 / 567;
+    margin:0;
+    transform:none;
+    background-size:100% 100%;
+}
+
+#wrap #margin .main02 .main_cloud .main_me{
+    position:absolute;
+    left:38%;
+    top:clamp(58px, 12.5%, 112px);
+    width:clamp(170px, 36%, 329px);
+    height:auto;
+    aspect-ratio:329 / 412;
+    margin:0;
+    transform:translateX(-50%);
+    background-size:100% 100%;
+    z-index:3;
+}
+
+#wrap #margin .main02 .main_cloud .main_title{
+    position:absolute;
+    left:50%;
+    top:3%;
+    width:100%;
+    height:100%;
+    margin:0;
+    transform:translateX(-50%);
+    background-position:center clamp(70px, 22vw, 220px);
+    background-size:min(910px, 85vw) auto;
+    z-index:4;
+}
+
+@media (max-width:767px){
+    #wrap #margin .main02{
+        height:clamp(300px, 92vw, 430px);
+    }
+
+    #wrap #margin .main02 .main_cloud{
+        width:100%;
+    }
+
+    #wrap #margin .main02 .main_cloud .main_me{
+        left:38%;
+        top:12%;
+        width:36%;
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        left:50%;
+        top:3%;
+        width:100%;
+        background-position:center clamp(58px, 22vw, 150px);
+        background-size:96% auto;
+    }
+}
+
+/* 메인 비주얼과 View Process 사이 간격 */
+#wrap #margin .main02{
+    margin-bottom:clamp(48px, 6vw, 88px);
+}
+
+@media (max-width:767px){
+    #wrap #margin .main02{
+        margin-bottom:clamp(32px, 8vw, 56px);
+    }
+}
+
+/* 1090px 이하: 모바일형 레이아웃 */
+@media (min-width:768px) and (max-width:1090px){
+    #wrap #margin{
+        width:calc(100% - 32px);
+    }
+
+    #wrap #margin .main01{
+        height:112px;
+    }
+
+    #wrap #margin .main01 .mainmenu{
+        width:min(250px, 62vw);
+        font-size:14px;
+    }
+
+    #wrap #margin .main01 .mainlogo{
+        width:64px;
+        height:24px;
+        flex-basis:64px;
+        background-size:64px 24px;
+    }
+
+    #wrap #margin .main01 .mainplus{
+        width:64px;
+        min-width:64px;
+        flex-basis:64px;
+    }
+
+    #wrap #margin .main01 .maincircle,
+    #wrap #margin .main01 .maincircle input[id="menuicon"] + label{
+        width:42px;
+        height:42px;
+    }
+
+    #wrap #margin .main02{
+        height:clamp(300px, 92vw, 430px);
+        margin-bottom:clamp(32px, 8vw, 56px);
+    }
+
+    #wrap #margin .main02 .main_cloud{
+        width:min(700px, 100%);
+    }
+
+    #wrap #margin .main02 .main_cloud .main_me{
+        left:38%;
+        top:12%;
+        width:36%;
+    }
+
+    #wrap #margin .main02 .main_cloud .main_title{
+        left:50%;
+        top:3%;
+        width:100%;
+        background-position:center clamp(58px, 22vw, 150px);
+        background-size:96% auto;
+    }
+
+    #wrap #margin .main03{
+        min-height:140px;
+        flex-direction:column;
+        justify-content:center;
+        gap:14px;
+        padding:24px 0;
+        box-sizing:border-box;
+        text-align:center;
+    }
+
+    #wrap #margin .main03_left,
+    #wrap #margin .main03_right{
+        width:100%;
+        font-size:11px;
+    }
+}
+
+/* Keep the main page's original desktop header geometry. */
+@media (min-width:1317px){
+    #wrap #margin{
+        width:1300px;
+        margin:0 auto;
+    }
+    #wrap #margin .main01,
+    #wrap #margin .main01 .mainlogo,
+    #wrap #margin .main01 .mainplus,
+    #wrap #margin .main01 .mainmenu{
+        height:206px;
+    }
+    #wrap #margin .main01 .mainlogo{
+        width:97px;
+        flex:0 0 97px;
+        background-size:auto;
+    }
+    #wrap #margin .main01 a:has(.mainlogo){width:97px;height:206px;flex-basis:97px}
+    #wrap #margin .main01 a:has(.mainlogo) .mainlogo{height:100%}
+    #wrap #margin .main01 .mainplus{justify-content:flex-start;}
+    #wrap #margin .main01{
+        width:1300px;
+        margin:0 auto;
+        left:auto;
+        top:0;
+    }
+    #wrap #margin .main01 .mainmenu{
+        width:750px;
+        flex:0 0 750px;
+        height:206px;
+        justify-content:center;
+        gap:72px;
+    }
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label{
+    --menu-mark:#999999;
+    background:transparent;
+    border:0;
+    border-radius:8px;
+    background-image:linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark));
+    background-position:left top,left top,right top,right top,left bottom,left bottom,right bottom,right bottom;
+    background-size:18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px;
+    background-repeat:no-repeat;
+    transition:background-color .2s ease, background-image .2s ease;
+    background-image:none;
+    background:transparent;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span{
+    background:#555555;
+    width:20px;
+    height:2px;
+    transform-origin:center;
+    transition:background-color .3s ease, opacity .2s ease, transform .4s cubic-bezier(.4,0,.2,1), top .4s cubic-bezier(.4,0,.2,1), bottom .4s cubic-bezier(.4,0,.2,1);
+    will-change:transform;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(1){
+    top:calc(50% - 6px);
+    transform:translateY(-50%) rotate(0deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(2){
+    bottom:calc(50% - 6px);
+    transform:translateY(50%) rotate(0deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label::after{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:20px;
+    height:2px;
+    background:#555555;
+    transform:translate(-50%,-50%);
+    transition:background-color .3s ease, opacity .25s ease;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label:hover::after{
+    background:#176B8C;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label::after{
+    opacity:0;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label:hover{
+    --menu-mark:#64C4E4;
+    background:transparent;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label:hover span{background:#176B8C;}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label{
+    --menu-mark:#64C4E4;
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    background:transparent;
+    border:0;
+    border-radius:8px;
+    background-image:linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark)),linear-gradient(var(--menu-mark),var(--menu-mark));
+    background-position:left top,left top,right top,right top,left bottom,left bottom,right bottom,right bottom;
+    background-size:18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px,18px 2px,2px 18px;
+    background-repeat:no-repeat;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span{background:#555555;}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    bottom:auto;
+    top:50%;
+    transform:translateY(-50%) rotate(-45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label::after{
+    content:none;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(1){
+    top:calc(50% - 10px);
+    transform:translateY(-50%) rotate(0deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(2){
+    top:50%;
+    bottom:auto;
+    transform:translateY(-50%) rotate(0deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(3){
+    top:auto;
+    bottom:calc(50% - 10px);
+    transform:translateY(50%) rotate(0deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    top:50%;
+    bottom:auto;
+    opacity:0;
+    transform:translateY(-50%) rotate(0deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    top:50%;
+    bottom:auto;
+    transform:translateY(-50%) rotate(-45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span{
+    left:50%;
+    width:20px;
+    height:2px;
+    margin:0;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(1){
+    top:16px;
+    bottom:auto;
+    transform:translateX(-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(2){
+    top:24px;
+    bottom:auto;
+    transform:translateX(-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(3){
+    top:32px;
+    bottom:auto;
+    transform:translateX(-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    top:25px;
+    transform:translateX(-50%) rotate(45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    top:25px;
+    transform:translateX(-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    top:25px;
+    transform:translateX(-50%) rotate(-45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label:hover,
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label{
+    background-image:none;
+    background:transparent;
+}
+
+/* Final main-menu geometry: three equal bars to a centered X. */
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label{
+    position:absolute;
+    display:block;
+    width:24px;
+    height:18px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span{
+    display:block;
+    position:absolute;
+    left:50%;
+    width:24px;
+    min-width:24px;
+    max-width:24px;
+    height:3px;
+    min-height:3px;
+    max-height:3px;
+    flex:0 0 24px;
+    box-sizing:border-box;
+    border-radius:30px;
+    margin:0;
+    transform-origin:center;
+    transition:.3s;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(1){
+    top:0;
+    bottom:auto;
+    transform:translateX(-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(2){
+    top:50%;
+    bottom:auto;
+    transform:translate(-50%,-50%);
+    opacity:1;
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(3){
+    top:auto;
+    bottom:0;
+    transform:translateX(-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    top:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    top:50%;
+    opacity:0;
+    transform:translate(-50%,-50%);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    top:50%;
+    bottom:auto;
+    transform:translate(-50%,-50%) rotate(-45deg);
+}
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* Main popup follows the hamburger button at every responsive width. */
+#wrap #margin .main01 .maincircle .sidebar{
+    position:absolute;
+    display:none;
+    top:calc(100% + 16px);
+    left:calc(-1 * min(340px, calc(100vw - 32px)) - 32px);
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:checked + label + .sidebar{
+    display:block;
+    left:12px;
+}
+
+/* Keep the main header navigation on the same vertical center line as the menu and logo. */
+#wrap #margin .main01 .mainmenu a{
+    display:flex;
+    align-items:center;
+    height:100%;
+}
+
+/* Shared desktop header height. */
+@media (min-width:1317px){
+    #wrap #margin .main01,
+    #wrap #margin .main01 .mainlogo,
+    #wrap #margin .main01 .mainplus,
+    #wrap #margin .main01 .mainmenu{
+        height:120px;
+    }
+    #wrap #margin .main01 a:has(.mainlogo){height:120px;}
+}
+
+@media (min-width:1317px){
+    #wrap #margin .main02{
+        margin-bottom:clamp(44px, 6vw, 48px);
+    }
+}
+
