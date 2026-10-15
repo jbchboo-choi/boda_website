@@ -42,37 +42,45 @@ document.addEventListener('DOMContentLoaded', function () {
             href: 'https://namanlab-nu.vercel.app/'
         },
         {
-            id: 'boda-studio',
-            title: 'Boda Studio',
-            category: 'branding',
-            label: 'WEBSITE',
-            thumbnail: 'images/portfolio/boda_studio_thumbnail.png',
-            href: './index.html'
-        },
-        {
             id: 'disney-plus',
             title: 'Disney+ Website',
             category: 'web',
-            label: 'WEBSITE',
+            label: 'UI/UX',
             thumbnail: 'images/portfolio/disneyplus_thumbnail.png',
             href: './disneyplus.html'
         },
         {
             id: 'easybab-mobile',
-            title: 'Easybab Mobile Abb',
+            title: 'Easybab Mobile App',
             category: 'web',
-            label: 'UI / UX',
+            label: 'UI/UX',
             thumbnail: 'images/portfolio/easybab_mobile_thumbnail.png',
             href: './portfolio_mobile.html'
         },
         {
             id: 'event-page',
             title: 'Event Page',
-            category: 'graphic',
-            label: 'GRAPHIC',
+            category: 'web',
+            label: 'UI/UX',
             thumbnail: 'images/portfolio/event_page_thumbnail.png',
             href: './portfolio_event.html'
-        }
+        },
+        {
+            id: 'save-the-polar-bear',
+            title: 'Save the Polar Bear',
+            category: 'motion',
+            label: 'MOTION',
+            thumbnail: 'images/portfolio/polarbear_graphic_thumbnail.png',
+            href: './portfolio_graphic_polarbear.html'
+        },
+        {
+            id: 'boda-studio',
+            title: 'Boda Studio',
+            category: 'web',
+            label: 'UI/UX',
+            thumbnail: 'images/portfolio/boda_studio_thumbnail.png',
+            href: './index.html'
+        },
     ];
 
     const filters = {
@@ -138,12 +146,14 @@ document.addEventListener('DOMContentLoaded', function () {
         card.style.setProperty('--thumb-title', '"' + project.title + '"');
 
         link.href = project.href;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
+        if (/^https?:\/\//i.test(project.href)) {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        }
         link.setAttribute('aria-label', project.title + ' 열기');
         const thumbnail = document.createElement('img');
         thumbnail.src = thumbnailUrl;
-        thumbnail.alt = '';
+        thumbnail.alt = project.title;
         thumbnail.loading = 'lazy';
         link.appendChild(thumbnail);
         card.appendChild(link);

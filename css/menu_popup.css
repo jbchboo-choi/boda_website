@@ -184,6 +184,38 @@ body:has(input[id="menuicon"]:checked) #wrap #margin > .main{
     transform:translate(-50%, -50%) rotate(-45deg);
 }
 
+/* Build the open state from two dedicated strokes so the X stays even on every page. */
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label::before,
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:24px;
+    height:3px;
+    border-radius:999px;
+    background:#555;
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%, -50%);
+    transition:opacity .3s ease, transform .3s ease, background-color .3s ease;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label::before{
+    opacity:1;
+    transform:translate(-50%, -50%) rotate(45deg);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label::after{
+    opacity:1;
+    transform:translate(-50%, -50%) rotate(-45deg);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span{
+    opacity:0;
+    transform:translate(-50%, -50%);
+}
+
 #wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label + .sidebar{
     display:block;
     left:12px;
@@ -359,4 +391,58 @@ body:has(input[id="menuicon"]:checked) #wrap #margin > .main{
         width:22px;
         height:22px;
     }
+}
+
+/* Let the shared popup rise smoothly from the menu control instead of appearing abruptly. */
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar{
+    display:block;
+    left:12px;
+    visibility:hidden;
+    opacity:0;
+    transform:translateY(-12px);
+    pointer-events:none;
+    transition:opacity .28s ease, transform .28s ease, visibility 0s linear .28s;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label + li.sidebar{
+    display:block;
+    visibility:visible;
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+    transition-delay:0s;
+}
+
+/* Keep the popup anchored while closing; only fade/raise it, never slide it left. */
+#wrap #margin .main .main01 .mainplus .maincircle .sidebar{
+    left:12px;
+    transition:opacity .28s ease, transform .28s ease, visibility 0s linear .28s;
+}
+
+/* Use one compact, centered hamburger/X geometry on every shared page. */
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span{
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(2){
+    transform:translate(-50%, -50%);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span{
+    left:50%;
+    top:50%;
+    bottom:auto;
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    transform:translate(-50%, -50%) rotate(45deg);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    transform:translate(-50%, -50%);
+}
+
+#wrap #margin .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    transform:translate(-50%, -50%) rotate(-45deg);
 }

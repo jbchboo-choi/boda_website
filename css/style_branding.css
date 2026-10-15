@@ -106,6 +106,16 @@ background-position:center; display:flex; align-items: center; flex-direction: c
     }
 }
 
+/* Keep the Spectrum scroll control perfectly circular at every viewport width. */
+#wrap #margin .con01 .scroll02{
+    aspect-ratio:1 / 1;
+    flex:0 0 auto;
+    box-sizing:border-box;
+    border:0;
+    background:url(../images/main/main_button.png) center / contain no-repeat;
+    box-shadow:none;
+}
+
 /* Final hero alignment — keep the hero directly below the header. */
 @media (min-width:1317px){
     #wrap #margin > .main + .con01{margin-top:0;}
@@ -455,8 +465,7 @@ html, body{width:100%; min-width:0; overflow-x:hidden;}
 /*scroll*/
 #wrap #margin .con01 .scroll{width:1300px; height:90px; display:flex; flex-direction: column; align-items: center; justify-content: space-between;
 margin-bottom:40px;}
-#wrap #margin .con01 .scroll02{width:52px; height:52px; border:#7a7c7e solid 1px; border-radius:100%; display:flex; justify-content: center;
-align-items: center;}
+#wrap #margin .con01 .scroll02{width:52px; height:52px; display:flex; justify-content:center; align-items:center;}
 #wrap #margin .con01 .scroll02 .arrow{width:7px; height: 7px; border-top:0;
 border-right:2px solid #000;
 border-bottom:2px solid #000;
@@ -2197,6 +2206,53 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     #wrap #margin .con01 .scroll{
         height:64px;
         margin-bottom:20px;
+    }
+}
+
+/* The main button image supplies the circle and arrow. */
+#wrap #margin .con01 .scroll02 .arrow{display:none;}
+
+/* Keep the Scroll Down label slightly above the button. */
+@media (min-width:768px){
+    #wrap #margin .con01 .scroll01{
+        transform:translateY(-8px);
+    }
+}
+
+/* Keep the Personal Branding infographic centered on mobile screens. */
+@media (max-width:767px){
+    #wrap #margin .con02 .brand_personal{
+        width:calc(100% - 32px);
+        margin-left:auto;
+        margin-right:auto;
+        align-items:center;
+    }
+
+    #wrap #margin .con02 .brand_personal .brand_expressions{
+        position:relative;
+        left:auto;
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+        transform:none;
+        align-self:center;
+        align-items:center;
+    }
+
+    #wrap #margin .con02 .brand_personal .expression_graphic{
+        position:absolute;
+        left:50%;
+        top:18px;
+        margin:0;
+        transform:translateX(-50%) scale(.62);
+        transform-origin:top center;
+    }
+}
+
+/* Keep the About and Spectrum hero views compact and visually matched. */
+@media (min-width:768px) and (max-width:1316px){
+    #wrap #margin .con01{
+        height:clamp(600px, 80vw, 700px);
     }
 }
 

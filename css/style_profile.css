@@ -258,3 +258,2520 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
   -ms-transform: scale(1, 1);
   transform: scale(1, 1)
 }
+
+/* Keep the About page header and footer on the same shared geometry as Spectrum. */
+#wrap #margin .main{
+    width:100vw;
+    height:120px;
+    left:50%;
+    transform:translateX(-50%);
+    position:relative;
+}
+
+#wrap #margin .main .main01{
+    width:min(1300px, calc(100% - 48px));
+    max-width:1300px;
+    height:120px;
+    position:relative;
+    align-items:center;
+    box-sizing:border-box;
+}
+
+#wrap #margin .main .main01 .mainplus,
+#wrap #margin .main .main01 .mainlogo,
+#wrap #margin .main .main01 .mainmenu{
+    height:120px;
+}
+
+#wrap #margin .main .main01 .mainplus{
+    width:97px;
+    display:flex;
+    align-items:center;
+}
+
+#wrap #margin .main .main01 .mainmenu{
+    width:750px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#wrap #margin .main .main01 .mainlogo{
+    width:97px;
+    background-position:left center;
+}
+
+#wrap #margin .main .main01 > a{
+    display:block;
+    width:97px;
+    height:120px;
+    flex:0 0 97px;
+}
+
+#wrap #margin .con07{
+    width:100vw;
+    height:464px;
+    min-height:464px;
+    margin-left:50%;
+    transform:translateX(-50%);
+    box-sizing:border-box;
+    background-position:center bottom;
+    background-size:cover;
+}
+
+#wrap #margin .con07 .btn01{
+    width:min(640px, calc(100% - 48px));
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#wrap #margin .con07 .btn01::before{
+    display:none;
+}
+
+#wrap #margin .con07 .profile_about{
+    width:auto;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:none;
+    color:#111;
+    line-height:1;
+}
+
+#wrap #margin .con07 .profile_about_kicker{
+    display:block;
+    color:#111;
+    font-size:20px;
+    font-weight:500;
+    letter-spacing:.3em;
+}
+
+#wrap #margin .con07 .profile_about_title{
+    position:relative;
+    display:block;
+    margin-top:10px;
+    color:#111;
+    font-size:88px;
+    font-weight:400;
+    letter-spacing:-.04em;
+}
+
+#wrap #margin .con07 .profile_about_title::after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-10px;
+    height:4px;
+    background:#56c8cf;
+    transform:scaleX(0);
+    transform-origin:left center;
+    transition:transform .35s ease;
+}
+
+#wrap #margin .con07 .btn01:hover .profile_about_title::after{
+    transform:scaleX(1);
+}
+
+#wrap #margin .con07 .profile_about_copy{
+    margin:44px 0 0;
+    color:#333;
+    font-size:20px;
+    font-weight:500;
+    line-height:1.6;
+    letter-spacing:-.04em;
+    white-space:nowrap;
+    text-shadow:0 1px 4px rgba(255,255,255,.55);
+}
+
+@media (max-width:1316px){
+    #wrap #margin .main{
+        height:112px;
+        margin-left:calc((100vw - 1300px) / 2);
+    }
+
+    #wrap #margin .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+    }
+
+    #wrap #margin .main .main01 .mainplus,
+    #wrap #margin .main .main01 .mainlogo,
+    #wrap #margin .main .main01 .mainmenu{
+        height:112px;
+    }
+
+    #wrap #margin .main .main01 .mainplus{
+        width:52px;
+        flex:0 0 52px;
+    }
+
+    #wrap #margin .main .main01 .mainmenu{
+        width:auto;
+        flex:1;
+        font-size:14px;
+    }
+
+    #wrap #margin .main .main01 .mainlogo{
+        width:64px;
+        flex:0 0 64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    #wrap #margin .main .main01 > a{
+        width:64px;
+        height:112px;
+        flex:0 0 64px;
+    }
+
+    #wrap #margin .con07{
+        min-height:320px;
+        height:320px;
+        margin-left:calc(50% + (100vw - 1300px) / 2);
+    }
+
+    #wrap #margin .con07 .profile_about_kicker{
+        font-size:15px;
+        letter-spacing:.22em;
+    }
+
+    #wrap #margin .con07 .profile_about_title{
+        font-size:60px;
+    }
+
+    #wrap #margin .con07 .profile_about_copy{
+        margin-top:32px;
+        font-size:16px;
+        white-space:normal;
+    }
+}
+
+/* About reference hero: one responsive rounded composition. */
+html, body{
+    background:#eef0ef;
+}
+
+#wrap,
+#wrap #margin{
+    width:100%;
+    max-width:none;
+    height:auto;
+    min-height:100%;
+}
+
+#wrap #margin{
+    position:relative;
+}
+
+#wrap #margin > .main{
+    position:absolute;
+    top:16px;
+    left:50%;
+    width:calc(100vw - 72px);
+    max-width:1920px;
+    height:82px;
+    margin:0;
+    transform:translateX(-50%);
+    z-index:10;
+    background:transparent;
+}
+
+#wrap #margin > .main .main01{
+    width:100%;
+    max-width:none;
+    height:82px;
+    padding:0 32px;
+    box-sizing:border-box;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+}
+
+#wrap #margin > .main .mainplus,
+#wrap #margin > .main .mainlogo,
+#wrap #margin > .main .main01 > a{
+    display:none;
+}
+
+#wrap #margin > .main .main01 .mainplus,
+#wrap #margin > .main .main01 .mainlogo,
+#wrap #margin > .main .main01 > a{
+    display:none;
+}
+
+#wrap #margin > .main .main-credit,
+#wrap #margin > .main .main-index{
+    display:block;
+    color:#15181b;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.08em;
+    line-height:1;
+    white-space:nowrap;
+}
+
+#wrap #margin > .main .main-credit{grid-column:1;}
+#wrap #margin > .main .main-index{
+    grid-column:3;
+    justify-self:end;
+}
+
+#wrap #margin > .main .main-index span{
+    display:inline-block;
+    width:22px;
+    height:1px;
+    margin:0 10px 4px;
+    background:#202326;
+}
+
+#wrap #margin > .main .mainmenu{
+    grid-column:2;
+    width:auto;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:54px;
+    font-size:13px;
+}
+
+#wrap #margin > .main .mainmenu a{
+    color:#15181b;
+    text-decoration:none;
+    font-weight:500;
+}
+
+#wrap #margin > .main .mainmenu a:hover{color:#4bc1d2;}
+
+#wrap #margin > .con01{
+    position:relative;
+    width:calc(100vw - 72px);
+    max-width:1920px;
+    height:min(760px, calc(100svh - 32px));
+    min-height:620px;
+    margin:16px auto 0;
+    transform:none;
+    overflow:hidden;
+    border-radius:16px;
+    background-color:#e1e4e3;
+    background-position:left center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+
+#wrap #margin > .con01 .con01_text{
+    position:absolute;
+    left:6%;
+    top:50%;
+    width:min(520px, 42%);
+    height:auto;
+    min-height:0;
+    margin:0;
+    padding:0;
+    transform:translateY(-50%);
+    text-align:left;
+    z-index:2;
+}
+
+#wrap #margin > .con01 .hero-kicker{
+    color:#3d454b;
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.46em;
+    line-height:1.2;
+}
+
+#wrap #margin > .con01 .con01_text h1{
+    margin:22px 0 16px;
+    color:#000;
+    font-family:'Alegreya Sans', sans-serif;
+    font-size:clamp(56px, 6.2vw, 112px);
+    font-weight:400;
+    letter-spacing:-.075em;
+    line-height:.92;
+}
+
+#wrap #margin > .con01 .con01_text h1 span{display:block;}
+
+#wrap #margin > .con01 .hero-description{
+    color:#111827;
+    font-size:clamp(18px, 1.5vw, 27px);
+    font-weight:400;
+    letter-spacing:-.055em;
+    line-height:1.34;
+}
+
+#wrap #margin > .con01 .con01_text > .hero-category{
+    margin-top:48px;
+    color:#777777;
+    font-size:clamp(12px, .85vw, 16px);
+    font-weight:700;
+    letter-spacing:.12em;
+    line-height:1.4;
+    white-space:nowrap;
+}
+
+#wrap #margin > .con01 .scroll{
+    position:absolute;
+    left:6%;
+    bottom:30px;
+    width:auto;
+    height:54px;
+    margin:0;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:32px;
+    transform:none;
+    z-index:2;
+}
+
+#wrap #margin > .con01 .scroll::before{
+    content:'';
+    width:1px;
+    height:54px;
+    background:#202326;
+}
+
+#wrap #margin > .con01 .scroll01{
+    width:auto;
+    color:#202326;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.3em;
+    line-height:1.2;
+}
+
+#wrap #margin > .con01 .scroll02{
+    width:52px;
+    height:52px;
+    margin:0;
+    flex:0 0 52px;
+    border:1px solid #202326;
+    background:transparent;
+}
+
+@media (max-width:767px){
+    #wrap #margin > .main{
+        top:0;
+        width:100%;
+        height:64px;
+        background:rgba(255,255,255,.74);
+    }
+
+    #wrap #margin > .main .main01{
+        height:64px;
+        padding:0 20px;
+        display:flex;
+        justify-content:space-between;
+    }
+
+    #wrap #margin > .main .main-credit,
+    #wrap #margin > .main .main-index,
+    #wrap #margin > .main .mainmenu{
+        display:none;
+    }
+
+    #wrap #margin > .main .mainplus{
+        display:flex;
+        width:42px;
+        height:64px;
+    }
+
+    #wrap #margin > .main .main01 .mainplus{
+        display:flex;
+    }
+
+    #wrap #margin > .main .mainplus .maincircle,
+    #wrap #margin > .main .mainplus .maincircle input[id="menuicon"] + label{
+        width:32px;
+        height:32px;
+    }
+
+    #wrap #margin > .main .mainplus .maincircle input[id="menuicon"] + label span{
+        height:3px !important;
+    }
+
+    #wrap #margin > .main .mainlogo,
+    #wrap #margin > .main .main01 > a{
+        display:block;
+        width:64px;
+        height:64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    #wrap #margin > .main .main01 .mainlogo,
+    #wrap #margin > .main .main01 > a{
+        display:block;
+    }
+
+    #wrap #margin > .con01{
+        width:calc(100vw - 24px);
+        height:calc(100svh - 24px);
+        min-height:620px;
+        margin-top:12px;
+        border-radius:14px;
+        background-position:68% top;
+        background-size:auto 62%;
+    }
+
+    #wrap #margin > .con01 .con01_text{
+        left:24px;
+        top:auto;
+        bottom:190px;
+        width:calc(100% - 48px);
+        transform:none;
+    }
+
+    #wrap #margin > .con01 .hero-kicker{font-size:9px; letter-spacing:.34em;}
+    #wrap #margin > .con01 .con01_text h1{
+        margin:14px 0 12px;
+        font-size:clamp(44px, 14vw, 70px);
+        line-height:.94;
+    }
+    #wrap #margin > .con01 .hero-description{font-size:17px;}
+    #wrap #margin > .con01 .con01_text > .hero-category{
+        margin-top:38px;
+        width:100%;
+        font-size:9px;
+        letter-spacing:.06em;
+        line-height:1.6;
+        white-space:normal;
+    }
+    #wrap #margin > .con01 .scroll{
+        left:24px;
+        bottom:28px;
+        height:42px;
+        gap:16px;
+    }
+    #wrap #margin > .con01 .scroll::before{height:42px;}
+    #wrap #margin > .con01 .scroll01{font-size:8px; letter-spacing:.16em;}
+    #wrap #margin > .con01 .scroll02{
+        width:44px;
+        height:44px;
+        flex-basis:44px;
+    }
+}
+
+/* Match the About top bar to the shared Spectrum header. */
+@media (min-width:768px){
+    #wrap #margin > .main{
+        top:16px;
+        width:calc(100vw - 72px);
+        height:120px;
+        background:transparent;
+        border-radius:0;
+    }
+
+    #wrap #margin > .main .main01{
+        width:min(1300px, calc(100% - 48px));
+        height:120px;
+        padding:0;
+        display:flex;
+        justify-content:space-between;
+    }
+
+    #wrap #margin > .main .main01 .mainplus,
+    #wrap #margin > .main .main01 .mainlogo,
+    #wrap #margin > .main .main01 > a{
+        display:flex;
+    }
+
+    #wrap #margin > .main .main01 .mainplus{
+        width:97px;
+        height:120px;
+        flex:0 0 97px;
+        align-items:center;
+    }
+
+    #wrap #margin > .main .main01 .mainlogo,
+    #wrap #margin > .main .main01 > a{
+        width:97px;
+        height:120px;
+        flex:0 0 97px;
+        background-position:left center;
+    }
+
+    #wrap #margin > .main .main-credit,
+    #wrap #margin > .main .main-index{
+        display:none;
+    }
+
+    #wrap #margin > .main .mainmenu{
+        width:750px;
+        height:120px;
+        flex:0 1 750px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:0;
+        font-size:16px;
+    }
+
+    #wrap #margin > .main .mainmenu a:first-child{
+        display:block;
+        color:#111;
+        font-size:16px;
+        font-weight:400;
+    }
+
+    #wrap #margin > .main .mainmenu a:nth-child(2){display:none;}
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    #wrap #margin > .main,
+    #wrap #margin > .main .main01{
+        height:112px;
+    }
+
+    #wrap #margin > .main{
+        top:12px;
+        width:calc(100vw - 24px);
+    }
+
+    #wrap #margin > .main .main01{
+        width:calc(100% - 32px);
+    }
+
+    #wrap #margin > .main .main01 .mainplus{
+        width:52px;
+        height:112px;
+        flex-basis:52px;
+    }
+
+    #wrap #margin > .main .main01 .mainlogo,
+    #wrap #margin > .main .main01 > a{
+        width:64px;
+        height:112px;
+        flex-basis:64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    #wrap #margin > .main .mainmenu{
+        height:112px;
+        font-size:14px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .con01 .scroll{
+        left:32px;
+        width:120px;
+        height:72px;
+    }
+
+    body #wrap #margin > .con01 .scroll01{
+        font-size:clamp(13px, 1.8vw, 18px);
+        white-space:nowrap;
+    }
+
+    body #wrap #margin > .con01 .scroll02{
+        width:44px;
+        height:44px;
+        flex-basis:44px;
+    }
+}
+
+/* Keep the closed hamburger bars on one shared vertical axis. */
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"] + label{
+    width:24px;
+    height:18px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"] + label span{
+    left:0;
+    width:24px;
+    min-width:24px;
+    max-width:24px;
+    height:3px;
+    min-height:3px;
+    max-height:3px;
+    transform:none;
+}
+
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(1){top:0;}
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(2){top:50%; transform:translateY(-50%);}
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"] + label span:nth-child(3){top:auto; bottom:0;}
+
+/* Checked state stays a centered X instead of inheriting the closed-bar offsets. */
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span{
+    top:50%;
+    bottom:auto;
+    left:0;
+}
+
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(1){
+    transform:translateY(-50%) rotate(45deg);
+}
+
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(2){
+    opacity:0;
+    transform:translateY(-50%);
+}
+
+body #wrap #margin > .main .main01 .mainplus .maincircle input[id="menuicon"]:checked + label span:nth-child(3){
+    transform:translateY(-50%) rotate(-45deg);
+}
+
+/* Final mobile header override: only the menu button and Boda logo remain. */
+@media (max-width:767px){
+    body #wrap #margin > .main{
+        top:0;
+        left:0;
+        width:100%;
+        height:64px;
+        transform:none;
+        background:rgba(255,255,255,.86);
+        border-radius:0;
+    }
+
+    body #wrap #margin > .main .main01{
+        width:100%;
+        height:64px;
+        padding:0 20px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu,
+    body #wrap #margin > .main .main01 .main-credit,
+    body #wrap #margin > .main .main01 .main-index{
+        display:none;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        display:flex;
+        width:42px;
+        height:64px;
+        flex:0 0 42px;
+        align-items:center;
+    }
+
+    body #wrap #margin > .main .main01 .mainlogo,
+    body #wrap #margin > .main .main01 > a{
+        display:block;
+        width:64px;
+        height:64px;
+        flex:0 0 64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+}
+
+/* Spectrum-style scroll prompt at the lower-left of the About hero. */
+body #wrap #margin > .con01 .scroll{
+    left:6%;
+    bottom:28px;
+    width:120px;
+    height:88px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:0;
+}
+
+body #wrap #margin > .con01 .scroll::before{display:none;}
+
+body #wrap #margin > .con01 .scroll01{
+    font-size:14px;
+    letter-spacing:0;
+    line-height:1.2;
+}
+
+body #wrap #margin > .con01 .scroll02{
+    width:52px;
+    height:52px;
+    flex-basis:52px;
+}
+
+@media (max-width:767px){
+    body #wrap #margin > .con01 .scroll{
+        left:24px;
+        bottom:24px;
+        width:100px;
+        height:72px;
+    }
+
+    body #wrap #margin > .con01 .scroll01{font-size:12px;}
+    body #wrap #margin > .con01 .scroll02{
+        width:44px;
+        height:44px;
+        flex-basis:44px;
+    }
+}
+
+/* About hero: keep the existing portrait/sign while using the three-line message. */
+#wrap #margin .con01{
+    position:relative;
+    background-position:right center;
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+}
+
+#wrap #margin .con01 .con01_text{
+    position:absolute;
+    left:max(24px, calc((100vw - 1300px) / 2));
+    top:50%;
+    width:min(440px, calc(100vw - 48px));
+    height:auto;
+    margin:0;
+    background:none;
+    transform:translateY(-50%);
+    text-align:left;
+    color:#111827;
+}
+
+#wrap #margin .con01 .con01_text p{
+    margin:0;
+    color:#111827;
+    font-family:'Noto Sans KR', sans-serif;
+}
+
+#wrap #margin .con01 .hero-beyond{
+    font-size:clamp(18px, 1.5vw, 26px);
+    font-weight:500;
+    letter-spacing:.24em;
+    line-height:1.2;
+    text-transform:none;
+}
+
+#wrap #margin .con01 .hero-visible{
+    margin-top:12px;
+    font-size:clamp(54px, 5.1vw, 88px);
+    font-weight:400;
+    letter-spacing:-.09em;
+    line-height:1.05;
+    white-space:nowrap;
+}
+
+#wrap #margin .con01 .hero-category{
+    margin-top:24px;
+    color:#50c2cf;
+    font-size:clamp(16px, 1.35vw, 22px);
+    font-weight:700;
+    letter-spacing:.28em;
+    line-height:1.2;
+}
+
+@media (max-width:1316px){
+    #wrap #margin .con01{
+        background-position:left center;
+        background-size:auto 100%;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        left:32px;
+        width:min(390px, calc(100vw - 64px));
+        transform:translateY(-50%);
+    }
+
+    #wrap #margin .con01 .hero-visible{
+        font-size:clamp(48px, 7vw, 72px);
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin .con01{
+        height:clamp(680px, 150vw, 820px);
+        background-position:68% top;
+        background-size:auto 58%;
+        background-color:#eef2f1;
+    }
+
+    #wrap #margin .con01 .con01_text{
+        left:24px;
+        top:auto;
+        bottom:72px;
+        width:calc(100% - 48px);
+        transform:none;
+    }
+
+    #wrap #margin .con01 .hero-beyond{
+        font-size:16px;
+    }
+
+    #wrap #margin .con01 .hero-visible{
+        margin-top:10px;
+        font-size:clamp(42px, 13vw, 64px);
+    }
+
+    #wrap #margin .con01 .hero-category{
+        margin-top:18px;
+        font-size:15px;
+    }
+}
+
+/* Final About hero typography — matched to Figma node 82:37. */
+#wrap #margin > .con01 .con01_text h1{
+    color:#000;
+    font-family:'Alegreya Sans', sans-serif;
+    font-size:clamp(60px, 5.52vw, 106px);
+    font-weight:400;
+    letter-spacing:-.075em;
+    line-height:.92;
+}
+
+#wrap #margin > .con01 .hero-description{
+    color:#111827;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(18px, 1.458vw, 28px);
+    font-weight:400;
+    letter-spacing:-.055em;
+    line-height:1.328;
+}
+
+#wrap #margin > .con01 .hero-category{
+    margin-top:46px;
+    color:#777777;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(11px, .833vw, 16px);
+    font-weight:700;
+    letter-spacing:2px;
+    line-height:1.65;
+    white-space:nowrap;
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01 .con01_text{
+        bottom:190px;
+    }
+
+    #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(44px, 14vw, 70px);
+        line-height:.94;
+        letter-spacing:-.075em;
+    }
+
+    #wrap #margin > .con01 .hero-description{
+        font-size:17px;
+        line-height:1.45;
+        letter-spacing:-.055em;
+    }
+
+    #wrap #margin > .con01 .hero-category{
+        margin-top:38px;
+        width:100%;
+        font-size:9px;
+        line-height:1.6;
+        letter-spacing:.06em;
+        white-space:normal;
+    }
+}
+
+/* Keep the About hero as a flat section without the outer rounded card. */
+html,
+body{
+    background:#ffffff;
+}
+
+#wrap #margin > .con01{
+    width:100%;
+    max-width:none;
+    margin:0;
+    background-color:#e1e4e3;
+    background-image:none;
+    border-radius:0;
+}
+
+/* Use the same image-based Scroll Down button as the Spectrum hero. */
+body #wrap #margin > .con01 .scroll02{
+    aspect-ratio:1 / 1;
+    flex:0 0 52px;
+    box-sizing:border-box;
+    border:0;
+    border-radius:0;
+    background:url(../images/main/main_button.png) center / contain no-repeat;
+    box-shadow:none;
+}
+
+body #wrap #margin > .con01 .scroll02 .arrow{
+    display:none;
+}
+
+@media (min-width:768px){
+    body #wrap #margin > .con01 .scroll01{
+        transform:translateY(-8px);
+    }
+}
+
+@media (max-width:767px){
+    body #wrap #margin > .con01 .scroll02{
+        width:44px;
+        height:44px;
+        flex-basis:44px;
+    }
+}
+
+/* Match the Profile scroll prompt to Spectrum and align it with Beyond. */
+@media (min-width:768px){
+    body #wrap #margin > .con01 .scroll{
+        left:max(24px, calc((100vw - 1300px) / 2));
+        bottom:28px;
+        width:120px;
+        height:88px;
+        align-items:flex-start;
+        justify-content:space-between;
+    }
+
+    body #wrap #margin > .con01 .scroll01{
+        font-family:'Noto Sans KR', sans-serif;
+        font-size:16px;
+        font-weight:400;
+        letter-spacing:0;
+        line-height:1.4;
+        transform:translateY(-8px);
+    }
+
+    body #wrap #margin > .con01 .scroll02{
+        width:52px;
+        height:52px;
+        flex-basis:52px;
+    }
+}
+
+/* Keep the hero artwork as a real image element, separate from the section color. */
+#wrap #margin > .con01 .con01-visual{
+    position:absolute;
+    top:12%;
+    right:16%;
+    z-index:1;
+    width:min(820px, 40vw);
+    height:auto;
+    max-width:none;
+    object-fit:contain;
+    object-position:center;
+    pointer-events:none;
+}
+
+@media (max-width:1316px){
+    #wrap #margin > .con01 .con01-visual{
+        right:3%;
+        left:auto;
+        width:min(650px, 58vw);
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01 .con01-visual{
+        top:0;
+        right:auto;
+        left:50%;
+        width:auto;
+        height:58%;
+        transform:translateX(-50%);
+    }
+}
+
+/* Match the Profile Scroll Down size to the current Spectrum control. */
+@media (min-width:768px){
+    body #wrap #margin > .con01 .scroll{
+        height:72px;
+    }
+
+    body #wrap #margin > .con01 .scroll01{
+        font-size:clamp(13px, 1.8vw, 18px);
+        line-height:1.3;
+        white-space:nowrap;
+    }
+
+    body #wrap #margin > .con01 .scroll02{
+        width:44px;
+        height:44px;
+        flex-basis:44px;
+    }
+}
+
+/* Match Spectrum on wide desktop screens as well. */
+@media (min-width:1317px){
+    body #wrap #margin > .con01 .scroll{
+        height:90px;
+    }
+
+    body #wrap #margin > .con01 .scroll01{
+        font-size:12px;
+        line-height:1.3;
+    }
+
+    body #wrap #margin > .con01 .scroll02{
+        width:52px;
+        height:52px;
+        flex-basis:52px;
+    }
+}
+
+/* Center the label and button on the same vertical axis. */
+body #wrap #margin > .con01 .scroll{
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px;
+    width:max-content;
+    height:auto;
+    text-align:center;
+}
+
+body #wrap #margin > .con01 .scroll01{
+    text-align:center;
+    transform:none;
+}
+
+body #wrap #margin > .con01 .scroll02{
+    margin-left:0;
+}
+
+@media (max-width:1316px) and (min-width:768px){
+    body #wrap #margin > .con01 .scroll{
+        left:32px;
+    }
+}
+
+@media (max-width:767px){
+    body #wrap #margin > .con01 .scroll{
+        left:24px;
+    }
+}
+
+/* Match About hero height to Spectrum at every responsive breakpoint. */
+@media (min-width:1317px){
+    #wrap #margin > .con01{
+        height:700px;
+    }
+}
+
+@media (max-width:1316px){
+    #wrap #margin > .con01{
+        height:clamp(600px, 80vw, 700px);
+    }
+}
+
+/* Match Spectrum's fluid tablet layout: no white header seam and a centered, shrinking portrait. */
+@media (min-width:768px) and (max-width:1316px){
+    html,
+    body{
+        background:#e1e4e3;
+    }
+
+    #wrap #margin > .main{
+        background:#e1e4e3;
+    }
+
+    #wrap #margin > .con01{
+        width:100%;
+        min-height:600px;
+        margin-top:0;
+        background-color:#e1e4e3;
+        background-image:none;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        top:50%;
+        right:5%;
+        left:auto;
+        width:min(54vw, 600px);
+        height:auto;
+        transform:translateY(-50%);
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01{
+        height:clamp(560px, 145vw, 760px);
+    }
+}
+
+/* Use the same mobile header and natural hero flow as Spectrum. */
+@media (max-width:767px){
+    body #wrap #margin > .main{
+        top:0;
+        left:0;
+        width:100%;
+        height:112px;
+        transform:none;
+        background:transparent;
+    }
+
+    body #wrap #margin > .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+        padding:0;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        display:flex;
+        width:52px;
+        height:112px;
+        flex:0 0 52px;
+        align-items:center;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        display:flex;
+        width:auto;
+        height:auto;
+        flex:1;
+        align-items:center;
+        justify-content:center;
+        font-size:14px;
+        text-align:center;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu a:first-child{
+        display:block;
+        color:#111;
+        font-size:14px;
+        font-weight:400;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu a:nth-child(2){
+        display:none;
+    }
+
+    body #wrap #margin > .main .main01 .mainlogo,
+    body #wrap #margin > .main .main01 > a{
+        display:block;
+        width:64px;
+        height:24px;
+        flex:0 0 64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    body #wrap #margin > .con01{
+        width:100%;
+        height:auto;
+        min-height:0;
+        margin-top:0;
+        padding-top:43vw;
+        box-sizing:border-box;
+        background:#e1e4e3;
+        overflow:hidden;
+    }
+
+    body #wrap #margin > .con01 .con01-visual{
+        top:0;
+        right:auto;
+        left:50%;
+        width:min(100vw, 620px);
+        height:auto;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        position:relative;
+        left:auto;
+        top:auto;
+        right:auto;
+        bottom:auto;
+        width:calc(100% - 48px);
+        margin:0 auto;
+        transform:none;
+    }
+}
+
+/* Final mobile spacing: start the title just below the shared 112px header. */
+@media (max-width:767px){
+    body #wrap #margin > .con01{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        height:auto;
+        min-height:0;
+        padding-top:128px;
+        padding-bottom:28px;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        order:1;
+        position:relative;
+        left:auto;
+        top:auto;
+        right:auto;
+        bottom:auto;
+        width:calc(100% - 48px);
+        margin:0 auto;
+        transform:none;
+    }
+
+    body #wrap #margin > .con01 .con01-visual{
+        order:2;
+        position:relative;
+        top:auto;
+        right:auto;
+        left:auto;
+        width:100vw;
+        height:auto;
+        margin-top:24px;
+        transform:none;
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        display:none;
+    }
+}
+
+/* Mobile: keep the title clear, then place the portrait underneath it. */
+@media (max-width:767px){
+    body #wrap #margin > .con01{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding-top:128px;
+        padding-bottom:28px;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        order:1;
+        flex:0 0 auto;
+        width:calc(100% - 48px);
+        margin:0 auto;
+    }
+
+    body #wrap #margin > .con01 .con01-visual{
+        order:2;
+        position:relative;
+        top:auto;
+        right:auto;
+        left:auto;
+        width:100vw;
+        height:auto;
+        margin-top:24px;
+        transform:none;
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        order:3;
+        position:relative;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        width:100px;
+        height:72px;
+        margin:24px auto 0;
+        align-self:flex-start;
+    }
+}
+
+/* Align the About header to Spectrum: remove the top inset above the hero. */
+@media (min-width:768px){
+    #wrap #margin > .main{
+        top:0;
+        width:100%;
+        background:transparent;
+    }
+
+    #wrap #margin > .main + .con01{
+        margin-top:0;
+    }
+}
+
+/* Match Spectrum's mobile flow: keep the header on the hero color and scale the portrait by width. */
+@media (max-width:767px){
+    html,
+    body{
+        background:#e1e4e3;
+    }
+
+    #wrap #margin > .main{
+        top:0;
+        background:#e1e4e3;
+    }
+
+    body #wrap #margin > .main{
+        background:#e1e4e3;
+    }
+
+    #wrap #margin > .con01{
+        width:100%;
+        height:clamp(600px, 150vw, 760px);
+        min-height:600px;
+        margin-top:0;
+        background:#e1e4e3;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        top:0;
+        right:auto;
+        left:50%;
+        width:min(110vw, 700px);
+        height:auto;
+        transform:translateX(-50%);
+    }
+
+    #wrap #margin > .con01 .con01_text{
+        bottom:160px;
+    }
+}
+
+/* Final shared mobile header/hero override — keep this after the legacy responsive rules. */
+@media (max-width:767px){
+    body #wrap #margin > .main{
+        top:0;
+        left:0;
+        width:100%;
+        height:112px;
+        transform:none;
+        background:transparent;
+    }
+
+    body #wrap #margin > .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+        padding:0;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        display:flex;
+        width:52px;
+        height:112px;
+        flex:0 0 52px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        display:flex;
+        width:auto;
+        height:auto;
+        flex:1;
+        align-items:center;
+        justify-content:center;
+        font-size:14px;
+        text-align:center;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu a:first-child{
+        display:block;
+        color:#111;
+        font-size:14px;
+        font-weight:400;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu a:nth-child(2){display:none;}
+
+    body #wrap #margin > .main .main01 .mainlogo,
+    body #wrap #margin > .main .main01 > a{
+        display:block;
+        width:64px;
+        height:24px;
+        flex:0 0 64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+
+    body #wrap #margin > .con01{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        height:auto;
+        min-height:0;
+        margin-top:0;
+        padding-top:128px;
+        padding-bottom:28px;
+        box-sizing:border-box;
+        background:#e1e4e3;
+        overflow:hidden;
+    }
+
+    body #wrap #margin > .con01 .con01-visual{
+        order:2;
+        position:relative;
+        top:auto;
+        right:auto;
+        left:auto;
+        width:100vw;
+        height:auto;
+        margin-top:24px;
+        transform:none;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        order:1;
+        position:relative;
+        left:auto;
+        top:auto;
+        right:auto;
+        bottom:auto;
+        width:calc(100% - 48px);
+        margin:0 auto;
+        transform:none;
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        order:3;
+        position:relative;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        width:100px;
+        height:72px;
+        margin:24px auto 0;
+        align-self:flex-start;
+    }
+}
+
+/* Keep Scroll Down from growing when the desktop viewport narrows. */
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .con01 .scroll01{
+        font-size:12px;
+        line-height:1.3;
+    }
+}
+
+/* Keep the desktop About hero compact while allowing the square artwork to fit. */
+@media (min-width:1317px){
+    #wrap #margin > .con01{
+        height:960px;
+        min-height:0;
+        overflow:hidden;
+    }
+}
+
+/* Keep the compact hero when the viewport gets narrower; the portrait must not
+   force the section taller or appear outside the reduced layout. */
+@media (min-width:768px) and (max-width:1316px){
+    #wrap #margin > .con01{
+        height:clamp(560px, 60vw, 640px);
+        min-height:0;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        display:block;
+        max-height:calc(100% - 40px);
+        object-fit:contain;
+    }
+}
+
+/* Use the same compact behavior on short desktop windows. */
+@media (min-width:1317px) and (max-height:1000px){
+    #wrap #margin > .con01{
+        height:100svh;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        display:block;
+        top:50%;
+        max-height:calc(100% - 40px);
+        transform:translateY(-50%);
+        object-fit:contain;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01{
+        height:clamp(560px, calc(100svh - 112px), 760px);
+        min-height:0;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        display:block;
+        max-width:100%;
+        max-height:calc(100% - 180px);
+        object-fit:contain;
+    }
+}
+
+/* About overview: skills and experience directly below the hero. */
+#wrap #margin > .about-overview{
+    width:100%;
+    min-height:720px;
+    box-sizing:border-box;
+    background:#fff;
+    color:#111;
+}
+
+#wrap #margin > .about-overview .about-overview__grid{
+    width:calc(100% - 96px);
+    max-width:1300px;
+    margin:0 auto;
+    padding:88px 0 82px;
+    box-sizing:border-box;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+}
+
+#wrap #margin > .about-overview article{
+    min-width:0;
+}
+
+#wrap #margin > .about-overview__grid .about-overview__skills{
+    padding-right:58px;
+}
+
+#wrap #margin > .about-overview .about-overview__impact{
+    padding-left:58px;
+    border-left:1px solid #d8d8d8;
+}
+
+#wrap #margin > .about-overview .about-overview__eyebrow{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    color:#222;
+    font-size:15px;
+    line-height:1;
+    letter-spacing:.06em;
+}
+
+#wrap #margin > .about-overview .about-overview__eyebrow i{
+    display:block;
+    width:56px;
+    height:1px;
+    background:#aaa;
+}
+
+#wrap #margin > .about-overview h2{
+    margin:36px 0 18px;
+    color:#080808;
+    font-size:clamp(30px, 3vw, 50px);
+    font-weight:700;
+    letter-spacing:.035em;
+    line-height:1.08;
+}
+
+#wrap #margin > .about-overview .about-overview__intro{
+    color:#555;
+    font-size:clamp(16px, 1.35vw, 23px);
+    font-weight:400;
+    letter-spacing:-.045em;
+    line-height:1.62;
+}
+
+#wrap #margin > .about-overview h3{
+    margin:52px 0 24px;
+    color:#111;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.28em;
+    line-height:1.2;
+}
+
+#wrap #margin > .about-overview .tool-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:13px;
+    padding-right:clamp(24px, 4vw, 64px);
+    box-sizing:border-box;
+}
+
+#wrap #margin > .about-overview .tool-list li{
+    min-height:48px;
+    display:grid;
+    grid-template-columns:54px 170px minmax(0,1fr);
+    align-items:center;
+    column-gap:14px;
+}
+
+#wrap #margin > .about-overview .tool-mark{
+    width:38px;
+    height:38px;
+    box-sizing:border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#111;
+    border:2px solid #111;
+    border-radius:7px;
+    font-size:18px;
+    font-weight:500;
+    line-height:1;
+}
+
+#wrap #margin > .about-overview .tool-mark--ai{font-size:17px;}
+#wrap #margin > .about-overview .tool-mark--figma{border-radius:50%; font-size:22px; font-weight:700;}
+#wrap #margin > .about-overview .tool-mark--code{border:0; width:44px; font-size:25px; letter-spacing:-.12em;}
+#wrap #margin > .about-overview .tool-mark--video{font-size:25px;}
+
+#wrap #margin > .about-overview .tool-name{
+    color:#222;
+    font-size:20px;
+    font-weight:400;
+    line-height:1.2;
+}
+
+#wrap #margin > .about-overview .tool-meter{
+    display:block;
+    width:100%;
+    height:8px;
+    background:#e3e4e5;
+}
+
+#wrap #margin > .about-overview .tool-meter span{
+    display:block;
+    width:var(--level);
+    height:100%;
+    background:#50c2cf;
+}
+
+#wrap #margin > .about-overview .language-row{
+    margin-top:34px;
+    margin-right:clamp(24px, 4vw, 64px);
+    padding-top:4px;
+    border-top:1px solid #d8d8d8;
+}
+
+#wrap #margin > .about-overview .language-row h3{margin:31px 0 22px;}
+
+#wrap #margin > .about-overview .language-item{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+#wrap #margin > .about-overview .language-mark{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:2px solid #111;
+    border-radius:50%;
+    color:#111;
+    font-size:30px;
+    line-height:1;
+}
+
+#wrap #margin > .about-overview .language-item strong,
+#wrap #margin > .about-overview .language-item small{
+    display:block;
+    color:#222;
+    font-size:19px;
+    font-weight:400;
+    line-height:1.35;
+}
+
+#wrap #margin > .about-overview .language-item small{
+    color:#777;
+    font-size:16px;
+}
+
+#wrap #margin > .about-overview .impact-grid{
+    margin-top:68px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+#wrap #margin > .about-overview .impact-stat{
+    min-height:214px;
+    padding:0 38px 42px 0;
+    box-sizing:border-box;
+}
+
+#wrap #margin > .about-overview .impact-stat:nth-child(2n){
+    padding-left:58px;
+    padding-right:0;
+    border-left:1px solid #d8d8d8;
+}
+
+#wrap #margin > .about-overview .impact-stat:nth-child(-n+2){
+    padding-bottom:48px;
+    border-bottom:1px solid #d8d8d8;
+}
+
+#wrap #margin > .about-overview .impact-stat:nth-child(n+3){padding-top:48px;}
+
+#wrap #margin > .about-overview .impact-stat strong{
+    display:block;
+    color:#080808;
+    font-family:Georgia, 'Times New Roman', serif;
+    font-size:clamp(70px, 6vw, 108px);
+    font-weight:400;
+    letter-spacing:-.07em;
+    line-height:.78;
+}
+
+#wrap #margin > .about-overview .impact-stat strong sup{
+    position:relative;
+    top:-.12em;
+    margin-left:7px;
+    font-family:inherit;
+    font-size:.52em;
+    letter-spacing:0;
+    vertical-align:middle;
+}
+
+#wrap #margin > .about-overview .impact-stat b,
+#wrap #margin > .about-overview .impact-stat span{
+    display:block;
+    margin-top:28px;
+    color:#111;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.18em;
+    line-height:1.2;
+}
+
+#wrap #margin > .about-overview .impact-stat span{
+    margin-top:12px;
+    color:#777;
+    font-size:16px;
+    letter-spacing:-.03em;
+}
+
+@media (max-width:900px){
+    #wrap #margin > .about-overview .about-overview__grid{
+        width:calc(100% - 48px);
+        display:block;
+    }
+
+    #wrap #margin > .about-overview__grid .about-overview__skills{
+        padding-right:0;
+    }
+
+    #wrap #margin > .about-overview .about-overview__impact{
+        margin-top:70px;
+        padding:70px 0 0;
+        border-top:1px solid #d8d8d8;
+        border-left:0;
+    }
+
+    #wrap #margin > .about-overview .impact-grid{margin-top:56px;}
+}
+
+@media (max-width:767px){
+    #wrap #margin > .about-overview .about-overview__grid{
+        width:calc(100% - 48px);
+        padding:58px 0 64px;
+    }
+
+    #wrap #margin > .about-overview h2{
+        margin-top:28px;
+        font-size:clamp(26px, 7.2vw, 38px);
+        letter-spacing:.02em;
+    }
+
+    #wrap #margin > .about-overview .about-overview__intro{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    #wrap #margin > .about-overview .desktop-only{display:none;}
+
+    #wrap #margin > .about-overview h3{
+        margin-top:42px;
+        font-size:13px;
+    }
+
+    #wrap #margin > .about-overview .tool-list li{
+        grid-template-columns:46px 118px minmax(0,1fr);
+        column-gap:10px;
+    }
+
+    #wrap #margin > .about-overview .tool-list{
+        padding-right:18px;
+    }
+
+    #wrap #margin > .about-overview .language-row{
+        margin-right:18px;
+    }
+
+    #wrap #margin > .about-overview .tool-name{font-size:15px;}
+    #wrap #margin > .about-overview .tool-meter{height:6px;}
+    #wrap #margin > .about-overview .impact-grid{margin-top:42px;}
+    #wrap #margin > .about-overview .impact-stat{min-height:174px; padding-right:18px; padding-bottom:34px;}
+    #wrap #margin > .about-overview .impact-stat:nth-child(2n){padding-left:18px;}
+    #wrap #margin > .about-overview .impact-stat:nth-child(-n+2){padding-bottom:34px;}
+    #wrap #margin > .about-overview .impact-stat:nth-child(n+3){padding-top:34px;}
+    #wrap #margin > .about-overview .impact-stat strong{font-size:clamp(54px, 15vw, 78px);}
+    #wrap #margin > .about-overview .impact-stat b{margin-top:22px; font-size:10px; letter-spacing:.1em;}
+    #wrap #margin > .about-overview .impact-stat span{font-size:13px;}
+}
+
+@media (max-width:420px){
+    #wrap #margin > .about-overview .tool-list{padding-right:12px;}
+    #wrap #margin > .about-overview .language-row{margin-right:12px;}
+    #wrap #margin > .about-overview .tool-list li{grid-template-columns:42px 106px minmax(0,1fr); column-gap:8px;}
+    #wrap #margin > .about-overview .tool-name{font-size:14px;}
+    #wrap #margin > .about-overview .impact-stat b{font-size:9px;}
+    #wrap #margin > .about-overview .impact-stat span{font-size:12px;}
+}
+
+/* Awards section: keep the cards inside the same 1300px frame. */
+#wrap #margin > .about-awards{
+    width:100%;
+    box-sizing:border-box;
+    background:#dcfbfa;
+    color:#111;
+}
+
+#wrap #margin > .about-awards .about-awards__inner{
+    width:calc(100% - 96px);
+    max-width:1300px;
+    margin:0 auto;
+    padding:96px 0 120px;
+    box-sizing:border-box;
+}
+
+#wrap #margin > .about-awards .about-awards__eyebrow{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    color:#222;
+    font-size:15px;
+    line-height:1;
+    letter-spacing:.06em;
+}
+
+#wrap #margin > .about-awards .about-awards__eyebrow i{
+    display:block;
+    width:56px;
+    height:1px;
+    background:#aaa;
+}
+
+#wrap #margin > .about-awards h2{
+    margin:35px 0 20px;
+    color:#080808;
+    font-size:clamp(30px, 3vw, 50px);
+    font-weight:700;
+    letter-spacing:.07em;
+    line-height:1.08;
+}
+
+#wrap #margin > .about-awards .about-awards__intro{
+    margin:0 0 48px;
+    color:#555;
+    font-size:clamp(16px, 1.35vw, 23px);
+    font-weight:400;
+    letter-spacing:-.045em;
+    line-height:1.6;
+}
+
+#wrap #margin > .about-awards .award-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:24px;
+}
+
+#wrap #margin > .about-awards .award-card{
+    min-width:0;
+    overflow:hidden;
+    border:1px solid #d8d8d8;
+    border-radius:10px;
+    background:#fff;
+}
+
+#wrap #margin > .about-awards .award-card__image{
+    width:100%;
+    aspect-ratio:1.24;
+    overflow:hidden;
+    background:#e1e4e3;
+}
+
+#wrap #margin > .about-awards .award-card__image img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+#wrap #margin > .about-awards .award-card:hover .award-card__image img{transform:scale(1.04);}
+
+#wrap #margin > .about-awards .award-card__body{
+    padding:36px 38px 26px;
+}
+
+#wrap #margin > .about-awards .award-card__type{
+    color:#777;
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:.04em;
+    line-height:1.2;
+}
+
+#wrap #margin > .about-awards .award-card h3{
+    min-height:2.7em;
+    margin:28px 0 12px;
+    color:#111;
+    font-size:clamp(19px, 1.5vw, 25px);
+    font-weight:700;
+    letter-spacing:-.055em;
+    line-height:1.35;
+}
+
+#wrap #margin > .about-awards .award-card p{
+    color:#777;
+    font-size:17px;
+    font-weight:400;
+    letter-spacing:-.04em;
+    line-height:1.35;
+}
+
+#wrap #margin > .about-awards .award-card__footer{
+    min-height:54px;
+    margin-top:38px;
+    padding-top:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    border-top:1px solid #dedede;
+    color:#777;
+    font-size:16px;
+    line-height:1;
+}
+
+#wrap #margin > .about-awards .award-card__footer i{
+    width:1px;
+    height:18px;
+    background:#d5d5d5;
+}
+
+#wrap #margin > .about-awards .award-card__footer a{
+    width:52px;
+    height:52px;
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-sizing:border-box;
+    border:1px solid #777;
+    border-radius:50%;
+    color:#111;
+    font-size:24px;
+    line-height:1;
+    text-decoration:none;
+    transition:background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+#wrap #margin > .about-awards .award-card__footer a:hover{
+    border-color:#50c2cf;
+    background:#50c2cf;
+    color:#fff;
+}
+
+@media (max-width:1000px){
+    #wrap #margin > .about-awards .award-grid{gap:16px;}
+    #wrap #margin > .about-awards .award-card__body{padding:28px 24px 22px;}
+    #wrap #margin > .about-awards .award-card h3{font-size:20px;}
+    #wrap #margin > .about-awards .award-card__footer{gap:11px; font-size:14px;}
+}
+
+@media (max-width:767px){
+    #wrap #margin > .about-awards .about-awards__inner{
+        width:calc(100% - 48px);
+        padding:64px 0 76px;
+    }
+
+    #wrap #margin > .about-awards h2{
+        margin-top:28px;
+        font-size:clamp(26px, 7.2vw, 38px);
+        letter-spacing:.04em;
+    }
+
+    #wrap #margin > .about-awards .about-awards__intro{
+        margin-bottom:30px;
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    #wrap #margin > .about-awards .award-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    #wrap #margin > .about-awards .award-card__image{aspect-ratio:1.28;}
+    #wrap #margin > .about-awards .award-card__body{padding:25px 22px 20px;}
+    #wrap #margin > .about-awards .award-card h3{min-height:0; margin:18px 0 8px; font-size:21px;}
+    #wrap #margin > .about-awards .award-card__footer{margin-top:26px; padding-top:16px;}
+}
+
+/* Vision: keep the existing content, but make the carousel fluid and responsive. */
+#wrap #margin > .con05{
+    width:100%;
+    height:auto;
+    min-height:0;
+    padding:82px 48px 96px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow:hidden;
+    background:#353637;
+}
+
+#wrap #margin > .con05 .profile_vision{
+    width:66px;
+    height:17px;
+    flex:0 0 17px;
+    margin:0 auto 48px;
+    background-size:66px 17px;
+    background-position:center;
+}
+
+#wrap #margin > .con05 .slidebox{
+    width:min(970px, 100%);
+    height:auto;
+    min-height:0;
+    margin:0 auto;
+    position:relative;
+    top:auto;
+    padding:0 0 0;
+    box-sizing:border-box;
+}
+
+#wrap #margin > .con05 .slidebox input[type="radio"]{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0 0 0 0);
+    clip-path:inset(50%);
+    white-space:nowrap;
+}
+
+#wrap #margin > .con05 .slidebox .slidelist{
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+#wrap #margin > .con05 .slidebox .slidelist .slideitem{
+    width:100%;
+    height:auto;
+    display:inline-block;
+    vertical-align:top;
+    box-sizing:border-box;
+}
+
+#wrap #margin > .con05 .slidebox .slidelist .slideitem > a,
+#wrap #margin > .con05 .slidebox .slidelist .slideitem > a img{
+    display:block;
+    width:100%;
+    max-width:956px;
+    height:auto;
+    margin:0 auto;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label{
+    top:50%;
+    width:54px;
+    height:54px;
+    padding:0;
+    transform:translateY(-50%);
+    box-sizing:border-box;
+    border-radius:50%;
+    background-size:54px 54px !important;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.prev,
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.next{
+    width:54px;
+    height:54px;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.prev{left:-86px;}
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.next{right:-86px;}
+
+@media (max-width:1120px){
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.prev{left:14px;}
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.next{right:14px;}
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con05{
+        padding:64px 24px 84px;
+    }
+
+    #wrap #margin > .con05 .profile_vision{
+        margin-bottom:32px;
+    }
+
+    #wrap #margin > .con05 .slidebox{
+        width:100%;
+        padding-bottom:72px;
+    }
+
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label{
+        top:auto;
+        bottom:0;
+        transform:none;
+    }
+
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.prev{
+        left:calc(50% - 60px);
+    }
+
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.next{
+        right:calc(50% - 60px);
+    }
+}
+
+/* Vision copy is real HTML text, so it can resize and wrap on every screen. */
+#wrap #margin > .con05 .slidebox .slidelist .slideitem .vision-slide{
+    width:min(956px, 100%);
+    margin:0 auto;
+    color:#fff;
+    white-space:normal;
+}
+
+#wrap #margin > .con05 .vision-slide__heading{
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+    gap:34px;
+    margin-bottom:28px;
+    color:#fff;
+    line-height:1.2;
+}
+
+#wrap #margin > .con05 .vision-slide__heading strong{
+    color:#fff;
+    font-size:clamp(22px, 3.1vw, 38px);
+    font-weight:700;
+    letter-spacing:-.06em;
+    text-decoration:underline;
+    text-underline-offset:5px;
+    white-space:nowrap;
+}
+
+#wrap #margin > .con05 .vision-slide__heading span{
+    color:#fff;
+    font-size:clamp(18px, 2vw, 28px);
+    font-weight:700;
+    letter-spacing:-.06em;
+    white-space:nowrap;
+}
+
+#wrap #margin > .con05 .vision-slide p{
+    margin:0;
+    color:#fff;
+    font-size:clamp(15px, 1.35vw, 20px);
+    font-weight:400;
+    letter-spacing:-.045em;
+    line-height:1.75;
+    text-align:left;
+    word-break:keep-all;
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con05 .vision-slide__heading{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:7px;
+        margin-bottom:22px;
+    }
+
+    #wrap #margin > .con05 .vision-slide__heading strong{font-size:22px;}
+    #wrap #margin > .con05 .vision-slide__heading span{font-size:19px;}
+
+    #wrap #margin > .con05 .vision-slide p{
+        font-size:15px;
+        line-height:1.8;
+    }
+}
+
+/* Vision pagination matches the Work pagination controls. */
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label{
+    position:absolute;
+    opacity:1;
+    border:1px solid #999999;
+    background-color:#FFFFFF !important;
+    background-image:none !important;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:54px 54px !important;
+    transition:background-color .2s ease, border-color .2s ease;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label::before{
+    content:'';
+    position:absolute;
+    top:20px;
+    left:24px;
+    width:9px;
+    height:9px;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    border-radius:1px;
+    transform:rotate(45deg);
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.next::before{
+    left:20px;
+    border-top:0;
+    border-right:0;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    transform:scaleX(-1) rotate(45deg);
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:hover{
+    background-color:#EAF6FF;
+    border-color:#64C4E4;
+    opacity:1;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:hover::before{
+    border-color:#176B8C;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:active,
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:focus-visible{
+    background-color:#EAF6FF;
+    border-color:#64C4E4;
+}
+
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:active::before,
+#wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:focus-visible::before{
+    border-color:#176B8C;
+}
+
+/* Compact About hero: anchor the portrait to the hero's bottom edge and let it
+   shrink inside the section instead of making the section taller. */
+@media (min-width:768px){
+    #wrap #margin > .con01{
+        height:clamp(760px, calc(40vw + 40px), 860px);
+        min-height:0;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        top:auto;
+        right:max(24px, calc((100vw - 1300px) / 2 - 20px));
+        bottom:0;
+        left:auto;
+        width:min(820px, 40vw);
+        max-width:none;
+        height:auto;
+        max-height:calc(100% - 40px);
+        transform:none;
+        object-fit:contain;
+        object-position:center bottom;
+    }
+}
+
+/* On the 1600px desktop range, bring the portrait closer to the text column. */
+@media (min-width:1317px) and (max-width:1800px){
+    #wrap #margin > .con01 .con01-visual{
+        right:calc((100vw - 1300px) / 2 + 90px);
+    }
+}
+
+@media (min-width:768px) and (max-width:1317px){
+    #wrap #margin > .con01{
+        height:clamp(560px, 60vw, 640px);
+        min-height:0;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        right:15%;
+        bottom:0;
+        width:min(45vw, 520px);
+        height:auto;
+        max-height:calc(100% - 24px);
+        transform:none;
+        object-fit:contain;
+        object-position:center bottom;
+    }
+}
+
+/* Narrow tablet: give the portrait more breathing room from the text. */
+@media (min-width:768px) and (max-width:945px){
+    #wrap #margin > .con01 .con01-visual{
+        right:5%;
+    }
+}
+
+/* Mobile: let the hero end exactly at the bottom of the portrait. */
+@media (max-width:767px){
+    body #wrap #margin > .con01{
+        padding-bottom:0;
+    }
+
+    body #wrap #margin > .con01 .con01-visual{
+        display:block;
+        margin-bottom:0;
+    }
+}
+
+/* Mobile typography: use the requested four-level type scale. */
+@media (max-width:767px){
+#wrap #margin > .con01 .hero-description,
+#wrap #margin > .about-overview .about-overview__intro,
+#wrap #margin > .about-awards .about-awards__intro,
+#wrap #margin > .con05 .vision-slide p{
+    font-size:16px;
+    line-height:1.7;
+}
+}
+
+/* Keep the final Work banner full-bleed and prevent a shifted lower section. */
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+#wrap #margin > .con07{
+    position:relative;
+    left:auto;
+    width:100vw;
+    max-width:none;
+    margin-left:calc(50% - 50vw);
+    transform:none;
+}
+
+/* Intermediate widths need room for the vision controls on both sides. */
+@media (min-width:768px) and (max-width:1400px){
+    #wrap #margin > .con05{
+        padding-left:24px;
+        padding-right:24px;
+    }
+
+    #wrap #margin > .con05 .slidebox{
+        width:100%;
+        max-width:none;
+    }
+
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.prev{
+        left:8px;
+    }
+
+    #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label.next{
+        right:8px;
+    }
+
+    #wrap #margin > .con05 .slidebox .slidelist .slideitem .vision-slide{
+        width:calc(100% - 148px);
+        max-width:none;
+    }
+
+    #wrap #margin > .con05 .vision-slide p{
+        font-size:clamp(14px, 1.35vw, 18px);
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con05 .slidebox .slidelist .slideitem .vision-slide{
+        width:100%;
+    }
+}
+
+#wrap #margin > .about-overview .language-item strong,
+#wrap #margin > .about-overview .tool-name{
+    font-size:16px;
+    line-height:1.6;
+}
+
+#wrap #margin > .about-overview .language-item small,
+#wrap #margin > .about-overview .impact-stat span,
+#wrap #margin > .about-awards .award-card p,
+#wrap #margin > .con07 .profile_about_copy{
+    font-size:14px;
+    line-height:1.6;
+}
+
+#wrap #margin > .con01 .hero-category,
+#wrap #margin > .about-overview .about-overview__eyebrow,
+#wrap #margin > .about-overview h3,
+#wrap #margin > .about-overview .impact-stat b,
+#wrap #margin > .about-awards .about-awards__eyebrow,
+#wrap #margin > .about-awards .award-card__type{
+    font-size:12px;
+    line-height:1.5;
+    letter-spacing:.08em;
+}
+
+#wrap #margin > .about-awards .award-card__footer{
+    font-size:13px;
+    line-height:1.5;
+}
+
+/* Keep award metadata on one line and reserve the arrow's space at narrow widths. */
+#wrap #margin > .about-awards .award-card__footer{
+    white-space:nowrap;
+}
+
+#wrap #margin > .about-awards .award-card__footer > span{
+    flex:0 0 auto;
+    white-space:nowrap;
+}
+
+#wrap #margin > .about-awards .award-card__footer i{
+    flex:0 0 1px;
+}
+
+#wrap #margin > .about-awards .award-card__footer a{
+    flex:0 0 52px;
+}
+
+@media (max-width:1000px){
+    #wrap #margin > .about-awards .award-card__footer{
+        gap:8px;
+        font-size:13px;
+        letter-spacing:-.04em;
+    }
+}
+
+/* Desktop hero subtitle: keep it visually balanced with the main title. */
+@media (min-width:768px){
+    #wrap #margin > .con01 .hero-description{
+        font-size:clamp(20px, 1.65vw, 30px);
+    }
+}
+
+/* Tablet: preserve the hero's visual scale until the mobile breakpoint. */
+@media (min-width:768px) and (max-width:1317px){
+    #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(72px, 5.52vw, 106px);
+    }
+
+    #wrap #margin > .con01 .hero-description{
+        font-size:clamp(22px, 1.65vw, 30px);
+    }
+
+    #wrap #margin > .con01 .hero-category{
+        font-size:12px;
+    }
+}
+
+/* Mobile: scale the hero type as one proportional group. */
+@media (max-width:767px){
+    #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(44px, 14vw, 70px);
+    }
+
+    #wrap #margin > .con01 .hero-description{
+        font-size:22px;
+        line-height:1.7;
+    }
+
+    #wrap #margin > .con01 .hero-category{
+        font-size:12px;
+    }
+
+    #wrap #margin > .con01 .con01_text > .hero-category{
+        font-size:12px;
+    }
+}
+
+
