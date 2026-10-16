@@ -753,6 +753,14 @@ body{max-width:100%; overflow-x:hidden;}
     background-position:center top, center top !important;
     background-size:100% 100%, 100% var(--card-width) !important;
     box-sizing:border-box;
+    border:1px solid #b5e5ee;
+    box-shadow:0 10px 22px rgba(83, 157, 170, .12);
+}
+
+/* Make the reference-style edge visible on the thumbnail cards. */
+#wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card{
+    border-color:#9edfeb;
+    box-shadow:0 12px 26px rgba(83, 157, 170, .18);
 }
 #wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card::before{
     top:calc(var(--card-width) + 20px);
@@ -808,6 +816,16 @@ body{max-width:100%; overflow-x:hidden;}
     height:12px;
     background:url(../images/portfolio/portfolio_card_arrow_figma.svg) center/10px 10px no-repeat;
     transform:rotate(-135deg) scaleY(-1);
+}
+#wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card > a::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border:1px solid #9edfeb;
+    border-radius:inherit;
+    box-shadow:0 12px 26px rgba(83, 157, 170, .18);
+    pointer-events:none;
+    z-index:4;
 }
 #wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card > a .design_btn02,
 #wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card > a .design_btn01,

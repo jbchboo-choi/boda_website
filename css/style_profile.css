@@ -1901,9 +1901,26 @@ body #wrap #margin > .con01 .scroll02{
 }
 
 #wrap #margin > .about-overview .tool-mark--ai{font-size:17px;}
-#wrap #margin > .about-overview .tool-mark--figma{border-radius:50%; font-size:22px; font-weight:700;}
-#wrap #margin > .about-overview .tool-mark--code{border:0; width:44px; font-size:25px; letter-spacing:-.12em;}
-#wrap #margin > .about-overview .tool-mark--video{font-size:25px;}
+#wrap #margin > .about-overview .tool-mark--figma{border-radius:7px; font-size:22px; font-weight:700; transform:scale(.9);}
+#wrap #margin > .about-overview .tool-mark--code{
+    width:38px;
+    border:0;
+    border-radius:0;
+    background:transparent url(../images/profile/tool_ai.svg) center/38px 38px no-repeat;
+    font-size:0;
+    line-height:0;
+    padding:0;
+}
+#wrap #margin > .about-overview .tool-mark--video{
+    position:relative;
+    font-size:0;
+}
+#wrap #margin > .about-overview .tool-mark--video::before{
+    content:'';
+    width:22px;
+    height:22px;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8.4 5.8C7.8 5.4 7.1 5.8 7.1 6.5v11c0 .7.7 1.1 1.3.7l9.9-5.5c.8-.4.8-1.6 0-2z' fill='none' stroke='%23111' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+}
 
 #wrap #margin > .about-overview .tool-name{
     color:#222;
@@ -1949,8 +1966,9 @@ body #wrap #margin > .con01 .scroll02{
     justify-content:center;
     border:2px solid #111;
     border-radius:50%;
-    color:#111;
-    font-size:30px;
+    background:transparent url(../images/profile/language_globe.svg) center/28px 28px no-repeat;
+    color:transparent;
+    font-size:0;
     line-height:1;
 }
 
@@ -2104,7 +2122,7 @@ body #wrap #margin > .con01 .scroll02{
     #wrap #margin > .about-overview .tool-list{padding-right:12px;}
     #wrap #margin > .about-overview .language-row{margin-right:12px;}
     #wrap #margin > .about-overview .tool-list li{grid-template-columns:42px 106px minmax(0,1fr); column-gap:8px;}
-    #wrap #margin > .about-overview .tool-name{font-size:14px;}
+    #wrap #margin > .about-overview .tool-name{font-size:18px;}
     #wrap #margin > .about-overview .impact-stat b{font-size:9px;}
     #wrap #margin > .about-overview .impact-stat span{font-size:12px;}
 }
@@ -2169,9 +2187,10 @@ body #wrap #margin > .con01 .scroll02{
 #wrap #margin > .about-awards .award-card{
     min-width:0;
     overflow:hidden;
-    border:1px solid #d8d8d8;
-    border-radius:10px;
+    border:1px solid #a8e2ec;
+    border-radius:28px;
     background:#fff;
+    box-shadow:0 10px 22px rgba(83, 157, 170, .12);
 }
 
 #wrap #margin > .about-awards .award-card__image{
@@ -2215,7 +2234,7 @@ body #wrap #margin > .con01 .scroll02{
 
 #wrap #margin > .about-awards .award-card p{
     color:#777;
-    font-size:17px;
+    font-size:18px;
     font-weight:400;
     letter-spacing:-.04em;
     line-height:1.35;
@@ -2241,6 +2260,7 @@ body #wrap #margin > .con01 .scroll02{
 }
 
 #wrap #margin > .about-awards .award-card__footer a{
+    position:relative;
     width:52px;
     height:52px;
     margin-left:auto;
@@ -2251,16 +2271,34 @@ body #wrap #margin > .con01 .scroll02{
     border:1px solid #777;
     border-radius:50%;
     color:#111;
-    font-size:24px;
+    font-size:0;
     line-height:1;
     text-decoration:none;
     transition:background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+#wrap #margin > .about-awards .award-card__footer a::before{
+    content:'';
+    display:block;
+    background:url(../images/portfolio/portfolio_card_arrow_figma.svg) center/10px 10px no-repeat;
+    width:11px;
+    height:11px;
+    border:0;
+    transform:rotate(-135deg) scaleY(-1);
 }
 
 #wrap #margin > .about-awards .award-card__footer a:hover{
     border-color:#50c2cf;
     background:#50c2cf;
     color:#fff;
+}
+
+#wrap #margin > .about-awards .award-card__footer a.is-disabled{
+    border-color:#d5dbe0;
+    color:#aab1b6;
+    opacity:.72;
+    pointer-events:none;
+    cursor:default;
 }
 
 @media (max-width:1000px){
@@ -2491,8 +2529,8 @@ body #wrap #margin > .con01 .scroll02{
 #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label{
     position:absolute;
     opacity:1;
-    border:1px solid #999999;
-    background-color:#FFFFFF !important;
+    border:1px solid rgba(217,221,224,.78);
+    background-color:transparent !important;
     background-image:none !important;
     background-position:center;
     background-repeat:no-repeat;
@@ -2507,8 +2545,8 @@ body #wrap #margin > .con01 .scroll02{
     left:24px;
     width:9px;
     height:9px;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
+    border-bottom:2px solid #d9dde0;
+    border-left:2px solid #d9dde0;
     border-radius:1px;
     transform:rotate(45deg);
 }
@@ -2517,14 +2555,14 @@ body #wrap #margin > .con01 .scroll02{
     left:20px;
     border-top:0;
     border-right:0;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
+    border-bottom:2px solid #d9dde0;
+    border-left:2px solid #d9dde0;
     transform:scaleX(-1) rotate(45deg);
 }
 
 #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:hover{
-    background-color:#EAF6FF;
-    border-color:#64C4E4;
+    background-color:#FFFFFF !important;
+    border-color:#999999;
     opacity:1;
 }
 
@@ -2534,8 +2572,8 @@ body #wrap #margin > .con01 .scroll02{
 
 #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:active,
 #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:focus-visible{
-    background-color:#EAF6FF;
-    border-color:#64C4E4;
+    background-color:#FFFFFF !important;
+    border-color:#999999;
 }
 
 #wrap #margin > .con05 .slidebox .slide-control [class*="control"] label:active::before,
@@ -2676,34 +2714,38 @@ body{
     }
 }
 
-#wrap #margin > .about-overview .language-item strong,
-#wrap #margin > .about-overview .tool-name{
-    font-size:16px;
-    line-height:1.6;
-}
+/* Keep the requested type scale mobile-only. Desktop keeps its original,
+   larger overview and project metadata sizes. */
+@media (max-width:767px){
+    #wrap #margin > .about-overview .language-item strong,
+    #wrap #margin > .about-overview .tool-name{
+        font-size:16px;
+        line-height:1.6;
+    }
 
-#wrap #margin > .about-overview .language-item small,
-#wrap #margin > .about-overview .impact-stat span,
-#wrap #margin > .about-awards .award-card p,
-#wrap #margin > .con07 .profile_about_copy{
-    font-size:14px;
-    line-height:1.6;
-}
+    #wrap #margin > .about-overview .language-item small,
+    #wrap #margin > .about-overview .impact-stat span,
+    #wrap #margin > .about-awards .award-card p,
+    #wrap #margin > .con07 .profile_about_copy{
+        font-size:18px;
+        line-height:1.6;
+    }
 
-#wrap #margin > .con01 .hero-category,
-#wrap #margin > .about-overview .about-overview__eyebrow,
-#wrap #margin > .about-overview h3,
-#wrap #margin > .about-overview .impact-stat b,
-#wrap #margin > .about-awards .about-awards__eyebrow,
-#wrap #margin > .about-awards .award-card__type{
-    font-size:12px;
-    line-height:1.5;
-    letter-spacing:.08em;
-}
+    #wrap #margin > .con01 .hero-category,
+    #wrap #margin > .about-overview .about-overview__eyebrow,
+    #wrap #margin > .about-overview h3,
+    #wrap #margin > .about-overview .impact-stat b,
+    #wrap #margin > .about-awards .about-awards__eyebrow,
+    #wrap #margin > .about-awards .award-card__type{
+        font-size:12px;
+        line-height:1.5;
+        letter-spacing:.08em;
+    }
 
-#wrap #margin > .about-awards .award-card__footer{
-    font-size:13px;
-    line-height:1.5;
+    #wrap #margin > .about-awards .award-card__footer{
+        font-size:13px;
+        line-height:1.5;
+    }
 }
 
 /* Keep award metadata on one line and reserve the arrow's space at narrow widths. */
@@ -2771,6 +2813,37 @@ body{
 
     #wrap #margin > .con01 .con01_text > .hero-category{
         font-size:12px;
+    }
+}
+
+/* Profile body type scale: keep the content readable at every viewport. */
+#wrap #margin > .con01 .hero-description,
+#wrap #margin > .about-overview .about-overview__intro,
+#wrap #margin > .about-awards .about-awards__intro,
+#wrap #margin > .con05 .vision-slide p,
+#wrap #margin > .con07 .profile_about_copy{
+    font-size:20px;
+    line-height:1.7;
+}
+
+#wrap #margin > .about-overview .tool-name,
+#wrap #margin > .about-overview .language-item strong,
+#wrap #margin > .about-overview .impact-stat span,
+#wrap #margin > .about-awards .award-card p{
+    font-size:18px;
+    line-height:1.6;
+}
+
+#wrap #margin > .about-overview .language-item small{
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* Nudge the hero artwork right on the mid-desktop canvas without changing
+   the existing tablet/mobile positioning rules. */
+@media (min-width:1317px) and (max-width:1800px){
+    #wrap #margin > .con01 .con01-visual{
+        right:12%;
     }
 }
 

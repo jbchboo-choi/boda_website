@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {
             id: 'event-page',
-            title: 'Event Page',
+            title: 'Seltos Event Page',
             category: 'web',
             label: 'UI/UX',
             thumbnail: 'images/portfolio/event_page_thumbnail.png',
@@ -74,6 +74,30 @@ document.addEventListener('DOMContentLoaded', function () {
             href: './portfolio_graphic_polarbear.html'
         },
         {
+            id: 'moon320',
+            title: 'MOON320',
+            category: 'branding',
+            label: 'BRANDING / PACKAGE DESIGN',
+            thumbnail: 'images/portfolio/moon320_thumbnail.jpg',
+            href: './portfolio_moon320.html'
+        },
+        {
+            id: 'troy-summer',
+            title: 'Summer Beauty Campaign',
+            category: 'graphic',
+            label: 'GRAPHIC DESIGN / CAMPAIGN',
+            thumbnail: 'images/portfolio/troy_summer_thumbnail.jpg',
+            href: './portfolio_troy_summer.html'
+        },
+        {
+            id: 'visual-design-award',
+            title: 'My Little Escape',
+            category: 'graphic',
+            label: 'GRAPHIC / DIGITAL ART',
+            thumbnail: 'images/portfolio/visual_design_award_thumbnail.png',
+            href: './portfolio_graphic_visual.html'
+        },
+        {
             id: 'boda-studio',
             title: 'Boda Studio',
             category: 'web',
@@ -85,10 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const filters = {
         all: function () { return true; },
-        web: function (project) { return project.category === 'web'; },
-        graphic: function (project) { return project.category === 'graphic'; },
-        branding: function (project) { return project.category === 'branding'; },
-        motion: function (project) { return project.category === 'motion'; }
+        web: function (project) { return project.category === 'web' || (project.categories || []).includes('web'); },
+        graphic: function (project) { return project.category === 'graphic' || (project.categories || []).includes('graphic'); },
+        branding: function (project) { return project.category === 'branding' || (project.categories || []).includes('branding'); },
+        motion: function (project) { return project.category === 'motion' || (project.categories || []).includes('motion'); }
     };
 
     let selectedFilter = 'all';
