@@ -349,7 +349,7 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
 #wrap #margin .con01 .portfolio02 .slideShow{height:392px;}
 #wrap #margin .con01 .portfolio02 .slideShow .slides{height:392px;}
 #wrap #margin .con01 .portfolio02 .slideShow .slides li{
-    --thumb-category:'WEBSITE';
+    --thumb-category:'Web';
     --thumb-title:'Selected Work';
     position:relative;
     width:300px;
@@ -436,7 +436,7 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
 #wrap #margin .con01 .portfolio02 .slideShow .slides .portfolio_list06{--thumbnail:url(../images/portfolio/honeybee_dashboard.png); --thumb-title:'HoneyBee Dashboard';}
 #wrap #margin .con01 .portfolio02 .slideShow .slides .portfolio_list07{
     --thumbnail:url(../images/portfolio/portfolio_pickgo_thumb.png);
-    --thumb-category:'UI/UX';
+    --thumb-category:'Web';
     --thumb-title:'PickGo App';
 }
 
@@ -521,6 +521,439 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     #wrap #margin .con01 .portfolio02 .portfolio_tagline{
         left:var(--portfolio-inset);
     }
+}
+
+/* Final WORK navigation overrides. */
+#wrap #margin .con01 .portfolio02 .portfolio_arrow{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:12px;
+    width:min(980px, calc(100% - 48px));
+    margin:24px auto 0;
+    flex:0 0 auto;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
+    position:relative;
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:transparent;
+    font-size:0;
+    cursor:pointer;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
+    content:'';
+    position:absolute;
+    inset:2px;
+    border:1px solid #999999;
+    border-radius:50%;
+    background:#FFFFFF;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:16px;
+    left:16px;
+    width:11px;
+    height:11px;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    border-radius:1px;
+    transform:rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
+    left:14px;
+    border-top:0;
+    border-right:0;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    transform:scaleX(-1) rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
+    background:#EAF6FF;
+    border-color:#64C4E4;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
+    border-color:#176B8C;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
+    cursor:default;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
+    background:#F5F5F5;
+    border-color:#D8DDE0;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
+    border-color:#AAB1B6;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_tagline{
+    position:static;
+    width:min(980px, calc(100% - 48px));
+    margin:22px auto 0;
+    color:#777;
+    text-align:left;
+}
+
+@media (min-width:1317px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        margin-left:var(--portfolio-inset);
+        margin-right:0;
+    }
+}
+
+@media (max-width:1090px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        align-self:stretch;
+        margin-top:24px;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        align-self:stretch;
+        margin-top:22px;
+        line-height:1.55;
+    }
+}
+
+/* Final WORK navigation overrides. */
+#wrap #margin .con01 .portfolio02 .portfolio_arrow{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:12px;
+    width:min(980px, calc(100% - 48px));
+    margin:24px auto 0;
+    flex:0 0 auto;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
+    position:relative;
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:transparent;
+    font-size:0;
+    cursor:pointer;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
+    content:'';
+    position:absolute;
+    inset:2px;
+    border:1px solid #999999;
+    border-radius:50%;
+    background:#FFFFFF;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:16px;
+    left:16px;
+    width:11px;
+    height:11px;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    border-radius:1px;
+    transform:rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
+    left:14px;
+    border-top:0;
+    border-right:0;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    transform:scaleX(-1) rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
+    background:#EAF6FF;
+    border-color:#64C4E4;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
+    border-color:#176B8C;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
+    cursor:default;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
+    background:#F5F5F5;
+    border-color:#D8DDE0;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
+    border-color:#AAB1B6;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_tagline{
+    position:static;
+    width:min(980px, calc(100% - 48px));
+    margin:22px auto 0;
+    color:#777;
+    text-align:left;
+}
+
+@media (min-width:1317px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        margin-left:var(--portfolio-inset);
+        margin-right:0;
+    }
+}
+
+@media (max-width:1090px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        align-self:stretch;
+        margin-top:24px;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        align-self:stretch;
+        margin-top:22px;
+        line-height:1.55;
+    }
+}
+
+/* Final WORK navigation treatment: align controls and copy to the card group. */
+#wrap #margin .con01 .portfolio02 .portfolio_arrow{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:12px;
+    width:min(980px, calc(100% - 48px));
+    margin:24px auto 0;
+    flex:0 0 auto;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
+    position:relative;
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:transparent;
+    font-size:0;
+    cursor:pointer;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
+    content:'';
+    position:absolute;
+    inset:2px;
+    border:1px solid #999999;
+    border-radius:50%;
+    background:#FFFFFF;
+    transition:background-color .2s ease, border-color .2s ease;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:16px;
+    left:16px;
+    width:11px;
+    height:11px;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    border-radius:1px;
+    transform:rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
+    left:14px;
+    border-top:0;
+    border-right:0;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    transform:scaleX(-1) rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
+    background:#EAF6FF;
+    border-color:#64C4E4;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
+    border-color:#176B8C;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
+    cursor:default;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
+    background:#F5F5F5;
+    border-color:#D8DDE0;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
+    border-color:#AAB1B6;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_tagline{
+    position:static;
+    width:min(980px, calc(100% - 48px));
+    margin:22px auto 0;
+    color:#777;
+    text-align:left;
+}
+
+@media (min-width:1317px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        margin-left:var(--portfolio-inset);
+        margin-right:0;
+    }
+}
+
+@media (max-width:1090px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        align-self:stretch;
+        margin-top:24px;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        align-self:stretch;
+        margin-top:22px;
+        line-height:1.55;
+    }
+}
+
+/* Keep WORK pagination visually attached to the card list on desktop. */
+@media (min-width:1091px){
+    #wrap #margin .con01 .portfolio02{
+        flex-direction:column;
+        align-items:stretch;
+        justify-content:center;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        gap:24px;
+        width:min(980px, calc(100% - 48px));
+        margin:18px auto 0;
+        flex:0 0 auto;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button{
+        position:relative;
+        width:54px;
+        height:54px;
+        padding:0;
+        border:1px solid #999999;
+        border-radius:50%;
+        background:#FFFFFF;
+        color:transparent;
+        font-size:0;
+        cursor:pointer;
+        transition:background-color .2s ease, border-color .2s ease;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
+        content:'';
+        position:absolute;
+        top:20px;
+        left:24px;
+        width:9px;
+        height:9px;
+        border-bottom:2px solid #555555;
+        border-left:2px solid #555555;
+        border-radius:1px;
+        transform:rotate(45deg);
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
+        left:20px;
+        border-top:0;
+        border-right:0;
+        border-bottom:2px solid #555555;
+        border-left:2px solid #555555;
+        transform:scaleX(-1) rotate(45deg);
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:active,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible{
+        background:#EAF6FF;
+        border-color:#64C4E4;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
+        border-color:#176B8C;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
+        cursor:default;
+        background:#F5F5F5;
+        border-color:#D8DDE0;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
+        border-color:#AAB1B6;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio-page{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:4px;
+        color:#9b9b9b;
+        font:400 17px/22px 'Noto Sans KR',sans-serif;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio-page strong{color:#353637; font-weight:400;}
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio-page i,
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio-page em{color:#9b9b9b; font-style:normal; font-weight:400;}
+}
+
+@media (min-width:1317px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        margin-left:var(--portfolio-inset);
+        margin-right:0;
+    }
+}
+
+/* Keep the Work popup menu circle size consistent with the home menu. */
+#wrap #margin .main .main01 .mainplus .maincircle{
+    width:64px;
+    height:64px;
 }
 
 /* Shared desktop header height. */
@@ -1266,5 +1699,176 @@ body{max-width:100%; overflow-x:hidden;}
     }
     #wrap #margin .con01 .portfolio02 .portfolio_tagline{
         left:var(--portfolio-inset);
+    }
+}
+
+/* Keep the desktop card group slightly lower without changing the left content column. */
+@media (min-width:1091px){
+    #wrap #margin .con01 .portfolio02 .slideShow{
+        margin-top:40px;
+    }
+}
+
+/* Desktop-only tagline adjustment. */
+@media (min-width:1091px){
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        margin-top:40px !important;
+        font-weight:500 !important;
+        color:#555555 !important;
+    }
+}
+
+/* Final WORK navigation placement and sizing. */
+/* Final arrow polish: fixed hit area, no hover scaling, smaller chevrons. */
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible{
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+    min-height:44px !important;
+    transform:none !important;
+    transition:none !important;
+    background:transparent !important;
+    border:0 !important;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
+    background:transparent !important;
+    border:0 !important;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
+    top:18px !important;
+    left:18px !important;
+    width:8px !important;
+    height:8px !important;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right:hover::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right:active::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right:focus-visible::before{
+    left:16px !important;
+}
+
+@media (max-width:1090px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        justify-content:center !important;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        text-align:center !important;
+    }
+}
+
+#wrap #margin .con01 .portfolio02 .portfolio_tagline{
+    font-weight:500 !important;
+}
+
+/* Final WORK navigation placement and sizing. */
+#wrap #margin .con01 .portfolio02 .portfolio_arrow{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:12px;
+    width:min(980px, calc(100% - 48px));
+    margin:24px auto 0;
+    flex:0 0 auto;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
+    position:relative;
+    width:44px;
+    height:44px;
+    flex:0 0 44px;
+    padding:0;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:transparent;
+    font-size:0;
+    cursor:pointer;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
+    content:'';
+    position:absolute;
+    inset:2px;
+    border:1px solid #999999;
+    border-radius:50%;
+    background:#FFFFFF;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
+    content:'';
+    position:absolute;
+    z-index:1;
+    top:16px;
+    left:16px;
+    width:11px;
+    height:11px;
+    border-bottom:2px solid #555555;
+    border-left:2px solid #555555;
+    border-radius:1px;
+    transform:rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
+    left:14px;
+    transform:scaleX(-1) rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
+    background:#EAF6FF;
+    border-color:#64C4E4;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
+    border-color:#176B8C;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
+    cursor:default;
+    opacity:1;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
+    background:#F5F5F5;
+    border-color:#D8DDE0;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
+    border-color:#AAB1B6;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_tagline{
+    position:static;
+    width:min(980px, calc(100% - 48px));
+    margin:22px auto 0;
+    color:#777;
+    text-align:left;
+}
+@media (min-width:1317px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        margin-left:var(--portfolio-inset);
+        margin-right:0;
+    }
+}
+@media (max-width:1090px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        align-self:stretch;
+        margin-top:24px;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        align-self:stretch;
+        margin-top:22px;
+        line-height:1.55;
     }
 }

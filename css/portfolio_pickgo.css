@@ -24,30 +24,13 @@ body{margin:0;background:#fff;color:var(--pickgo-ink);font-family:'Noto Sans KR'
 @media (max-width:767px){.main01{width:calc(100% - 40px)}.mainlogo{width:76px}.mainmenu{font-size:14px}.pickgo-hero{width:calc(100% - 32px);display:flex;flex-direction:column;align-items:stretch;gap:24px;padding:28px 20px 34px}.pickgo-hero-copy{display:contents}.pickgo-breadcrumb{position:relative;top:auto;left:auto;transform:none;order:1;align-self:center;margin:0 0 2px;font-size:12px;gap:12px}.pickgo-type-label{order:2;margin:0 0 4px;font-size:16px;letter-spacing:.2em}.pickgo-hero h1{order:3;font-size:clamp(38px,11vw,52px);line-height:1.05}.pickgo-summary{order:4;margin:0;font-size:15px;line-height:1.6}.pickgo-rule{order:5;width:38px;height:2px;margin:0 0 4px}.pickgo-hero-media{order:6}.pickgo-hero-media img{width:100%}.pickgo-meta{order:7;gap:15px;margin-top:4px}.pickgo-meta div{grid-template-columns:104px 1fr;font-size:14px;line-height:1.55}.pickgo-tags{gap:7px}.pickgo-tags span{padding:6px 11px;font-size:12px}.pickgo-actions{order:8;display:grid;gap:10px;margin-top:14px}.pickgo-button{width:100%;min-width:0;height:54px;border-radius:11px;font-size:15px}.pickgo-button span{font-size:19px}.desktop-break{display:none}.pickgo-process{width:calc(100% - 40px);padding:60px 0}.pickgo-eyebrow{font-size:12px;margin-bottom:14px}.pickgo-section-heading h2{font-size:32px}.pickgo-section-heading>p:last-child{font-size:13px;line-height:1.7}.pickgo-process-grid{grid-template-columns:1fr;gap:12px;margin-top:34px}.pickgo-process-grid article{min-height:0;padding:22px}.pickgo-process-grid h3{margin:22px 0 8px;font-size:20px}.pickgo-process-grid p{font-size:13px}.pickgo-close{min-height:300px;padding:78px 20px}.pickgo-close p{font-size:12px}.pickgo-close strong{font-size:34px}.pickgo-close a{margin-top:30px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pickgo-button{transition:none}}
 
+/* Keep the shared WORK button label size consistent across desktop and mobile. */
+.pickgo-button{font-size:16px}
+@media (max-width:767px){.pickgo-button{font-size:16px}}
+
 /* Use the same soft image treatment across project detail pages. */
 .pickgo-hero-media img{border-radius:18px;filter:none;box-shadow:0 10px 28px rgba(16,29,56,.08)}
 @media (max-width:767px){.pickgo-hero-media img{border-radius:12px}}
-
-/* Keep the motion category visible above the project title at every breakpoint. */
-.pickgo-hero h1::before{
-    content:'MOTION';
-    display:block;
-    margin:0 0 14px;
-    color:#4bc1d2;
-    font-family:'Noto Sans KR',sans-serif;
-    font-size:20px;
-    font-weight:700;
-    letter-spacing:.22em;
-    line-height:1.2;
-}
-
-@media (max-width:767px){
-    .pickgo-hero h1::before{
-        margin-bottom:4px;
-        font-size:16px;
-        letter-spacing:.2em;
-    }
-}
 
 /* Emphasize the process step numbers. */
 .pickgo-process-grid > article > span{
@@ -135,6 +118,39 @@ body{margin:0;background:#fff;color:var(--pickgo-ink);font-family:'Noto Sans KR'
 .pickgo-process-grid > article{
     border:1px solid #b5e5ee;
     box-shadow:0 10px 22px rgba(83, 157, 170, .12);
+}
+
+/* Shared back control for WORK detail pages. */
+.work-back-button{
+    width:64px;
+    height:64px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 64px;
+    margin-left:-10px;
+    color:#333333;
+    background:transparent;
+    border:0;
+    border-radius:0;
+    text-decoration:none;
+    cursor:pointer;
+    transition:color .2s ease;
+}
+.work-back-button svg{
+    width:24px;
+    height:24px;
+    display:block;
+    stroke:currentColor;
+    stroke-width:2;
+}
+.work-back-button:hover,
+.work-back-button:focus-visible{
+    color:var(--pickgo-accent);
+}
+.work-back-button:focus-visible{
+    outline:2px solid var(--pickgo-accent);
+    outline-offset:3px;
 }
 
 @media (max-width:767px){

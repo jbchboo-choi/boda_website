@@ -2256,3 +2256,9 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     }
 }
 
+/* Keep the Spectrum popup menu circle size consistent with the home menu. */
+#wrap #margin .main .main01 .mainplus .maincircle{
+    width:64px;
+    height:64px;
+}
+

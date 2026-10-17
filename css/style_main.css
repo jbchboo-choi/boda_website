@@ -1015,6 +1015,172 @@ body{
         gap:72px;
     }
 }
+
+/* Hero layout refinement: keep the original visual asset and its proportions,
+   while letting the surrounding layout respond to both width and viewport height. */
+#wrap #margin{
+    width:min(1300px, calc(100% - 48px));
+    min-height:100svh;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+#wrap #margin .main01{
+    flex:0 0 auto;
+}
+
+#wrap #margin .main02{
+    flex:1 1 auto;
+    width:100%;
+    min-height:clamp(300px, calc(100svh - 430px), 540px);
+    height:auto;
+    margin:0 0 clamp(28px, 4vw, 48px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:visible;
+}
+
+#wrap #margin .main02 .main_cloud{
+    position:relative;
+    left:auto;
+    top:auto;
+    flex:0 1 auto;
+    width:min(800px, 82vw, max(300px, calc((100svh - 360px) * 1.602)));
+    max-width:100%;
+    height:auto;
+    aspect-ratio:920 / 567;
+    margin:0;
+    transform:none;
+    background-size:100% 100%;
+}
+
+#wrap #margin .main03{
+    flex:0 0 auto;
+    width:100%;
+    min-height:0;
+    height:auto;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+#wrap #margin .main03 .main03_center{
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction:column;
+    gap:10px;
+    font-size:14px;
+    font-weight:400;
+}
+
+#wrap #margin .main03 .main03_intro{
+    width:100%;
+    margin:0;
+    color:inherit;
+    font-size:14px;
+    font-weight:300;
+    line-height:1.6;
+    white-space:nowrap;
+}
+
+#wrap #margin .main03 .main03_center_link{
+    display:block;
+    width:auto;
+    color:inherit;
+    line-height:1.4;
+    text-align:center;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+#wrap #margin .main03 .main03_center_button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:85px;
+    height:85px;
+}
+
+#wrap #margin .main03 .main03_center .main03_center02{
+    display:block;
+    width:85px;
+    height:85px;
+    background:url(../images/main/main_button.png) center/85px 85px no-repeat;
+    transition:transform .25s ease;
+}
+
+#wrap #margin .main03 .main03_center_button:hover .main03_center02,
+#wrap #margin .main03 .main03_center_button:focus-visible .main03_center02{
+    transform:translateY(5px);
+}
+
+@media (max-width:767px){
+    #wrap #margin{
+        width:calc(100% - 32px);
+    }
+
+    #wrap #margin .main02{
+        min-height:clamp(260px, calc(100svh - 290px), 430px);
+        margin-bottom:clamp(24px, 6vw, 40px);
+    }
+
+    #wrap #margin .main02 .main_cloud{
+        width:min(86vw, max(280px, calc((100svh - 250px) * 1.602)));
+    }
+
+    #wrap #margin .main03 .main03_center{
+        gap:8px;
+    }
+
+    #wrap #margin .main03 .main03_intro{
+        max-width:calc(100vw - 32px);
+        font-size:12px;
+        white-space:normal;
+    }
+
+    #wrap #margin .main03 .main03_center_link{
+        font-size:14px;
+    }
+
+}
+
+/* On short laptop screens, reserve room for the 안내 영역 before scaling the visual. */
+@media (min-width:768px) and (max-height:760px){
+    #wrap #margin .main01,
+    #wrap #margin .main01 .mainlogo,
+    #wrap #margin .main01 .mainplus,
+    #wrap #margin .main01 .mainmenu{
+        height:112px;
+    }
+
+    #wrap #margin .main02{
+        min-height:clamp(260px, calc(100svh - 280px), 420px);
+        margin-bottom:24px;
+    }
+
+    #wrap #margin .main02 .main_cloud{
+        width:min(700px, 76vw, max(300px, calc((100svh - 260px) * 1.602)));
+    }
+
+    #wrap #margin .main03 .main03_center{
+        gap:6px;
+    }
+
+    #wrap #margin .main03 .main03_intro,
+    #wrap #margin .main03 .main03_center_link{
+        font-size:12px;
+    }
+
+}
+
 #wrap #margin .main01 .maincircle input[id="menuicon"] + label{
     --menu-mark:#999999;
     background:transparent;
@@ -1036,11 +1202,11 @@ body{
     transition:background-color .3s ease, opacity .2s ease, transform .4s cubic-bezier(.4,0,.2,1), top .4s cubic-bezier(.4,0,.2,1), bottom .4s cubic-bezier(.4,0,.2,1);
     will-change:transform;
 }
-#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(1){
+#wrap #margin .main01 .maincircle input[id="menuicon"]:not(:checked) + label span:nth-child(1){
     top:calc(50% - 6px);
     transform:translateY(-50%) rotate(0deg);
 }
-#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(2){
+#wrap #margin .main01 .maincircle input[id="menuicon"]:not(:checked) + label span:nth-child(2){
     bottom:calc(50% - 6px);
     transform:translateY(50%) rotate(0deg);
 }
@@ -1101,7 +1267,7 @@ body{
     bottom:auto;
     transform:translateY(-50%) rotate(0deg);
 }
-#wrap #margin .main01 .maincircle input[id="menuicon"] + label span:nth-child(3){
+#wrap #margin .main01 .maincircle input[id="menuicon"]:not(:checked) + label span:nth-child(3){
     top:auto;
     bottom:calc(50% - 10px);
     transform:translateY(50%) rotate(0deg);
@@ -1259,5 +1425,38 @@ body{
     #wrap #margin .main02{
         margin-bottom:clamp(44px, 6vw, 48px);
     }
+}
+
+/* Keep the menu icon visual size while providing a more forgiving touch target. */
+#wrap #margin .main01 .maincircle input[id="menuicon"] + label{
+    width:64px;
+    height:64px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+/* Center the visible three-bar mark inside the enlarged hit area. */
+#wrap #margin .main01 .maincircle input[id="menuicon"]:not(:checked) + label span:nth-child(1){
+    top:calc(50% - 9px);
+    bottom:auto;
+    transform:translateX(-50%);
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:not(:checked) + label span:nth-child(2){
+    top:50%;
+    bottom:auto;
+    transform:translate(-50%, -50%);
+}
+
+#wrap #margin .main01 .maincircle input[id="menuicon"]:not(:checked) + label span:nth-child(3){
+    top:calc(50% + 6px);
+    bottom:auto;
+    transform:translateX(-50%);
+}
+
+#wrap #margin .main01 .maincircle{
+    width:64px;
+    height:64px;
 }
 

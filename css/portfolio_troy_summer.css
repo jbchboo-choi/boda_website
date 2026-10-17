@@ -2,6 +2,12 @@
     background:#fff;
 }
 
+/* Match the standard WORK detail button used by the linked pages. */
+.troy-results-toggle{
+    font-size:15px;
+    font-family:inherit;
+}
+
 .troy-hero{
     align-items:center;
 }
@@ -31,12 +37,11 @@
     align-items:end;
     justify-content:space-between;
     gap:40px;
-    padding-bottom:20px;
-    border-bottom:1px solid var(--pickgo-line);
 }
 
 .troy-results-heading .pickgo-eyebrow{
-    margin:0;
+    margin:0 0 18px;
+    color:var(--pickgo-accent);
 }
 
 .troy-results-heading h2{
@@ -54,7 +59,7 @@
 
 .troy-group-heading{
     display:flex;
-    align-items:baseline;
+    align-items:center;
     gap:18px;
     margin-bottom:30px;
 }
@@ -62,7 +67,8 @@
 .troy-group-heading span{
     color:var(--pickgo-accent);
     font-family:'Alegreya Sans',sans-serif;
-    font-size:20px;
+    font-size:36px;
+    line-height:1;
     letter-spacing:.12em;
 }
 
@@ -192,6 +198,10 @@
     .troy-results{
         padding-block:100px;
     }
+
+    .troy-results-heading{
+        display:block;
+    }
 }
 
 @media (max-width:767px){
@@ -205,8 +215,12 @@
     }
 
     .troy-results-heading h2{
-        margin-top:14px;
+        margin-top:0;
         font-size:32px;
+    }
+
+    .troy-results-toggle{
+        font-size:14px;
     }
 
     .troy-result-group{
@@ -219,7 +233,7 @@
     }
 
     .troy-group-heading span{
-        font-size:16px;
+        font-size:22px;
     }
 
     .troy-group-heading h3{
@@ -255,3 +269,7 @@
         transition:none;
     }
 }
+
+/* Match the shared WORK button label size. */
+.troy-results-toggle{font-size:16px}
+@media (max-width:767px){.troy-results-toggle{font-size:16px}}

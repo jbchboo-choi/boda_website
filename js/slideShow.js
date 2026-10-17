@@ -8,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentPage = document.querySelector('.portfolio-page strong');
     const totalPage = document.querySelector('.portfolio-page em');
     const portfolioPanel = document.querySelector('.portfolio02');
-    const infoPanel = document.querySelector('.portfolio01_text');
     const controls = document.querySelector('.portfolio_arrow');
-    const tagline = document.querySelector('.portfolio_tagline');
 
-    if (!slideShow || !slides || !previousButton || !nextButton || !infoPanel || !portfolioPanel || !controls) {
+    if (!slideShow || !slides || !previousButton || !nextButton || !portfolioPanel || !controls) {
         return;
     }
 
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'pickgo',
             title: 'PickGo App',
             category: 'web',
-            label: 'UI/UX',
+            label: 'Web',
             thumbnail: 'images/portfolio/portfolio_pickgo_thumb.png',
             href: './portfolio_pickgo.html'
         },
@@ -29,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'honeybee',
             title: 'HoneyBee Dashboard',
             category: 'web',
-            label: 'WEBSITE',
+            label: 'Web',
             thumbnail: 'images/portfolio/honeybee_dashboard.png',
             href: 'https://maze-pry-80983983.figma.site/'
         },
@@ -37,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'namanlab',
             title: 'Namanlab',
             category: 'web',
-            label: 'WEBSITE',
+            label: 'Web',
             thumbnail: 'images/portfolio/namanlab_thumbnail.png',
             href: 'https://namanlab-nu.vercel.app/'
         },
@@ -45,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'disney-plus',
             title: 'Disney+ Website',
             category: 'web',
-            label: 'UI/UX',
+            label: 'Web',
             thumbnail: 'images/portfolio/disneyplus_thumbnail.png',
             href: './disneyplus.html'
         },
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'easybab-mobile',
             title: 'Easybab Mobile App',
             category: 'web',
-            label: 'UI/UX',
+            label: 'Web',
             thumbnail: 'images/portfolio/easybab_mobile_thumbnail.png',
             href: './portfolio_mobile.html'
         },
@@ -61,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'event-page',
             title: 'Seltos Event Page',
             category: 'web',
-            label: 'UI/UX',
+            label: 'Web',
             thumbnail: 'images/portfolio/event_page_thumbnail.png',
             href: './portfolio_event.html'
         },
@@ -69,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'save-the-polar-bear',
             title: 'Save the Polar Bear',
             category: 'motion',
-            label: 'MOTION',
+            label: 'Motion & 3D',
             thumbnail: 'images/portfolio/polarbear_graphic_thumbnail.png',
             href: './portfolio_graphic_polarbear.html'
         },
@@ -77,15 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'moon320',
             title: 'MOON320',
             category: 'branding',
-            label: 'BRANDING / PACKAGE DESIGN',
+            label: 'Branding',
             thumbnail: 'images/portfolio/moon320_thumbnail.jpg',
             href: './portfolio_moon320.html'
         },
         {
             id: 'troy-summer',
-            title: 'Summer Beauty Campaign',
+            title: 'Summer Event Page',
             category: 'graphic',
-            label: 'GRAPHIC DESIGN / CAMPAIGN',
+            label: 'Graphic',
             thumbnail: 'images/portfolio/troy_summer_thumbnail.jpg',
             href: './portfolio_troy_summer.html'
         },
@@ -93,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'visual-design-award',
             title: 'My Little Escape',
             category: 'graphic',
-            label: 'GRAPHIC / DIGITAL ART',
+            label: 'Graphic',
             thumbnail: 'images/portfolio/visual_design_award_thumbnail.png',
             href: './portfolio_graphic_visual.html'
         },
@@ -101,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'boda-studio',
             title: 'Boda Studio',
             category: 'web',
-            label: 'UI/UX',
+            label: 'Web',
             thumbnail: 'images/portfolio/boda_studio_thumbnail.png',
             href: './index.html'
         },
@@ -229,14 +227,6 @@ document.addEventListener('DOMContentLoaded', function () {
         applyPosition(Boolean(withTransition));
     }
 
-    function updateControlsPlacement() {
-        if (window.innerWidth <= 1090) {
-            portfolioPanel.insertBefore(controls, tagline || null);
-        } else {
-            infoPanel.appendChild(controls);
-        }
-    }
-
     function selectFilter(button) {
         selectedFilter = button.dataset.filter || 'all';
         filteredProjects = projects.filter(filters[selectedFilter] || filters.all);
@@ -300,7 +290,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         resizeFrame = window.requestAnimationFrame(function () {
-            updateControlsPlacement();
             updateLayout(false);
         });
     });
@@ -310,7 +299,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     renderSlides();
-    updateControlsPlacement();
     if (breadcrumb) {
         breadcrumb.textContent = 'Work';
     }
