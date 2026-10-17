@@ -150,6 +150,280 @@ bottom:20px;}
     border-radius:0;
     background:transparent;
 }
+
+/* Restore the About header geometry used before the Hero composition update. */
+@media (min-width:1317px){
+    body #wrap #margin > .main{
+        top:16px;
+        left:50%;
+        width:calc(100vw - 72px);
+        height:120px;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .main .main01{
+        width:min(1300px, calc(100% - 48px));
+        height:120px;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        width:97px;
+        height:120px;
+        flex-basis:97px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:static;
+        width:750px;
+        height:120px;
+        flex:0 1 750px;
+        transform:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:16px;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        width:97px;
+        height:120px;
+        flex-basis:97px;
+        background:none;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{
+        display:block;
+        width:97px;
+        height:120px;
+        background:url(../images/main/main_logo.png) no-repeat left center;
+    }
+}
+
+/* Final header parity with Spectrum: use the same logo element and box axis. */
+@media (min-width:768px){
+    body #wrap #margin > .main{
+        left:50% !important;
+        transform:translateX(-50%) !important;
+        height:88px !important;
+    }
+
+    body #wrap #margin > .main .main01{
+        height:88px !important;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        height:64px !important;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        height:88px !important;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        height:33px !important;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{
+        height:33px !important;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        background:none !important;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{
+        display:block !important;
+        background-image:url(../images/main/main_logo.png) !important;
+        background-repeat:no-repeat !important;
+    }
+}
+
+/* Final responsive safety pass: keep the text and visual in separate layout modes. */
+@media (min-width:768px){
+    body #wrap #margin > .con01 .hero-description{
+        width:min(640px, 100%) !important;
+        font-size:clamp(16px, 1.25vw, 20px) !important;
+        line-height:1.5 !important;
+        white-space:nowrap !important;
+    }
+}
+
+@media (min-width:1091px){
+    body #wrap #margin > .con01{
+        height:700px !important;
+        min-height:0 !important;
+        overflow:hidden !important;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        position:absolute !important;
+        left:max(68px, calc((100vw - 1300px) / 2 + 20px)) !important;
+        top:50% !important;
+        width:min(520px, 38vw) !important;
+        margin:0 !important;
+        transform:translateY(-50%) !important;
+    }
+
+    body #wrap #margin > .con01 .about-visual{
+        position:absolute !important;
+        top:calc(50% + 8px) !important;
+        right:max(32px, calc((100vw - 1300px) / 2)) !important;
+        left:auto !important;
+        width:min(580px, 48vw, calc(100dvh - 170px)) !important;
+        margin:0 !important;
+        transform:translateY(-50%) !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:1090px){
+    body #wrap #margin > .con01{
+        height:auto !important;
+        min-height:0 !important;
+        padding:145px 24px 34px !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        overflow:hidden !important;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        position:relative !important;
+        inset:auto !important;
+        width:min(620px, 100%) !important;
+        margin:0 auto !important;
+        transform:none !important;
+        order:1 !important;
+    }
+
+    body #wrap #margin > .con01 .about-visual{
+        position:relative !important;
+        inset:auto !important;
+        width:clamp(380px, 48vw, 420px) !important;
+        margin:42px auto 0 !important;
+        transform:none !important;
+        order:2 !important;
+    }
+
+    body #wrap #margin > .con01 .about-visual .hero-orbit > img.con01-visual{
+        width:76% !important;
+        height:auto !important;
+        max-height:none !important;
+        aspect-ratio:1 / 1 !important;
+        object-fit:contain !important;
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        position:relative !important;
+        inset:auto !important;
+        margin:48px auto 0 !important;
+        transform:none !important;
+        order:3 !important;
+    }
+}
+
+/* Keep the compact tablet composition through the full pre-desktop range. */
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .con01{
+        height:auto !important;
+        min-height:0 !important;
+        padding:145px 24px 34px !important;
+        display:flex !important;
+        flex-direction:column !important;
+        align-items:center !important;
+        overflow:hidden !important;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        position:relative !important;
+        inset:auto !important;
+        width:min(620px, 100%) !important;
+        height:auto !important;
+        margin:0 auto !important;
+        transform:none !important;
+        order:1 !important;
+    }
+
+    body #wrap #margin > .con01 .about-visual{
+        position:relative !important;
+        inset:auto !important;
+        width:clamp(380px, 48vw, 420px) !important;
+        height:auto !important;
+        margin:42px auto 0 !important;
+        transform:none !important;
+        order:2 !important;
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        position:relative !important;
+        inset:auto !important;
+        margin:48px auto 0 !important;
+        transform:none !important;
+        order:3 !important;
+    }
+}
+
+/* Keep the About copy and visual inside the shared 1300px content rail. */
+@media (min-width:1317px){
+    body #wrap #margin > .con01{
+        height:700px !important;
+        min-height:0 !important;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        left:max(68px, calc((100vw - 1300px) / 2 + 20px)) !important;
+    }
+
+    body #wrap #margin > .con01 > .about-visual{
+        right:max(32px, calc((100vw - 1300px) / 2)) !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .main{
+        top:12px;
+        left:50%;
+        width:calc(100vw - 24px);
+        height:112px;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        width:52px;
+        height:112px;
+        flex-basis:52px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:static;
+        width:auto;
+        height:112px;
+        flex:1 1 auto;
+        transform:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:14px;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        width:64px;
+        height:112px;
+        flex-basis:64px;
+        background:none;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{
+        display:block;
+        width:64px;
+        height:112px;
+        background:url(../images/main/main_logo.png) no-repeat center / 64px 24px;
+    }
+}
 #wrap #margin .main01 .mainplus .maincircle input[id="menuicon"] + label span{
     left:0;
     width:100% !important;
@@ -228,6 +502,14 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     cursor: pointer;
     background-size:cover;}
 #wrap .topBtn:hover {opacity:50%;}
+
+/* Keep About's TOP control aligned with Spectrum's original fixed position. */
+#wrap .topBtn.site-top-button{
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    z-index:999;
+}
 
 
 /*푸터애니*/
@@ -828,6 +1110,116 @@ html, body{
     #wrap #margin > .main .mainmenu a:nth-child(2){display:none;}
 }
 
+/* Restore the About header geometry used before the Hero composition update. */
+@media (min-width:1317px){
+    body #wrap #margin > .main{
+        top:16px;
+        left:50%;
+        width:calc(100vw - 72px);
+        height:120px;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .main .main01{
+        width:min(1300px, calc(100% - 48px));
+        height:120px;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        width:97px;
+        height:120px;
+        flex-basis:97px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:static;
+        width:750px;
+        height:120px;
+        flex:0 1 750px;
+        transform:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:16px;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        width:97px;
+        height:120px;
+        flex-basis:97px;
+        background-size:97px 33px;
+        background-position:left center;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .main{
+        top:12px;
+        left:50%;
+        width:calc(100vw - 24px);
+        height:112px;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        width:52px;
+        height:112px;
+        flex-basis:52px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:static;
+        width:auto;
+        height:112px;
+        flex:1 1 auto;
+        transform:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:14px;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        width:64px;
+        height:112px;
+        flex-basis:64px;
+        background-size:64px 24px;
+        background-position:center;
+    }
+}
+
+/* Keep the final About header logo markup identical to Spectrum. */
+@media (min-width:1317px){
+    body #wrap #margin > .main .main01 > a{
+        background:none;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{
+        display:block;
+        width:97px;
+        height:120px;
+        background:url(../images/main/main_logo.png) no-repeat left center;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .main .main01 > a{
+        background:none;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{
+        display:block;
+        width:64px;
+        height:112px;
+        background:url(../images/main/main_logo.png) no-repeat center / 64px 24px;
+    }
+}
+
 @media (min-width:768px) and (max-width:1316px){
     #wrap #margin > .main,
     #wrap #margin > .main .main01{
@@ -1257,6 +1649,31 @@ body #wrap #margin > .con01 .scroll02 .arrow{
     object-fit:contain;
     object-position:center;
     pointer-events:none;
+}
+
+#wrap #margin > .con01 > .about-visual > img.con01-visual{
+    position:absolute;
+    top:50%;
+    right:auto;
+    bottom:auto;
+    left:50%;
+    display:block;
+    width:100%;
+    max-width:none;
+    margin:0;
+    border-radius:0;
+    transform:translate(-50%, -50%);
+}
+
+body #wrap #margin > .con01 .about-visual .hero-orbit > img.con01-visual{
+    position:absolute;
+    top:50%;
+    right:auto;
+    bottom:auto;
+    left:50%;
+    width:78%;
+    max-width:none;
+    transform:translate(-50%, -50%);
 }
 
 @media (max-width:1316px){
@@ -2844,6 +3261,919 @@ body{
 @media (min-width:1317px) and (max-width:1800px){
     #wrap #margin > .con01 .con01-visual{
         right:12%;
+    }
+}
+
+/* Keep the About popup menu circle size consistent with the home menu. */
+body #wrap #margin > .main .main01 .mainplus .maincircle{
+    width:64px;
+    height:64px;
+}
+
+/* About hero reference composition. */
+html,
+body{
+    background:#ffffff;
+}
+
+#wrap #margin > .con01{
+    position:relative;
+    width:100%;
+    height:clamp(540px, 28vw, 620px);
+    min-height:540px;
+    margin:0;
+    overflow:hidden;
+    background:#edf2f1;
+}
+
+#wrap #margin > .con01 .hero-orbit{
+    position:absolute;
+    z-index:1;
+    top:50%;
+    right:7%;
+    width:min(760px, 43vw);
+    aspect-ratio:1;
+    border:1px solid rgba(115,140,150,.34);
+    border-radius:50%;
+    transform:translateY(-50%);
+    pointer-events:none;
+}
+
+#wrap #margin > .con01 .hero-orbit::before,
+#wrap #margin > .con01 .hero-orbit::after{
+    content:'';
+    position:absolute;
+    left:-38%;
+    top:50%;
+    width:176%;
+    height:1px;
+    background:rgba(115,140,150,.28);
+    transform:rotate(-25deg);
+    transform-origin:center;
+}
+
+#wrap #margin > .con01 .hero-orbit::after{
+    transform:rotate(25deg);
+    opacity:.35;
+}
+
+#wrap #margin > .con01 .hero-orbit__dot{
+    position:absolute;
+    z-index:2;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:#44add5;
+    box-shadow:0 0 0 2px rgba(255,255,255,.2);
+}
+
+#wrap #margin > .con01 .hero-orbit__dot--top{
+    top:8%;
+    right:7%;
+}
+
+#wrap #margin > .con01 .hero-orbit__dot--left{
+    left:8%;
+    top:61%;
+}
+
+#wrap #margin > .con01 .hero-orbit__dot--right{
+    right:-1%;
+    top:44%;
+}
+
+#wrap #margin > .con01 .con01-visual{
+    top:50%;
+    right:8%;
+    z-index:2;
+    width:min(650px, 35vw);
+    height:auto;
+    transform:translateY(-50%);
+}
+
+#wrap #margin > .con01 .con01_text{
+    left:max(180px, calc((100vw - 1300px) / 2 + 20px));
+    top:50%;
+    z-index:3;
+    width:min(760px, 58vw);
+    transform:translateY(-50%);
+}
+
+#wrap #margin > .con01 .hero-kicker{
+    color:#4ab9d0;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(13px, .9vw, 18px);
+    font-weight:700;
+    letter-spacing:.28em;
+    line-height:1.2;
+}
+
+#wrap #margin > .con01 .con01_text h1{
+    margin:30px 0 22px;
+    color:#111111;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(38px, 3.4vw, 58px);
+    font-weight:400;
+    letter-spacing:-.095em;
+    line-height:1.08;
+    white-space:normal;
+}
+
+#wrap #margin > .con01 .con01_text h1 span{
+    display:block;
+}
+
+#wrap #margin > .con01 .con01_text h1 span:first-child,
+#wrap #margin > .con01 .con01_text h1 span:last-child{
+    white-space:nowrap;
+}
+
+/* Use Spectrum's hero-message typography for the About headline. */
+@media (min-width:1317px){
+    body #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(32px, 3.2vw, 56px) !important;
+        line-height:1.34 !important;
+        letter-spacing:-.06em !important;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(28px, 4.8vw, 48px) !important;
+        line-height:1.38 !important;
+        letter-spacing:-.06em !important;
+    }
+}
+
+@media (max-width:767px){
+    body #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(24px, 7vw, 34px) !important;
+        line-height:1.4 !important;
+        letter-spacing:-.06em !important;
+    }
+}
+
+#wrap #margin > .con01 .con01_text h1 span:last-child{
+    white-space:nowrap;
+}
+
+#wrap #margin > .con01 .hero-description{
+    color:#777777;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(18px, 1.32vw, 28px);
+    font-weight:400;
+    letter-spacing:-.065em;
+    line-height:1.55;
+}
+
+#wrap #margin > .con01 .hero-category{
+    display:none;
+    margin-top:38px;
+    color:#697582;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(12px, .82vw, 17px);
+    font-weight:700;
+    letter-spacing:.2em;
+    line-height:1.4;
+    white-space:nowrap;
+}
+
+#wrap #margin > .con01 .scroll{
+    left:max(48px, 3.4vw);
+    bottom:26px;
+    z-index:3;
+}
+
+@media (max-width:1316px) and (min-width:768px){
+    #wrap #margin > .con01{
+        height:clamp(500px, 58vw, 620px);
+        min-height:500px;
+    }
+
+    #wrap #margin > .con01 .hero-orbit{
+        right:3%;
+        width:min(620px, 52vw);
+    }
+
+    body #wrap #margin > .con01 .con01-visual{
+        right:2%;
+        width:min(440px, 40vw);
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        left:clamp(100px, 12vw, 150px);
+        width:min(620px, calc(100vw - 64px));
+    }
+
+    body #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(34px, 3vw, 44px);
+        white-space:normal;
+    }
+
+    body #wrap #margin > .con01 .con01_text h1 span:last-child{
+        white-space:nowrap;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01{
+        height:auto;
+        min-height:0;
+        padding:128px 0 28px;
+        background:#edf2f1;
+    }
+
+    #wrap #margin > .con01 .hero-orbit{display:none;}
+
+    #wrap #margin > .con01 .con01_text{
+        position:relative;
+        left:auto;
+        top:auto;
+        width:calc(100% - 48px);
+        margin:0 auto;
+        transform:none;
+    }
+
+    #wrap #margin > .con01 .hero-kicker{font-size:11px;}
+
+    body #wrap #margin > .con01 .con01_text h1{
+        margin:18px 0 16px;
+        font-size:clamp(34px, 9.5vw, 50px);
+        line-height:1.12;
+        white-space:normal;
+    }
+
+    #wrap #margin > .con01 .con01_text h1 span:last-child{
+        white-space:normal;
+    }
+
+    #wrap #margin > .con01 .con01_text h1 span:first-child{
+        white-space:normal;
+    }
+
+    #wrap #margin > .con01 .hero-description{
+        font-size:16px;
+        line-height:1.65;
+    }
+
+    #wrap #margin > .con01 .hero-category{
+        display:none;
+        margin-top:24px;
+        font-size:10px;
+        letter-spacing:.08em;
+        white-space:normal;
+    }
+
+    #wrap #margin > .con01 .con01-visual{
+        position:relative;
+        top:auto;
+        right:auto;
+        left:auto;
+        width:90vw;
+        height:auto;
+        margin-top:20px;
+        transform:none;
+    }
+
+    #wrap #margin > .con01 .scroll{display:none;}
+}
+
+@media (min-width:768px){
+    body #wrap #margin > .con01 .con01-visual{
+        top:auto;
+        bottom:0;
+        object-position:center bottom;
+        transform:none;
+    }
+
+    body #wrap #margin > .con01 .hero-orbit::before,
+    body #wrap #margin > .con01 .hero-orbit::after{
+        background:rgba(68,173,213,.24);
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        left:50%;
+        bottom:26px;
+        transform:translateX(-50%);
+    }
+}
+
+/* About hero planets: one responsive visual container, kept page-scoped. */
+#wrap #margin > .con01{
+    --hero-sky:#e1e4e3;
+    --hero-orbit-line:rgba(91,145,162,.32);
+    --hero-planet-bg:rgba(186,231,239,.82);
+    --hero-planet-border:rgba(255,255,255,.82);
+    --hero-planet-text:#3d7382;
+    --hero-visual-size:clamp(420px, min(36vw, calc(100dvh - 170px)), 520px);
+    height:100dvh;
+    min-height:600px;
+    background:var(--hero-sky);
+    overflow:hidden;
+}
+
+#wrap #margin > .con01 .about-visual{
+    position:absolute;
+    z-index:1;
+    top:50%;
+    right:clamp(32px, 7vw, 128px);
+    width:var(--hero-visual-size);
+    aspect-ratio:1;
+    transform:translateY(-50%);
+}
+
+#wrap #margin > .con01 .hero-orbit{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    z-index:1;
+    border:1px solid var(--hero-orbit-line);
+    border-radius:50%;
+    pointer-events:none;
+}
+
+#wrap #margin > .con01 .hero-orbit::before,
+#wrap #margin > .con01 .hero-orbit::after{
+    content:'';
+    position:absolute;
+    inset:11%;
+    border:1px solid rgba(91,145,162,.13);
+    border-radius:50%;
+    transform:rotate(42deg) scaleX(.72);
+}
+
+#wrap #margin > .con01 .hero-orbit::after{
+    transform:rotate(-42deg) scaleX(.72);
+}
+
+#wrap #margin > .con01 .hero-orbit::before,
+#wrap #margin > .con01 .hero-orbit::after{
+    display:none;
+}
+
+#wrap #margin > .con01 .con01-visual{
+    position:absolute;
+    z-index:2;
+    top:50%;
+    right:auto;
+    bottom:auto;
+    left:50%;
+    width:78%;
+    height:auto;
+    max-width:none;
+    transform:translate(-50%, -50%);
+    object-fit:contain;
+}
+
+#wrap #margin > .con01 .hero-planet{
+    position:absolute;
+    z-index:3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:clamp(56px, 4.2vw, 68px);
+    height:clamp(56px, 4.2vw, 68px);
+    padding:6px;
+    box-sizing:border-box;
+    border:1px solid var(--hero-planet-border);
+    border-radius:50%;
+    background:var(--hero-planet-bg);
+    box-shadow:0 8px 18px rgba(89,146,160,.16), inset 0 0 12px rgba(255,255,255,.4);
+    color:var(--hero-planet-text);
+    font-family:'Noto Sans KR', sans-serif;
+    font-size:clamp(8px, .68vw, 11px);
+    font-weight:700;
+    letter-spacing:.08em;
+    line-height:1.05;
+    text-align:center;
+    white-space:nowrap;
+    animation:aboutPlanetFloat 7s ease-in-out infinite;
+}
+
+#wrap #margin > .con01 .hero-planet--web{top:7%; left:12%; animation-delay:-1.3s;}
+#wrap #margin > .con01 .hero-planet--graphic{top:5%; right:9%; animation-duration:8.5s;}
+#wrap #margin > .con01 .hero-planet--branding{bottom:7%; left:9%; animation-duration:9s; animation-delay:-3.4s;}
+#wrap #margin > .con01 .hero-planet--motion{right:5%; bottom:5%; animation-duration:7.8s; animation-delay:-5.1s; white-space:normal;}
+#wrap #margin > .con01 .hero-planet--motion span{display:block;}
+
+#wrap #margin > .con01 .hero-orbit__dot{
+    position:absolute;
+    z-index:2;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#8bd9e5;
+    box-shadow:0 0 0 3px rgba(139,217,229,.14);
+}
+
+#wrap #margin > .con01 .hero-orbit__dot--top{top:20%; left:50%;}
+#wrap #margin > .con01 .hero-orbit__dot--left{top:52%; left:4%;}
+#wrap #margin > .con01 .hero-orbit__dot--right{top:43%; right:3%;}
+#wrap #margin > .con01 .hero-orbit__dot--bottom{right:42%; bottom:3%;}
+
+/* Place each planet directly on the orbit and remove decorative dots. */
+#wrap #margin > .con01 .hero-orbit__dot{
+    display:none !important;
+}
+
+#wrap #margin > .con01 .hero-planet--web{
+    top:10% !important;
+    left:10% !important;
+}
+
+#wrap #margin > .con01 .hero-planet--graphic{
+    top:10% !important;
+    right:10% !important;
+}
+
+#wrap #margin > .con01 .hero-planet--branding{
+    bottom:10% !important;
+    left:10% !important;
+}
+
+#wrap #margin > .con01 .hero-planet--motion{
+    right:10% !important;
+    bottom:10% !important;
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    #wrap #margin > .con01 .hero-planet--web{
+        top:9% !important;
+        left:9% !important;
+    }
+
+    #wrap #margin > .con01 .hero-planet--graphic{
+        top:9% !important;
+        right:9% !important;
+    }
+
+    #wrap #margin > .con01 .hero-planet--branding{
+        bottom:9% !important;
+        left:9% !important;
+    }
+
+    #wrap #margin > .con01 .hero-planet--motion{
+        right:9% !important;
+        bottom:9% !important;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01 .hero-planet--web{
+        top:8% !important;
+        left:8% !important;
+    }
+
+    #wrap #margin > .con01 .hero-planet--graphic{
+        top:8% !important;
+        right:8% !important;
+    }
+
+    #wrap #margin > .con01 .hero-planet--branding{
+        bottom:8% !important;
+        left:8% !important;
+    }
+
+    #wrap #margin > .con01 .hero-planet--motion{
+        right:8% !important;
+        bottom:8% !important;
+    }
+}
+
+/* Mobile image safety: never constrain the portrait height independently. */
+@media (max-width:767px){
+    body #wrap #margin > .con01 .con01-visual{
+        width:78% !important;
+        max-width:none !important;
+        height:auto !important;
+        max-height:none !important;
+        aspect-ratio:auto !important;
+        object-fit:contain !important;
+    }
+}
+
+@keyframes aboutPlanetFloat{
+    0%,100%{transform:translate3d(0,0,0);}
+    50%{transform:translate3d(0,-6px,0);}
+}
+
+@media (min-width:1091px){
+    #wrap #margin > .con01{min-height:0;}
+
+    #wrap #margin > .con01 .con01_text{
+        left:clamp(48px, 8vw, 160px);
+        width:min(520px, 38vw);
+    }
+
+    #wrap #margin > .con01 .scroll{
+        left:clamp(48px, 3.4vw, 64px);
+        bottom:26px;
+        transform:none;
+    }
+}
+
+@media (min-width:768px) and (max-width:1090px){
+    #wrap #margin > .con01{
+        height:auto;
+        min-height:0;
+        padding:145px 24px 34px;
+        box-sizing:border-box;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01_text{
+        position:relative;
+        inset:auto;
+        width:min(620px, 100%);
+        margin:0 auto;
+        transform:none;
+        order:1;
+    }
+
+    #wrap #margin > .con01 .about-visual{
+        position:relative;
+        top:auto;
+        right:auto;
+        width:clamp(380px, 48vw, 420px);
+        margin:42px auto 0;
+        transform:none;
+        order:2;
+    }
+
+    #wrap #margin > .con01 .hero-orbit{display:block;}
+
+    #wrap #margin > .con01 .hero-planet{
+        width:58px;
+        height:58px;
+        font-size:9px;
+    }
+
+    #wrap #margin > .con01 .scroll{
+        position:relative;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        margin:48px auto 0;
+        transform:none;
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01{
+        height:auto;
+        min-height:0;
+        padding:128px 24px 28px;
+        box-sizing:border-box;
+        align-items:stretch;
+        overflow:hidden;
+    }
+
+    #wrap #margin > .con01 .con01_text{
+        width:100%;
+        order:1;
+    }
+
+    #wrap #margin > .con01 .about-visual{
+        position:relative;
+        top:auto;
+        right:auto;
+        width:clamp(240px, 72vw, 280px);
+        margin:48px auto 0;
+        transform:none;
+        order:2;
+    }
+
+    #wrap #margin > .con01 .hero-orbit{display:block;}
+
+    #wrap #margin > .con01 .hero-planet{
+        width:clamp(42px, 13vw, 50px);
+        height:clamp(42px, 13vw, 50px);
+        padding:4px;
+        font-size:7px;
+        letter-spacing:.04em;
+    }
+
+    #wrap #margin > .con01 .hero-orbit__dot{
+        width:5px;
+        height:5px;
+    }
+
+    #wrap #margin > .con01 .hero-planet--motion{right:1%; bottom:3%;}
+
+    #wrap #margin > .con01 .hero-planet{animation-duration:14s;}
+
+    #wrap #margin > .con01 .scroll{
+        display:flex;
+        position:relative;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        margin:24px auto 0;
+        transform:none;
+        order:3;
+    }
+}
+
+@media (prefers-reduced-motion:reduce){
+    #wrap #margin > .con01 .hero-planet{animation:none;}
+}
+
+/* Override legacy body-qualified portrait positioning after the older rules. */
+body #wrap #margin > .con01 .con01-visual{
+    position:absolute;
+    top:50%;
+    right:auto;
+    bottom:auto;
+    left:50%;
+    width:78%;
+    height:auto;
+    border-radius:0;
+    transform:translate(-50%, -50%);
+}
+
+@media (min-width:768px) and (max-width:1090px){
+    body #wrap #margin > .con01 .con01-visual{
+        top:50%;
+        left:50%;
+        width:78%;
+        transform:translate(-50%, -50%);
+    }
+}
+
+@media (max-width:767px){
+    #wrap #margin > .con01 > .about-visual > img.con01-visual{
+        position:absolute;
+        top:50%;
+        right:auto;
+        bottom:auto;
+        left:50%;
+        width:100%;
+        margin:0;
+        transform:translate(-50%, -50%);
+    }
+
+    body #wrap #margin > .con01 .scroll{
+        display:flex;
+        position:relative;
+        left:auto;
+        right:auto;
+        bottom:auto;
+        margin:24px auto 0;
+        transform:none;
+    }
+
+}
+
+/* Final reference composition for tablet and desktop widths. */
+@media (min-width:768px){
+    body #wrap #margin > .main{
+        top:0;
+        left:0;
+        width:100%;
+        height:88px;
+        transform:none;
+        background:transparent;
+    }
+
+    body #wrap #margin > .main .main01{
+        width:calc(100% - 96px);
+        height:88px;
+        margin:0 auto;
+        padding:0;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        display:flex;
+        width:64px;
+        height:64px;
+        flex:0 0 64px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:absolute;
+        left:50%;
+        width:auto;
+        height:auto;
+        transform:translateX(-50%);
+        display:block;
+        font-size:18px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu a:first-child{display:block;}
+    body #wrap #margin > .main .main01 .mainmenu a:nth-child(2){display:none;}
+    body #wrap #margin > .main .main01 .main-credit,
+    body #wrap #margin > .main .main01 .main-index{display:none;}
+
+    body #wrap #margin > .main .main01 > a{
+        display:block;
+        width:87px;
+        height:33px;
+        flex:0 0 87px;
+        background:url(../images/main/main_logo.png) center / 87px 33px no-repeat;
+    }
+
+    body #wrap #margin > .main .main01 > a .mainlogo{display:none;}
+
+    body #wrap #margin > .con01{
+        height:100dvh;
+        min-height:0;
+        background:#e1e4e3;
+    }
+
+    body #wrap #margin > .con01 .con01_text{
+        left:clamp(48px, 8vw, 164px);
+        top:50%;
+        width:min(520px, 38vw);
+        transform:translateY(-50%);
+    }
+
+    body #wrap #margin > .con01 .con01_text h1{
+        font-size:clamp(42px, 3.2vw, 68px);
+        line-height:1.04;
+    }
+
+    body #wrap #margin > .con01 .hero-description{
+        font-size:clamp(18px, 1.25vw, 25px);
+    }
+
+    body #wrap #margin > .con01 .about-visual{
+        --about-visual-size:min(580px, 48vw, calc(100dvh - 150px));
+        top:calc(50% + 8px);
+        right:clamp(32px, 5vw, 96px);
+        width:var(--about-visual-size);
+        height:var(--about-visual-size);
+        aspect-ratio:auto;
+        transform:translateY(-50%);
+    }
+
+    body #wrap #margin > .con01 .hero-orbit{
+        width:100% !important;
+        height:100% !important;
+        top:0 !important;
+        right:auto !important;
+        bottom:auto !important;
+        left:0 !important;
+        transform:none !important;
+        border-color:rgba(91,179,201,.42);
+    }
+
+    body #wrap #margin > .con01 .hero-orbit > img.con01-visual{
+        width:76% !important;
+        clip-path:circle(50% at 50% 50%);
+    }
+
+    body #wrap #margin > .con01 .hero-planet{
+        width:clamp(58px, 4vw, 68px);
+        height:clamp(58px, 4vw, 68px);
+        font-size:clamp(9px, .65vw, 11px);
+    }
+
+    body #wrap #margin > .con01 .hero-planet--web{top:7%; left:14%;}
+    body #wrap #margin > .con01 .hero-planet--graphic{top:8%; right:7%;}
+    body #wrap #margin > .con01 .hero-planet--branding{bottom:9%; left:7%;}
+    body #wrap #margin > .con01 .hero-planet--motion{right:5%; bottom:7%;}
+
+    body #wrap #margin > .con01 .scroll{
+        left:50%;
+        bottom:22px;
+        transform:translateX(-50%);
+        align-items:center;
+        flex-direction:column;
+        gap:6px;
+    }
+
+    /* Lock the reference group after the legacy hero rules. */
+    #wrap #margin > .con01 > .about-visual{
+        --about-visual-size:min(580px, 48vw, calc(100dvh - 150px));
+        position:absolute !important;
+        top:clamp(72px, 10vh, 112px) !important;
+        right:clamp(32px, 5vw, 96px) !important;
+        bottom:auto !important;
+        left:auto !important;
+        width:var(--about-visual-size) !important;
+        height:var(--about-visual-size) !important;
+        transform:none !important;
+    }
+}
+
+/* Spectrum uses a centered viewport header; keep About on the same axis. */
+@media (min-width:1317px){
+    body #wrap #margin > .main{
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .main{
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
+
+/* Spectrum uses a centered viewport header; keep About on the same axis. */
+@media (min-width:1317px){
+    body #wrap #margin > .main{
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .main{
+        left:50%;
+        transform:translateX(-50%);
+    }
+}
+
+/* Restore the About header geometry used before the Hero composition update. */
+@media (min-width:1317px){
+    body #wrap #margin > .main{
+        top:16px;
+        left:50%;
+        width:calc(100vw - 72px);
+        height:120px;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .main .main01{
+        width:min(1300px, calc(100% - 48px));
+        height:120px;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        width:97px;
+        height:120px;
+        flex-basis:97px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:static;
+        width:750px;
+        height:120px;
+        flex:0 1 750px;
+        transform:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:16px;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        width:97px;
+        height:120px;
+        flex-basis:97px;
+        background-size:97px 33px;
+        background-position:left center;
+    }
+}
+
+@media (min-width:768px) and (max-width:1316px){
+    body #wrap #margin > .main{
+        top:12px;
+        left:50%;
+        width:calc(100vw - 24px);
+        height:112px;
+        transform:translateX(-50%);
+    }
+
+    body #wrap #margin > .main .main01{
+        width:calc(100% - 32px);
+        height:112px;
+    }
+
+    body #wrap #margin > .main .main01 .mainplus{
+        width:52px;
+        height:112px;
+        flex-basis:52px;
+    }
+
+    body #wrap #margin > .main .main01 .mainmenu{
+        position:static;
+        width:auto;
+        height:112px;
+        flex:1 1 auto;
+        transform:none;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:14px;
+    }
+
+    body #wrap #margin > .main .main01 > a{
+        width:64px;
+        height:112px;
+        flex-basis:64px;
+        background-size:64px 24px;
+        background-position:center;
     }
 }
 
