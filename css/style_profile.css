@@ -348,6 +348,7 @@ bottom:20px;}
         inset:auto !important;
         width:clamp(380px, 48vw, 420px) !important;
         height:auto !important;
+        aspect-ratio:1 / 1 !important;
         margin:42px auto 0 !important;
         transform:none !important;
         order:2 !important;
@@ -4010,7 +4011,7 @@ body #wrap #margin > .con01 .con01-visual{
         right:clamp(32px, 5vw, 96px);
         width:var(--about-visual-size);
         height:var(--about-visual-size);
-        aspect-ratio:auto;
+        aspect-ratio:1 / 1 !important;
         transform:translateY(-50%);
     }
 
