@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getVisibleCount() {
         if (window.innerWidth <= 767) {
-            return 1;
+            return 2;
         }
         if (window.innerWidth <= 1090) {
             return 2;

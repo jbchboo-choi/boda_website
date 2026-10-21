@@ -1450,6 +1450,25 @@ body{max-width:100%; overflow-x:hidden;}
         margin-top:22px;
         line-height:1.55;
     }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        display:grid;
+        grid-template-columns:36px minmax(0, 1fr) 36px;
+        align-items:center;
+        justify-content:normal;
+        gap:0;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_left{
+        grid-column:1;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio-page{
+        grid-column:2;
+        justify-self:center;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right{
+        grid-column:3;
+        justify-self:end;
+        margin-left:0;
+    }
 }
 @media (min-width:768px) and (max-width:1090px){
     #wrap #margin .con01 .portfolio02 .portfolio_arrow{
