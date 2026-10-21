@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>소원성취 EVENT — Boda</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/menu_popup.css?v=20261014-menu14" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_pickgo.css?v=20261019-rounded1" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_moon320.css?v=20261019-package1" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        .pickgo-hero h1::before{content:none;}
+        .troy-autumn-gallery-grid{
+            grid-template-columns:1fr;
+            justify-items:center;
+        }
+        .troy-autumn-gallery-grid .moon320-gallery-item{
+            display:block;
+            width:100%;
+            margin-inline:auto;
+        }
+        .troy-autumn-gallery-grid .troy-autumn-detail-card{
+            max-width:620px;
+        }
+        .troy-autumn-gallery-grid .troy-autumn-banner-card{
+            max-width:1000px;
+        }
+        .troy-autumn-gallery-grid .moon320-gallery-item img{
+            display:block;
+            width:100%;
+            height:auto;
+            object-fit:contain;
+        }
+        .troy-autumn-gallery-grid .moon320-gallery-item:hover img,
+        .troy-autumn-gallery-grid .moon320-gallery-item:focus-visible img{
+            transform:none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="margin">
+            <header class="main">
+                <div class="main01">
+                    <div class="mainplus">
+                        <a class="work-back-button" href="./portfolio.html?filter=graphic" aria-label="Graphic 작업 목록으로 이동">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                        </a>
+                    </div>
+                    <div class="mainmenu"><div>Work / Graphic</div></div>
+                    <a href="./index.html" aria-label="Boda home"><div class="mainlogo"></div></a>
+                </div>
+            </header>
+
+            <main class="pickgo-page moon320-page">
+                <section class="pickgo-hero moon320-hero" aria-labelledby="troy-autumn-title">
+                    <div class="pickgo-hero-copy">
+                        <p class="pickgo-type-label">Graphic</p>
+                        <h1 id="troy-autumn-title">소원성취<br>EVENT</h1>
+                        <p class="pickgo-summary">트로이성형외과 가을 프로모션 디자인<br class="desktop-break"> PC·MO 이벤트 페이지와 SNS 콘텐츠, 웹 배너를 일관된 콘셉트로 제작한 프로젝트입니다.</p>
+                        <div class="pickgo-rule"></div>
+                        <dl class="pickgo-meta">
+                            <div><dt>작업기간</dt><dd>약 1주일</dd></div>
+                            <div><dt>프로젝트 구분</dt><dd>실무 프로젝트</dd></div>
+                            <div><dt>브랜드</dt><dd>트로이성형외과</dd></div>
+                            <div><dt>참여도</dt><dd>100%</dd></div>
+                            <div><dt>담당 범위</dt><dd class="pickgo-tags"><span>PC·MO 이벤트 페이지 디자인</span><span>SNS 콘텐츠 디자인</span><span>웹 배너 디자인</span></dd></div>
+                            <div><dt>상태</dt><dd>실제 제작</dd></div>
+                        </dl>
+                        <div class="pickgo-actions">
+                            <a class="pickgo-button pickgo-button-primary" href="#troy-autumn-gallery">디자인 상세 보기 <span class="pickgo-external-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                    <div class="pickgo-hero-media">
+                        <img src="images/portfolio/troy_autumn/thumbnail.png" alt="소원성취 EVENT 메인 목업">
+                    </div>
+                </section>
+
+                <section class="moon320-gallery" id="troy-autumn-gallery" aria-labelledby="troy-autumn-gallery-title">
+                    <div class="moon320-gallery-heading">
+                        <div>
+                            <p class="pickgo-eyebrow">DESIGN DETAILS</p>
+                            <h2 id="troy-autumn-gallery-title">소원성취 EVENT 그래픽 디자인</h2>
+                        </div>
+                    </div>
+                    <div class="moon320-gallery-grid troy-autumn-gallery-grid">
+                        <button class="moon320-gallery-item troy-autumn-detail-card" type="button" aria-label="소원성취 EVENT 상세페이지 크게 보기" data-image="images/portfolio/troy_autumn/event-mobile.png" data-alt="소원성취 EVENT 상세페이지">
+                            <img src="images/portfolio/troy_autumn/event-mobile.png" alt="소원성취 EVENT 모바일 광고" loading="lazy">
+                        </button>
+                        <button class="moon320-gallery-item troy-autumn-banner-card" type="button" aria-label="소원성취 EVENT 가로 배너 크게 보기" data-image="images/portfolio/troy_autumn/event-friend.jpg" data-alt="소원성취 EVENT 가로 배너">
+                            <img src="images/portfolio/troy_autumn/event-friend.jpg" alt="소원성취 EVENT 플친 이미지" loading="lazy">
+                        </button>
+                    </div>
+                </section>
+            </main>
+
+            <div class="moon320-lightbox" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" aria-hidden="true">
+                <button class="moon320-lightbox-close" type="button" aria-label="확대 이미지 닫기">×</button>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (() => {
+            const lightbox = document.querySelector('.moon320-lightbox');
+            const lightboxImage = lightbox.querySelector('img');
+            const closeButton = lightbox.querySelector('.moon320-lightbox-close');
+            const galleryItems = document.querySelectorAll('.moon320-gallery-item');
+            let lastFocusedItem = null;
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.removeAttribute('src');
+                document.body.style.overflow = '';
+                lastFocusedItem?.focus();
+            };
+
+            galleryItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    lastFocusedItem = item;
+                    lightboxImage.src = item.dataset.image;
+                    lightboxImage.alt = item.dataset.alt;
+                    lightbox.classList.add('is-open');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                    closeButton.focus();
+                });
+            });
+
+            closeButton.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+            });
+        })();
+    </script>
+</body>
+</html>

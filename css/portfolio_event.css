@@ -134,6 +134,9 @@ align-content: space-between; justify-content: center; margin-top:118px;}
 display:flex; justify-content: center; align-items: center; margin-top:-200px;}
 #wrap #margin .con04 .epil{width:1300px; height:878px;
 display:flex; flex-direction: column; justify-content: space-between; align-items: center;}
+#wrap #margin .con04 .epilogue-copy{width:1306px; color:#1c2d49; word-break:keep-all;}
+#wrap #margin .con04 .epilogue-copy h2{margin:0 0 30px; font-size:32px; font-weight:500; line-height:1.4; letter-spacing:-.06em; word-break:keep-all;}
+#wrap #margin .con04 .epilogue-copy p{margin:0; font-size:24px; font-weight:400; line-height:1.8; letter-spacing:-.055em; word-break:keep-all;}
 
 /*메안풍차애니메이션*/
 #wrap #margin .con03 .eventpage .eventmain .windmill .windmill01{animation:rolling01 5s linear infinite; border-radius:50%;
@@ -181,7 +184,7 @@ body::-webkit-scrollbar-track {background: #c2eef6;}
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
 
-	visibility: visible !important;			
+	visibility: visible;
 }
 
 #wrap #margin .con03 .eventpage .eventbg .event03 .button02{animation-name: slideUp;
@@ -193,7 +196,7 @@ body::-webkit-scrollbar-track {background: #c2eef6;}
 	animation-timing-function: ease;	
 	-webkit-animation-timing-function: ease;
 
-	visibility: visible !important;			
+	visibility: visible;
 }
 
 @keyframes slideUp {

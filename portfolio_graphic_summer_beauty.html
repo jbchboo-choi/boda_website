@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>썸머 뷰티 페스타 — Boda</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/menu_popup.css?v=20261014-menu14" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_pickgo.css?v=20261019-rounded1" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_moon320.css?v=20261019-package1" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        .pickgo-hero h1::before{content:none;}
+        .summer-beauty-gallery-grid{grid-template-columns:1fr;}
+        .summer-beauty-gallery-top{
+            display:grid;
+            grid-template-columns:minmax(0,.79fr) minmax(0,1fr);
+            gap:20px;
+            align-items:start;
+        }
+        .summer-beauty-gallery-side{
+            display:grid;
+            gap:20px;
+            align-content:start;
+        }
+        .summer-beauty-gallery-grid .moon320-gallery-item{
+            display:block;
+        }
+        .summer-beauty-gallery-grid .moon320-gallery-item img{
+            display:block;
+            width:100%;
+            height:auto;
+            object-fit:contain;
+        }
+        .summer-beauty-gallery-grid .summer-beauty-gallery-wide{
+            width:100%;
+        }
+        .summer-beauty-gallery-grid .moon320-gallery-item:hover img,
+        .summer-beauty-gallery-grid .moon320-gallery-item:focus-visible img{
+            transform:none;
+        }
+        @media (max-width:1090px){
+            .summer-beauty-gallery-top{
+                grid-template-columns:1fr;
+            }
+            .summer-beauty-gallery-side{
+                display:contents;
+            }
+        }
+        @media (max-width:767px){
+            .summer-beauty-gallery-top{
+                gap:12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="margin">
+            <header class="main">
+                <div class="main01">
+                    <div class="mainplus">
+                        <a class="work-back-button" href="./portfolio.html?filter=graphic" aria-label="Graphic 작업 목록으로 이동">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                        </a>
+                    </div>
+                    <div class="mainmenu"><div>Work / Graphic</div></div>
+                    <a href="./index.html" aria-label="Boda home"><div class="mainlogo"></div></a>
+                </div>
+            </header>
+
+            <main class="pickgo-page moon320-page">
+                <section class="pickgo-hero moon320-hero" aria-labelledby="summer-beauty-title">
+                    <div class="pickgo-hero-copy">
+                        <p class="pickgo-type-label">Graphic</p>
+                        <h1 id="summer-beauty-title">썸머 뷰티<br>페스타</h1>
+                        <p class="pickgo-summary">스페셜성형외과 여름 프로모션 디자인<br class="desktop-break"> 이벤트 페이지와 SNS 콘텐츠, 웹 배너, 원내게시판을 일관된 콘셉트로 제작한 프로젝트입니다.</p>
+                        <div class="pickgo-rule"></div>
+                        <dl class="pickgo-meta">
+                            <div><dt>작업기간</dt><dd>약 1주일</dd></div>
+                            <div><dt>프로젝트 구분</dt><dd>실무 프로젝트</dd></div>
+                            <div><dt>브랜드</dt><dd>스페셜성형외과</dd></div>
+                            <div><dt>참여도</dt><dd>100%</dd></div>
+                            <div><dt>담당 범위</dt><dd class="pickgo-tags"><span>이벤트 페이지</span><span>SNS 디자인</span><span>웹 배너 디자인</span><span>원내게시판</span></dd></div>
+                            <div><dt>상태</dt><dd>실제 제작</dd></div>
+                        </dl>
+                        <div class="pickgo-actions">
+                            <a class="pickgo-button pickgo-button-primary" href="#summer-beauty-gallery">디자인 상세 보기 <span class="pickgo-external-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                    <div class="pickgo-hero-media">
+                        <img src="images/portfolio/summer_beauty/thumbnail.png" alt="썸머 뷰티 페스타 메인 목업">
+                    </div>
+                </section>
+
+                <section class="moon320-gallery" id="summer-beauty-gallery" aria-labelledby="summer-beauty-gallery-title">
+                    <div class="moon320-gallery-heading">
+                        <div>
+                            <p class="pickgo-eyebrow">DESIGN DETAILS</p>
+                            <h2 id="summer-beauty-gallery-title">썸머 뷰티 페스타 그래픽 디자인</h2>
+                        </div>
+                    </div>
+                    <div class="moon320-gallery-grid summer-beauty-gallery-grid">
+                        <div class="summer-beauty-gallery-top">
+                            <button class="moon320-gallery-item" type="button" aria-label="썸머 뷰티 페스타 모바일 광고 크게 보기" data-image="images/portfolio/summer_beauty/event-mobile.png" data-alt="썸머 뷰티 페스타 모바일 광고">
+                                <img src="images/portfolio/summer_beauty/event-mobile.png" alt="썸머 뷰티 페스타 모바일 광고" loading="lazy">
+                            </button>
+                            <div class="summer-beauty-gallery-side">
+                                <button class="moon320-gallery-item" type="button" aria-label="썸머 뷰티 페스타 메인 시안 크게 보기" data-image="images/portfolio/summer_beauty/event-main.jpg" data-alt="썸머 뷰티 페스타 메인 시안">
+                                    <img src="images/portfolio/summer_beauty/event-main.jpg" alt="썸머 뷰티 페스타 메인 시안" loading="lazy">
+                                </button>
+                                <button class="moon320-gallery-item" type="button" aria-label="썸머 뷰티 페스타 A4 광고 크게 보기" data-image="images/portfolio/summer_beauty/event-a4.jpg" data-alt="썸머 뷰티 페스타 A4 광고">
+                                    <img src="images/portfolio/summer_beauty/event-a4.jpg" alt="썸머 뷰티 페스타 A4 광고" loading="lazy">
+                                </button>
+                            </div>
+                        </div>
+                        <button class="moon320-gallery-item summer-beauty-gallery-wide" type="button" aria-label="썸머 뷰티 페스타 PC 광고 크게 보기" data-image="images/portfolio/summer_beauty/event-pc.jpg" data-alt="썸머 뷰티 페스타 PC 광고">
+                            <img src="images/portfolio/summer_beauty/event-pc.jpg" alt="썸머 뷰티 페스타 PC 광고" loading="lazy">
+                        </button>
+                    </div>
+                </section>
+            </main>
+
+            <div class="moon320-lightbox" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" aria-hidden="true">
+                <button class="moon320-lightbox-close" type="button" aria-label="확대 이미지 닫기">×</button>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (() => {
+            const lightbox = document.querySelector('.moon320-lightbox');
+            const lightboxImage = lightbox.querySelector('img');
+            const closeButton = lightbox.querySelector('.moon320-lightbox-close');
+            const galleryItems = document.querySelectorAll('.moon320-gallery-item');
+            let lastFocusedItem = null;
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.removeAttribute('src');
+                document.body.style.overflow = '';
+                lastFocusedItem?.focus();
+            };
+
+            galleryItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    lastFocusedItem = item;
+                    lightboxImage.src = item.dataset.image;
+                    lightboxImage.alt = item.dataset.alt;
+                    lightbox.classList.add('is-open');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                    closeButton.focus();
+                });
+            });
+
+            closeButton.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -357,10 +357,10 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     overflow:hidden;
     border-radius:24px;
     background-color:#fff;
-    background-image:linear-gradient(to bottom, transparent 0 76.55%, #fff 76.55% 100%), var(--thumbnail) !important;
-    background-repeat:no-repeat !important;
-    background-position:center top, .38px -3.31px !important;
-    background-size:100% 100%, 100% auto !important;
+    background-image:linear-gradient(to bottom, transparent 0 76.55%, #fff 76.55% 100%), var(--thumbnail);
+    background-repeat:no-repeat;
+    background-position:center top, .38px -3.31px;
+    background-size:100% 100%, 100% auto;
     box-shadow:0 22px 44px rgba(88,135,155,.2);
     box-sizing:border-box;
     transition:transform .3s ease, filter .3s ease, box-shadow .3s ease;
@@ -506,357 +506,6 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     #wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card{
         flex:0 0 300px;
         width:300px;
-    }
-}
-
-/* Final alignment source: thumbnail start controls the tagline start. */
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02{
-        --portfolio-inset:clamp(48px, 6vw, 115px);
-    }
-    #wrap #margin .con01 .portfolio02 .slideShow{
-        margin-left:var(--portfolio-inset);
-        margin-right:0;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        left:var(--portfolio-inset);
-    }
-}
-
-/* Final WORK navigation overrides. */
-#wrap #margin .con01 .portfolio02 .portfolio_arrow{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:12px;
-    width:min(980px, calc(100% - 48px));
-    margin:24px auto 0;
-    flex:0 0 auto;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
-    position:relative;
-    width:44px;
-    height:44px;
-    flex:0 0 44px;
-    padding:0;
-    border:0;
-    border-radius:50%;
-    background:transparent;
-    color:transparent;
-    font-size:0;
-    cursor:pointer;
-    opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
-    content:'';
-    position:absolute;
-    inset:2px;
-    border:1px solid #999999;
-    border-radius:50%;
-    background:#FFFFFF;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
-    content:'';
-    position:absolute;
-    z-index:1;
-    top:16px;
-    left:16px;
-    width:11px;
-    height:11px;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
-    border-radius:1px;
-    transform:rotate(45deg);
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
-    left:14px;
-    border-top:0;
-    border-right:0;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
-    transform:scaleX(-1) rotate(45deg);
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
-    background:#EAF6FF;
-    border-color:#64C4E4;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
-    border-color:#176B8C;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
-    cursor:default;
-    opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
-    background:#F5F5F5;
-    border-color:#D8DDE0;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
-    border-color:#AAB1B6;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_tagline{
-    position:static;
-    width:min(980px, calc(100% - 48px));
-    margin:22px auto 0;
-    color:#777;
-    text-align:left;
-}
-
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        margin-left:var(--portfolio-inset);
-        margin-right:0;
-    }
-}
-
-@media (max-width:1090px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        width:100%;
-        margin-left:0;
-        margin-right:0;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
-        align-self:stretch;
-        margin-top:24px;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        align-self:stretch;
-        margin-top:22px;
-        line-height:1.55;
-    }
-}
-
-/* Final WORK navigation overrides. */
-#wrap #margin .con01 .portfolio02 .portfolio_arrow{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:12px;
-    width:min(980px, calc(100% - 48px));
-    margin:24px auto 0;
-    flex:0 0 auto;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
-    position:relative;
-    width:44px;
-    height:44px;
-    flex:0 0 44px;
-    padding:0;
-    border:0;
-    border-radius:50%;
-    background:transparent;
-    color:transparent;
-    font-size:0;
-    cursor:pointer;
-    opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
-    content:'';
-    position:absolute;
-    inset:2px;
-    border:1px solid #999999;
-    border-radius:50%;
-    background:#FFFFFF;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
-    content:'';
-    position:absolute;
-    z-index:1;
-    top:16px;
-    left:16px;
-    width:11px;
-    height:11px;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
-    border-radius:1px;
-    transform:rotate(45deg);
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
-    left:14px;
-    border-top:0;
-    border-right:0;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
-    transform:scaleX(-1) rotate(45deg);
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
-    background:#EAF6FF;
-    border-color:#64C4E4;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
-    border-color:#176B8C;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
-    cursor:default;
-    opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
-    background:#F5F5F5;
-    border-color:#D8DDE0;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
-    border-color:#AAB1B6;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_tagline{
-    position:static;
-    width:min(980px, calc(100% - 48px));
-    margin:22px auto 0;
-    color:#777;
-    text-align:left;
-}
-
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        margin-left:var(--portfolio-inset);
-        margin-right:0;
-    }
-}
-
-@media (max-width:1090px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        width:100%;
-        margin-left:0;
-        margin-right:0;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
-        align-self:stretch;
-        margin-top:24px;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        align-self:stretch;
-        margin-top:22px;
-        line-height:1.55;
-    }
-}
-
-/* Final WORK navigation treatment: align controls and copy to the card group. */
-#wrap #margin .con01 .portfolio02 .portfolio_arrow{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:12px;
-    width:min(980px, calc(100% - 48px));
-    margin:24px auto 0;
-    flex:0 0 auto;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button{
-    position:relative;
-    width:44px;
-    height:44px;
-    flex:0 0 44px;
-    padding:0;
-    border:0;
-    border-radius:50%;
-    background:transparent;
-    color:transparent;
-    font-size:0;
-    cursor:pointer;
-    opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
-    content:'';
-    position:absolute;
-    inset:2px;
-    border:1px solid #999999;
-    border-radius:50%;
-    background:#FFFFFF;
-    transition:background-color .2s ease, border-color .2s ease;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
-    content:'';
-    position:absolute;
-    z-index:1;
-    top:16px;
-    left:16px;
-    width:11px;
-    height:11px;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
-    border-radius:1px;
-    transform:rotate(45deg);
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
-    left:14px;
-    border-top:0;
-    border-right:0;
-    border-bottom:2px solid #555555;
-    border-left:2px solid #555555;
-    transform:scaleX(-1) rotate(45deg);
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
-    background:#EAF6FF;
-    border-color:#64C4E4;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
-    border-color:#176B8C;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
-    cursor:default;
-    opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
-    background:#F5F5F5;
-    border-color:#D8DDE0;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
-    border-color:#AAB1B6;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_tagline{
-    position:static;
-    width:min(980px, calc(100% - 48px));
-    margin:22px auto 0;
-    color:#777;
-    text-align:left;
-}
-
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        margin-left:var(--portfolio-inset);
-        margin-right:0;
-    }
-}
-
-@media (max-width:1090px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow,
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        width:100%;
-        margin-left:0;
-        margin-right:0;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
-        align-self:stretch;
-        margin-top:24px;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        align-self:stretch;
-        margin-top:22px;
-        line-height:1.55;
     }
 }
 
@@ -1037,44 +686,6 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     }
 }
 
-/* Keep thumbnails and the tagline on the same left guide at every desktop size. */
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02 .slideShow{
-        margin-left:var(--portfolio-inset, clamp(48px, 6vw, 115px));
-        margin-right:0;
-    }
-}
-
-/* Keep the thumbnail group aligned with the tagline start on large desktops. */
-@media (min-width:1920px){
-    #wrap #margin .con01 .portfolio02 .slideShow{
-        margin-left:var(--portfolio-inset, 115px);
-        margin-right:0;
-    }
-}
-
-/* Use the thumbnail grid as the single horizontal alignment source. */
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02{
-        --portfolio-inset:clamp(48px, 6vw, 115px);
-    }
-    #wrap #margin .con01 .portfolio02 .slideShow{
-        margin-left:var(--portfolio-inset);
-        margin-right:0;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        left:var(--portfolio-inset);
-    }
-}
-
-/* Keep thumbnails and the tagline on the same left guide at every desktop size. */
-@media (min-width:1317px){
-    #wrap #margin .con01 .portfolio02 .slideShow{
-        margin-left:var(--portfolio-inset, clamp(48px, 6vw, 115px));
-        margin-right:0;
-    }
-}
-
 /* Large desktop: keep the designed content grid fixed while the sky expands. */
 @media (min-width:1920px){
     #wrap #margin .main .main01{
@@ -1098,7 +709,7 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     opacity:1;
     border:1px solid #999999;
     background-color:#FFFFFF;
-    background-image:none !important;
+    background-image:none;
     transition:background-color .2s ease, border-color .2s ease;
 }
 #wrap #margin .con01 .portfolio01 .portfolio_arrow button::before{
@@ -1179,12 +790,12 @@ body{max-width:100%; overflow-x:hidden;}
     width:var(--card-width);
     height:calc(var(--card-width) + 92px);
     min-width:0;
-    margin-right:0 !important;
+    margin-right:0;
     border-radius:24px;
-    background-image:linear-gradient(to bottom, transparent 0 var(--card-width), #fff var(--card-width) 100%), var(--thumbnail) !important;
-    background-repeat:no-repeat !important;
-    background-position:center top, center top !important;
-    background-size:100% 100%, 100% var(--card-width) !important;
+    background-image:linear-gradient(to bottom, transparent 0 var(--card-width), #fff var(--card-width) 100%), var(--thumbnail);
+    background-repeat:no-repeat;
+    background-position:center top, center top;
+    background-size:100% 100%, 100% var(--card-width);
     box-sizing:border-box;
     border:1px solid #b5e5ee;
     box-shadow:0 10px 22px rgba(83, 157, 170, .12);
@@ -1234,6 +845,10 @@ body{max-width:100%; overflow-x:hidden;}
     border-radius:24px 24px 0 0;
     object-fit:cover;
     pointer-events:none;
+}
+#wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card.thumbnail-contain > a > img{
+    object-fit:contain;
+    background:#f2f2f2;
 }
 #wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card::before,
 #wrap #margin .con01 .portfolio02 .slideShow .slides li.project-card::after{
@@ -1712,59 +1327,10 @@ body{max-width:100%; overflow-x:hidden;}
 /* Desktop-only tagline adjustment. */
 @media (min-width:1091px){
     #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        margin-top:40px !important;
-        font-weight:500 !important;
-        color:#555555 !important;
+        margin-top:40px;
+        font-weight:500;
+        color:#555555;
     }
-}
-
-/* Final WORK navigation placement and sizing. */
-/* Final arrow polish: fixed hit area, no hover scaling, smaller chevrons. */
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible{
-    width:44px !important;
-    height:44px !important;
-    min-width:44px !important;
-    min-height:44px !important;
-    transform:none !important;
-    transition:none !important;
-    background:transparent !important;
-    border:0 !important;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
-    background:transparent !important;
-    border:0 !important;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::before{
-    top:18px !important;
-    left:18px !important;
-    width:8px !important;
-    height:8px !important;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right:hover::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right:active::before,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right:focus-visible::before{
-    left:16px !important;
-}
-
-@media (max-width:1090px){
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
-        justify-content:center !important;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
-        text-align:center !important;
-    }
-}
-
-#wrap #margin .con01 .portfolio02 .portfolio_tagline{
-    font-weight:500 !important;
 }
 
 /* Final WORK navigation placement and sizing. */
@@ -1779,48 +1345,62 @@ body{max-width:100%; overflow-x:hidden;}
 }
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button{
     position:relative;
-    width:44px;
-    height:44px;
-    flex:0 0 44px;
+    width:36px;
+    min-width:36px;
+    max-width:36px;
+    height:36px;
+    min-height:36px;
+    max-height:36px;
+    flex:0 0 36px;
     padding:0;
-    border:0;
+    border:1px solid #999999;
     border-radius:50%;
-    background:transparent;
+    background:#FFFFFF;
+    background-image:none;
+    background-clip:padding-box;
     color:transparent;
     font-size:0;
     cursor:pointer;
     opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button::after{
-    content:'';
-    position:absolute;
-    inset:2px;
-    border:1px solid #999999;
-    border-radius:50%;
-    background:#FFFFFF;
+    overflow:hidden;
+    box-sizing:border-box;
+    outline:none;
+    box-shadow:none;
+    appearance:none;
+    isolation:isolate;
+    -webkit-tap-highlight-color:transparent;
+    transition:background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button::before{
     content:'';
     position:absolute;
     z-index:1;
-    top:16px;
-    left:16px;
-    width:11px;
-    height:11px;
+    top:50%;
+    left:50%;
+    width:8px;
+    height:8px;
+    margin:0;
     border-bottom:2px solid #555555;
     border-left:2px solid #555555;
     border-radius:1px;
-    transform:rotate(45deg);
+    transform:translate(-50%, -50%) rotate(45deg);
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_left::before{
+    transform:translate(-32%, -50%) rotate(45deg);
 }
 #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right::before{
-    left:14px;
-    transform:scaleX(-1) rotate(45deg);
+    left:50%;
+    transform:translate(-68%, -50%) scaleX(-1) rotate(45deg);
 }
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible::after{
+#wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right{
+    margin-left:-4px;
+}
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:active,
+#wrap #margin .con01 .portfolio02 .portfolio_arrow button:focus-visible{
     background:#EAF6FF;
     border-color:#64C4E4;
+    box-shadow:inset 0 0 0 1px #64C4E4;
 }
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button:hover::before,
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button:active::before,
@@ -1831,11 +1411,9 @@ body{max-width:100%; overflow-x:hidden;}
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover{
     cursor:default;
     opacity:1;
-}
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::after,
-#wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::after{
     background:#F5F5F5;
     border-color:#D8DDE0;
+    box-shadow:none;
 }
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled::before,
 #wrap #margin .con01 .portfolio02 .portfolio_arrow button:disabled:hover::before{
@@ -1845,7 +1423,8 @@ body{max-width:100%; overflow-x:hidden;}
     position:static;
     width:min(980px, calc(100% - 48px));
     margin:22px auto 0;
-    color:#777;
+    color:#555;
+    font-weight:500;
     text-align:left;
 }
 @media (min-width:1317px){
@@ -1870,5 +1449,13 @@ body{max-width:100%; overflow-x:hidden;}
         align-self:stretch;
         margin-top:22px;
         line-height:1.55;
+    }
+}
+@media (min-width:768px) and (max-width:1090px){
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow{
+        justify-content:center;
+    }
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{
+        text-align:center;
     }
 }

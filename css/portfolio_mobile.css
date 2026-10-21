@@ -119,8 +119,11 @@ display:flex; align-items: center; flex-direction: column; justify-content: cent
 justify-content: space-between; align-items: center; margin-top:430px;} 
 #wrap #margin .con08 .con08_epil{width:1920px; height:696px; display:flex; flex-direction: column;
 justify-content: center; align-items: center; margin-top:256px; background:url(../images/portfolio_mobile/mockup01.png) no-repeat;}
-#wrap #margin .con08 .con08_epil .con08_epil01{width:1300px; height:236px; display:flex;
-justify-content: flex-end; align-items: center;}
+#wrap #margin .con08 .con08_epil .con08_epil01{width:1300px; height:236px; display:block; color:#000;}
+#wrap #margin .con08 .con08_epil .con08_epil_copy{width:calc(100% - 360px); margin-left:360px; padding-top:0; transform:translateY(-50px);}
+#wrap #margin .con08 .con08_epil .con08_epil_copy h2{margin:0 0 36px; font-size:64px; font-weight:400; line-height:1.2; letter-spacing:-.06em;}
+#wrap #margin .con08 .con08_epil .con08_epil_copy h3{margin:0 0 46px; font-size:32px; font-weight:500; line-height:1.3; letter-spacing:-.065em; word-break:keep-all;}
+#wrap #margin .con08 .con08_epil .con08_epil_copy p{margin:0; font-size:20px; font-weight:300; line-height:1.9; letter-spacing:-.055em; word-break:keep-all;}
 #wrap #margin .con08 .con08_mockup{width:1920px; height:692px; display:flex; flex-direction: row;
 justify-content: space-between; align-items:center; margin-top:256px;}
 

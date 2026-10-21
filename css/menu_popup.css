@@ -12,6 +12,11 @@
     align-items:center;
 }
 
+/* Let each page's content show through the shared header. */
+#wrap #margin > .main{
+    background:transparent;
+}
+
 /* Keep the full-screen dim layer above every page section when the menu is open. */
 #wrap #margin > .main{
     z-index:9999;
@@ -48,6 +53,40 @@ body:has(input[id="menuicon"]:checked) #wrap #margin > .main{
     #wrap #margin > .main > .main01,
     #wrap #margin > .main .main01{
         height:120px;
+    }
+}
+
+/* Keep the Spectrum and Work header logos on the same visual scale. */
+body #wrap #margin > .main .main01 > a:has(.mainlogo){
+    display:block;
+    width:87px;
+    height:33px;
+    flex:0 0 87px;
+    background:none;
+}
+
+body #wrap #margin > .main .main01 > a:has(.mainlogo) .mainlogo{
+    display:block;
+    width:87px;
+    height:33px;
+    flex:0 0 87px;
+    background:url(../images/main/main_logo.png) center / 87px 33px no-repeat;
+}
+
+@media (max-width:1316px){
+    body #wrap #margin > .main .main01 > a:has(.mainlogo){
+        width:64px;
+        height:24px;
+        flex-basis:64px;
+        background:none;
+    }
+
+    body #wrap #margin > .main .main01 > a:has(.mainlogo) .mainlogo{
+        display:block;
+        width:64px;
+        height:24px;
+        flex-basis:64px;
+        background-size:64px 24px;
     }
 }
 

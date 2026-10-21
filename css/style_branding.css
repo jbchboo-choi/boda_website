@@ -1906,7 +1906,7 @@ padding:10px; text-decoration:none; font-weight:400; font-size:16px;}
     max-width:100%;
 }
 
-/* Align the Logo Variation title with the logo content below. */
+/* Align the Logo Type title with the logo content below. */
 #wrap #margin .con05 .brand_text04{
     width:min(1300px, calc(100% - 48px));
     justify-content:flex-start;

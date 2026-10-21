@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'web',
             label: 'Web',
             thumbnail: 'images/portfolio/honeybee_dashboard.png',
-            href: 'https://maze-pry-80983983.figma.site/'
+            href: './portfolio_honeybee.html'
         },
         {
             id: 'namanlab',
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'web',
             label: 'Web',
             thumbnail: 'images/portfolio/namanlab_thumbnail.png',
-            href: 'https://namanlab-nu.vercel.app/'
+            href: './portfolio_namanlab.html'
         },
         {
             id: 'disney-plus',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'web',
             label: 'Web',
             thumbnail: 'images/portfolio/disneyplus_thumbnail.png',
-            href: './disneyplus.html'
+            href: './portfolio_disneyplus.html'
         },
         {
             id: 'easybab-mobile',
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'web',
             label: 'Web',
             thumbnail: 'images/portfolio/easybab_mobile_thumbnail.png',
-            href: './portfolio_mobile.html'
+            href: './portfolio_easybab.html'
         },
         {
             id: 'event-page',
@@ -72,12 +72,44 @@ document.addEventListener('DOMContentLoaded', function () {
             href: './portfolio_graphic_polarbear.html'
         },
         {
+            id: 'cimi-drifter',
+            title: 'DC Journey',
+            category: 'motion',
+            label: 'Motion & 3D',
+            thumbnail: 'images/portfolio/cimi_drifter_thumbnail.png',
+            href: './portfolio_cimi.html'
+        },
+        {
             id: 'moon320',
-            title: 'MOON320',
+            title: 'MOON320 약주·탁주',
             category: 'branding',
             label: 'Branding',
             thumbnail: 'images/portfolio/moon320_thumbnail.jpg',
             href: './portfolio_moon320.html'
+        },
+        {
+            id: 'chae-chungja-noodles',
+            title: '채충자 국수',
+            category: 'branding',
+            label: 'Branding',
+            thumbnail: 'images/portfolio/chae_chungja_thumbnail.jpg',
+            href: './portfolio_chae_chungja.html'
+        },
+        {
+            id: 'summer-beauty-festa',
+            title: '썸머 뷰티 페스타',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio/summer_beauty/thumbnail.png',
+            href: './portfolio_graphic_summer_beauty.html'
+        },
+        {
+            id: 'troy-autumn-wish-event',
+            title: '소원성취 EVENT',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio/troy_autumn/thumbnail.png',
+            href: './portfolio_graphic_troy_autumn.html'
         },
         {
             id: 'troy-summer',
@@ -88,6 +120,14 @@ document.addEventListener('DOMContentLoaded', function () {
             href: './portfolio_troy_summer.html'
         },
         {
+            id: 'secui-graphic',
+            title: 'SECUI',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio/secui/thumbnail-card.png',
+            href: './portfolio_graphic_secui.html'
+        },
+        {
             id: 'visual-design-award',
             title: 'My Little Escape',
             category: 'graphic',
@@ -96,12 +136,36 @@ document.addEventListener('DOMContentLoaded', function () {
             href: './portfolio_graphic_visual.html'
         },
         {
+            id: 'social-economy-hanmadang',
+            title: '사회적경제 한마당',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio/social_economy/thumbnail.jpg',
+            href: './portfolio_graphic_social_economy.html'
+        },
+        {
+            id: 'ice-hockey-tournament',
+            title: '강원도컵 아이스하키 대회',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio/ice_hockey/poster.jpg',
+            href: './portfolio_graphic_ice_hockey.html'
+        },
+        {
+            id: 'ssireum-hanmadang',
+            title: '씨름 한마당',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio/ssireum/poster.png',
+            href: './portfolio_graphic_ssireum.html'
+        },
+        {
             id: 'boda-studio',
             title: 'Boda Studio',
             category: 'web',
             label: 'Web',
             thumbnail: 'images/portfolio/boda_studio_thumbnail.png',
-            href: './index.html'
+            href: './portfolio_boda.html'
         },
     ];
 
@@ -112,11 +176,18 @@ document.addEventListener('DOMContentLoaded', function () {
         branding: function (project) { return project.category === 'branding' || (project.categories || []).includes('branding'); },
         motion: function (project) { return project.category === 'motion' || (project.categories || []).includes('motion'); }
     };
+    const categoryOrder = { web: 0, graphic: 1, branding: 2, motion: 3 };
+
+    function sortAllProjects(list) {
+        return list.slice().sort(function (first, second) {
+            return (categoryOrder[first.category] ?? 99) - (categoryOrder[second.category] ?? 99);
+        });
+    }
 
     let selectedFilter = 'all';
     let visibleCount = 1;
     let currentPageIndex = 0;
-    let filteredProjects = projects.slice();
+    let filteredProjects = sortAllProjects(projects);
     let resizeFrame = null;
     let touchStartX = 0;
 
@@ -162,6 +233,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         card.className = 'project-card';
         card.dataset.projectId = project.id;
+        if (project.id === 'secui-graphic') {
+            card.classList.add('thumbnail-contain');
+        }
         const thumbnailUrl = new URL(project.thumbnail, document.baseURI).href;
         card.style.setProperty('--thumbnail', 'url("' + thumbnailUrl + '")');
         card.style.setProperty('--thumb-category', '"' + project.label + '"');
@@ -229,7 +303,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function selectFilter(button) {
         selectedFilter = button.dataset.filter || 'all';
-        filteredProjects = projects.filter(filters[selectedFilter] || filters.all);
+        const matchedProjects = projects.filter(filters[selectedFilter] || filters.all);
+        filteredProjects = selectedFilter === 'all' ? sortAllProjects(matchedProjects) : matchedProjects;
         currentPageIndex = 0;
 
         filterButtons.forEach(function (item) {
@@ -298,9 +373,10 @@ document.addEventListener('DOMContentLoaded', function () {
         slides.style.transition = '';
     });
 
-    renderSlides();
-    if (breadcrumb) {
-        breadcrumb.textContent = 'Work';
-    }
-    updateLayout(false);
+    const requestedFilter = new URLSearchParams(window.location.search).get('filter');
+    const initialFilterButton = Array.from(filterButtons).find(function (button) {
+        return button.dataset.filter === requestedFilter;
+    }) || filterButtons[0];
+
+    selectFilter(initialFilterButton);
 });
