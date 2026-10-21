@@ -90,8 +90,8 @@ a:hover {
 	font-weight:600;
 	letter-spacing:.04em;
 }
-#wrap .site-top-button:hover,
-#wrap .site-top-button:focus-visible{
+#wrap .topBtn.site-top-button:hover,
+#wrap .topBtn.site-top-button:focus-visible{
 	border-color:#56c6d0;
 	background:#56c6d0;
 	color:#fff;
