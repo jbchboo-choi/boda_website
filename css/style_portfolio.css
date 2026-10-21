@@ -1451,24 +1451,13 @@ body{max-width:100%; overflow-x:hidden;}
         line-height:1.55;
     }
     #wrap #margin .con01 .portfolio02 .portfolio_arrow{
-        display:grid;
-        grid-template-columns:36px minmax(0, 1fr) 36px;
+        display:flex;
         align-items:center;
-        justify-content:normal;
-        gap:0;
+        justify-content:center;
+        gap:12px;
     }
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_left{
-        grid-column:1;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio-page{
-        grid-column:2;
-        justify-self:center;
-    }
-    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right{
-        grid-column:3;
-        justify-self:end;
-        margin-left:0;
-    }
+    #wrap #margin .con01 .portfolio02 .portfolio_arrow .portfolio_right{margin-left:-4px;}
+    #wrap #margin .con01 .portfolio02 .portfolio_tagline{text-align:center;}
 }
 @media (min-width:768px) and (max-width:1090px){
     #wrap #margin .con01 .portfolio02 .portfolio_arrow{
