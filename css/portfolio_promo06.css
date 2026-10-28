@@ -1,0 +1,38 @@
+/* The shopping-mall detail page follows the shared Summer Beauty detail layout. */
+.promo06-page{background:#fff;}
+.promo06-page .pickgo-button-primary{background:#56c6d0;}
+
+.promo06-hero .pickgo-hero-media img{
+    width:auto;
+    max-width:100%;
+    height:min(68svh,700px);
+    object-fit:contain;
+    border:7px solid #373536;
+    border-radius:34px;
+    box-sizing:border-box;
+    box-shadow:0 10px 28px rgba(16,29,56,.08);
+}
+
+.promo06-gallery-grid{grid-template-columns:1fr;}
+.promo06-gallery-grid .promo06-detail-card{
+    display:block;
+    width:min(760px,100%);
+    margin-inline:auto;
+}
+.promo06-gallery-grid .promo06-detail-card img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+}
+.promo06-gallery-grid .promo06-detail-card:hover img,
+.promo06-gallery-grid .promo06-detail-card:focus-visible img{transform:none;}
+
+@media (max-width:1090px){
+    .promo06-hero .pickgo-hero-media img{width:min(100%,620px); height:auto;}
+}
+
+@media (max-width:767px){
+    .promo06-hero .pickgo-hero-media img{width:100%; height:auto; border-width:5px; border-radius:22px;}
+    .promo06-gallery-grid .promo06-detail-card{width:100%;}
+}

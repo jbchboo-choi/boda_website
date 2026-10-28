@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>쇼핑몰 이벤트페이지 — Boda</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/menu_popup.css?v=20261014-menu14" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_pickgo.css?v=20261019-rounded1" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_moon320.css?v=20261019-package1" rel="stylesheet" type="text/css">
+    <link href="css/portfolio_promo06.css?v=20261028-promo06-reference" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        .pickgo-hero h1::before{content:none;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="margin">
+            <header class="main">
+                <div class="main01">
+                    <div class="mainplus">
+                        <a class="work-back-button" href="./portfolio.html?filter=graphic" aria-label="Graphic 작업 목록으로 이동">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                        </a>
+                    </div>
+                    <div class="mainmenu"><div>Work / Graphic</div></div>
+                    <a href="./index.html" aria-label="Boda home"><div class="mainlogo"></div></a>
+                </div>
+            </header>
+
+            <main class="pickgo-page moon320-page promo06-page">
+                <section class="pickgo-hero moon320-hero promo06-hero" aria-labelledby="promo06-title">
+                    <div class="pickgo-hero-copy">
+                        <p class="pickgo-type-label">Graphic</p>
+                        <h1 id="promo06-title">쇼핑몰<br>이벤트페이지</h1>
+                        <p class="pickgo-summary">요일마다, 새로운 옷이 새로운 음악처럼 하루에 신선한 리듬과 색을 더해 주는 쇼핑몰 이벤트 페이지입니다.</p>
+                        <div class="pickgo-rule"></div>
+                        <dl class="pickgo-meta">
+                            <div><dt>작업기간</dt><dd>약 1주</dd></div>
+                            <div><dt>프로젝트 구분</dt><dd>개인 프로젝트</dd></div>
+                            <div><dt>참여도</dt><dd>100%</dd></div>
+                            <div><dt>담당 범위</dt><dd class="pickgo-tags"><span>이벤트 기획</span><span>Gif 작업</span><span>이벤트 디자인</span><span>AI 활용 아이콘 제작</span></dd></div>
+                            <div><dt>상태</dt><dd>작업 완료</dd></div>
+                        </dl>
+                        <div class="pickgo-actions">
+                            <a class="pickgo-button pickgo-button-primary" href="#promo06-gallery">디자인 상세 보기 <span class="pickgo-external-arrow" aria-hidden="true"></span></a>
+                        </div>
+                    </div>
+                    <div class="pickgo-hero-media">
+                        <img src="images/portfolio_promotion/promotion06_main.gif" alt="쇼핑몰 이벤트 페이지 메인 화면">
+                    </div>
+                </section>
+
+                <section class="moon320-gallery promo06-gallery" id="promo06-gallery" aria-labelledby="promo06-gallery-title">
+                    <div class="moon320-gallery-heading">
+                        <div>
+                            <p class="pickgo-eyebrow">DESIGN DETAILS</p>
+                            <h2 id="promo06-gallery-title">쇼핑몰 이벤트페이지 디자인</h2>
+                        </div>
+                    </div>
+                    <div class="moon320-gallery-grid promo06-gallery-grid">
+                        <button class="moon320-gallery-item promo06-detail-card" type="button" aria-label="쇼핑몰 이벤트페이지 상세 이미지 크게 보기" data-image="images/portfolio_promotion/promotion06_lmg.png" data-alt="쇼핑몰 이벤트페이지 전체 디자인">
+                            <img src="images/portfolio_promotion/promotion06_lmg.png" alt="쇼핑몰 이벤트페이지 전체 디자인" loading="lazy">
+                        </button>
+                    </div>
+                </section>
+
+                <div class="moon320-lightbox" role="dialog" aria-modal="true" aria-label="이미지 확대 보기" aria-hidden="true">
+                    <button class="moon320-lightbox-close" type="button" aria-label="확대 이미지 닫기">×</button>
+                    <img src="" alt="">
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        (() => {
+            const lightbox = document.querySelector('.moon320-lightbox');
+            const lightboxImage = lightbox.querySelector('img');
+            const closeButton = lightbox.querySelector('.moon320-lightbox-close');
+            const galleryItem = document.querySelector('.promo06-detail-card');
+            let lastFocusedItem = null;
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImage.removeAttribute('src');
+                document.body.style.overflow = '';
+                lastFocusedItem?.focus();
+            };
+
+            galleryItem.addEventListener('click', () => {
+                lastFocusedItem = galleryItem;
+                lightboxImage.src = galleryItem.dataset.image;
+                lightboxImage.alt = galleryItem.dataset.alt;
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+                closeButton.focus();
+            });
+
+            closeButton.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+            });
+        })();
+    </script>
+</body>
+</html>

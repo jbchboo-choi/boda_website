@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', function () {
             href: './portfolio_event.html'
         },
         {
+            id: 'shopping-mall-event',
+            title: '쇼핑몰 이벤트페이지',
+            category: 'graphic',
+            label: 'Graphic',
+            thumbnail: 'images/portfolio_promotion/promotion06_thumbnail.png',
+            href: './portfolio_promo_06.html'
+        },
+        {
             id: 'save-the-polar-bear',
             title: 'Save the Polar Bear',
             category: 'motion',
