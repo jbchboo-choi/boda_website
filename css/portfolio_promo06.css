@@ -1,6 +1,8 @@
 /* The shopping-mall detail page follows the shared Summer Beauty detail layout. */
 .promo06-page{background:#fff;}
 .promo06-page .pickgo-button-primary{background:#56c6d0;}
+.promo06-gallery-heading h2{word-break:keep-all;}
+.promo06-title-word{white-space:nowrap;}
 
 .promo06-hero .pickgo-hero-media img{
     width:auto;
