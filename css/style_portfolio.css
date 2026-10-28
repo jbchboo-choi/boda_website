@@ -1220,7 +1220,7 @@ body{max-width:100%; overflow-x:hidden;}
 
 @media (max-width:767px){
     #wrap #margin .main .main01{width:calc(100% - 40px);}
-    #wrap #margin .main .main01 .mainmenu{font-size:14px;}
+    #wrap #margin .main .main01 .mainmenu{font-size:15px;}
     #wrap #margin .con01 .portfolio01{padding:32px 20px 24px;}
     #wrap #margin .con01 .portfolio01 .portfolio01_text h1{
         font-size:clamp(58px, 17vw, 78px);
@@ -1228,7 +1228,7 @@ body{max-width:100%; overflow-x:hidden;}
     }
     #wrap #margin .con01 .portfolio01 .portfolio_intro{
         margin-top:16px;
-        font-size:16px;
+        font-size:18px;
         line-height:1.55;
         letter-spacing:-.05em;
     }
@@ -1239,7 +1239,7 @@ body{max-width:100%; overflow-x:hidden;}
     #wrap #margin .con01 .portfolio01 .portfolio_filter button.is-active{
         height:34px;
         padding:0 16px;
-        font-size:14px;
+        font-size:15px;
     }
     #wrap #margin .con01 .portfolio02{
         min-height:620px;
@@ -1262,7 +1262,7 @@ body{max-width:100%; overflow-x:hidden;}
     }
     #wrap #margin .con01 .portfolio02 .portfolio_tagline{
         margin-top:36px;
-        font-size:15px;
+        font-size:16px;
         line-height:1.55;
     }
 }

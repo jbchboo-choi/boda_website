@@ -26,6 +26,13 @@ body{margin:0;background:#fff;color:var(--pickgo-ink);font-family:'Noto Sans KR'
 @media (max-width:767px){.main01{width:calc(100% - 40px)}.mainlogo{width:76px}.mainmenu{font-size:14px}.pickgo-hero{width:calc(100% - 32px);display:flex;flex-direction:column;align-items:stretch;gap:24px;padding:28px 20px 34px}.pickgo-hero-copy{display:contents}.pickgo-breadcrumb{position:relative;top:auto;left:auto;transform:none;order:1;align-self:center;margin:0 0 2px;font-size:12px;gap:12px}.pickgo-type-label{order:2;margin:0 0 4px;font-size:16px;letter-spacing:.2em}.pickgo-hero h1{order:3;font-size:clamp(38px,11vw,52px);line-height:1.05}.pickgo-summary{order:4;margin:0;font-size:15px;line-height:1.6}.pickgo-rule{order:5;width:38px;height:2px;margin:0 0 4px}.pickgo-hero-media{order:6}.pickgo-hero-media img{width:100%}.pickgo-meta{order:7;gap:15px;margin-top:4px}.pickgo-meta div{grid-template-columns:104px 1fr;font-size:14px;line-height:1.55}.pickgo-tags{gap:7px}.pickgo-tags span{padding:6px 11px;font-size:12px}.pickgo-actions{order:8;display:grid;gap:10px;margin-top:14px}.pickgo-button{width:100%;min-width:0;height:54px;border-radius:11px;font-size:15px}.pickgo-button span{font-size:19px}.desktop-break{display:none}.pickgo-process{width:calc(100% - 40px);padding:60px 0}.pickgo-eyebrow{font-size:12px;margin-bottom:14px}.pickgo-section-heading h2{font-size:32px}.pickgo-section-heading>p:last-child{font-size:13px;line-height:1.7}.pickgo-process-grid{grid-template-columns:1fr;gap:12px;margin-top:34px}.pickgo-process-grid article{min-height:0;padding:22px}.pickgo-process-grid h3{margin:22px 0 8px;font-size:20px}.pickgo-process-grid p{font-size:13px}.pickgo-close{min-height:300px;padding:78px 20px}.pickgo-close p{font-size:12px}.pickgo-close strong{font-size:34px}.pickgo-close a{margin-top:30px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pickgo-button{transition:none}}
 
+/* Keep Korean headings together by word on narrow screens. */
+.pickgo-hero h1,
+.pickgo-section-heading h2,
+.pickgo-close strong{
+    word-break:keep-all;
+}
+
 /* Keep the shared WORK button label size consistent across desktop and mobile. */
 .pickgo-button{font-size:16px}
 @media (max-width:767px){.pickgo-button{font-size:16px}}
